@@ -37,4 +37,8 @@
     <button class="button is-link" ng-click="vm.updateGroup()">Join Group</button>
   </div>
 
+  <div class="control" ng-if="vm.group.members.indexOf(main.user.id) === -1">
+    <button class="button is-link" ng-click="XXX">Leave Group</button>
+  </div>
+
 </div>
