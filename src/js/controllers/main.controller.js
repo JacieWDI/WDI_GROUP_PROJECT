@@ -1,26 +1,37 @@
 angular
   .module('groupProject')
-  .controller('mainController', mainController);
+  .controller('MainCtrl', MainCtrl);
 
-mainController.$inject = [
-  '$state',
+MainCtrl.$inject = [
+  '$transitions',
   '$rootScope',
   'currentUserService',
-  '$timeout'
+  '$state'
 ];
-function mainController(
-  $state,
+
+function MainCtrl(
+  $transitions,
   $rootScope,
   currentUserService,
-  $timeout
+  $state
 ) {
 
   const vm = this;
 
-  vm.logout       = logout;
-  vm.closeMessage = closeMessage;
+  vm.isNavCollapsed = true;
+  vm.logout = logout;
+
+  $transitions.onSuccess({}, () => {
+    //when the state has been successfully changed, hide the navbar dropdown
+    vm.isNavCollapsed = true;
+  });
+
+  function logout() {
+    currentUserService.removeUser();
+  }
 
   $rootScope.$on('loggedIn', () => {
+    console.log('fired, huzzah!!!');
     vm.user = currentUserService.currentUser;
   });
 
@@ -28,34 +39,4 @@ function mainController(
     vm.user = null;
     $state.go('home');
   });
-
-  $rootScope.$on('error', (e, err) => {
-    if(err.status === 401) {
-      $state.go('login');
-      $rootScope.$broadcast('displayMessage', {
-        type: 'danger',
-        content: err.data.message
-      });
-    }
-  });
-
-  $rootScope.$on('displayMessage', (e, message) => {
-    vm.message = message.content;
-    vm.messageType = message.type;
-
-    $timeout(closeMessage, 1500);
-  });
-
-  function logout() {
-    currentUserService.removeUser();
-    $rootScope.$broadcast('displayMessage', {
-      type: 'info',
-      content: 'You have successfully logged out.'
-    });
-  }
-
-  function closeMessage() {
-    vm.message     = null;
-    vm.messageType = null;
-  }
 }

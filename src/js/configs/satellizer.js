@@ -1,4 +1,4 @@
-angular 
+angular
   .module('groupProject')
   .config(Auth);
 
