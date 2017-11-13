@@ -32,6 +32,9 @@
         <a class="navbar-item" ui-sref="login" ng-if="!main.user">
           Login
         </a>
+        <a class="navbar-item" ui-sref="groupsIndex" ng-if="main.user">
+          Groups
+        </a>
 
         <div class="navbar-item has-dropdown is-hoverable is-right" ng-if="main.user">
           <a class="navbar-link" href="#">

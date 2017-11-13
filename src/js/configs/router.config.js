@@ -38,6 +38,11 @@ function Router(
       url: '/students/:id/edit',
       templateUrl: '/js/views/users/edit.html',
       controller: 'usersEditCtrl as vm'
+    })
+    .state('groupsIndex', {
+      url: '/groups',
+      templateUrl: '/js/views/groups/index.html',
+      controller: 'groupsIndexCtrl as vm'
     });
 
   $urlRouterProvider.otherwise('/');
