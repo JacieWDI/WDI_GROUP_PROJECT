@@ -2,26 +2,78 @@
 <html ng-app="groupProject">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WDI Project 3</title>
+  <base href="/" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- inject:js -->
   <!-- endinject -->
   <!-- inject:css -->
   <!-- endinject -->
-  <base href="/" />
+
 </head>
 <body ng-controller="MainCtrl as main">
-  <ul>
-        <li>
-          <a ui-sref="register">REGISTER</a>
-        </li>
-        <li>
-          <a ui-sref="login">LOG IN</a>
-        </li>
-  </ul>
+  <!--
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+  <a class="navbar-item" ui-sref="register" ng-if="!main.user">
+  Register
+</a>
+<a class="navbar-item" ui-sref="login" ng-if="!main.user">
+Login
+</a>
+<a class="navbar-item" href="#" ng-click="main.logout()" ng-if="main.user">
+Logout
+</a>
+</div>
+</nav> -->
 
-  <h1>WDI Project 3</h1>
+<nav class="navbar is-primary">
+  <div class="navbar-brand">
+    <a class="navbar-item" ui-sref="home">
+      Home
+    </a>
+  </div>
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" ui-sref="#" ng-if="main.user">
+        Placeholder
+      </a>
+      <a class="navbar-item" ui-sref="register" ng-if="!main.user">
+        Register
+      </a>
+      <a class="navbar-item" ui-sref="login" ng-if="!main.user">
+        Login
+      </a>
 
-  {{ 1+1 }}
+      <div class="navbar-item has-dropdown is-hoverable is-right" ng-if="main.user">
+        <a class="navbar-link" href="#">
+          Account
+        </a>
+        <div class="navbar-dropdown is-right">
+          <a class="navbar-item" href="#">
+            Signed in as: {{ main.user.username }}
+          </a>
+          <a class="navbar-item" href="#">
+            <span class="icon">
+              <i class="fa fa-user"></i>
+            </span> My Profile
+          </a>
+          <a class="navbar-item" href="#" ng-click="main.logout()">
+            <span class="icon">
+              <i class="fa fa-sign-out"></i>
+            </span> Logout
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<h1>WDI Project 3</h1>
+
+{{ 1+1 }}
 <main ui-view></main>
 </body>
 </html>
