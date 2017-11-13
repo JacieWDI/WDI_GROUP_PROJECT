@@ -1,19 +1,17 @@
-<h1>Login</h1>
-<section>
-
-  <form ng-submit="vm.submitForm()">
-    <div class="form-group">
-      <label for="email"><h2>Email</h2></label>
-      <input class="input-box" type="text" name="email" ng-model="vm.user.email" class="form-control">
+<form ng-submit="vm.submitForm()">
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control">
+      <input type="text" name="email" ng-model="vm.user.email" placeholder="email" class="input">
     </div>
-
-    <div class="form-group">
-      <label for="password"><h2>Password</h2></label>
-      <input class="input-box" type="password" name="password" ng-model="vm.user.password" class="form-control">
+  </div>
+  <div class="field">
+    <label class="label">Password</label>
+    <div class="control">
+      <input type="text" name="password" ng-model="vm.user.password" placeholder="password" class="input">
     </div>
-
-    <div class="form-group">
-      <input type="submit" value="login" class="btn btn-success">
-    </div>
-  </form>
-</section>
+  </div>
+  <div class="form-group">
+    <input type="submit" value="login" class="btn btn-success">
+  </div>
+</form>

@@ -1,0 +1,22 @@
+<h1>{{ vm.group.event }} chat!</h1>
+
+<section>
+  <ul>
+    <li class="column notification is-info" ng-repeat="comment in vm.group.comments">
+      <p>Author: {{ comment.createdBy.userName }}</p>
+      <p>{{ comment.createdBy.image  }}</p>
+      <p>Comment: {{ comment.body }}</p>
+      <p>Time: {{ comment.createdAt }}</p>
+    </li>
+  </ul>
+</section>
+
+<form ng-submit="vm.commentCreate()">
+  <div class="field">
+    <label class="label">Comment</label>
+    <div class="control">
+      <textarea class="textarea" placeholder="your comment..." ng-model="vm.comment.body"></textarea>
+    </div>
+    <button class="button is-link">Submit</button>
+  </div>
+</form>

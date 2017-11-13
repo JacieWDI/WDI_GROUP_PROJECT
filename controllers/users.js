@@ -11,7 +11,7 @@ function usersIndex(req, res) {
 function usersCreate(req, res) {
   User
     .create(req.body)
-    .then((student) => res.status(201).json(student))
+    .then((user) => res.status(201).json(user))
     .catch(() => res.status(500).json({ message: 'Something went wrong.' }));
 }
 

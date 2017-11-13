@@ -3,6 +3,9 @@ const router  = express.Router();
 
 const authentications = require('../controllers/authentications');
 const users = require('../controllers/users');
+const groups = require('../controllers/groups');
+const events = require('../controllers/events');
+const comments = require('../controllers/comments');
 
 //AUTHENTICATION
 router.route('/register')
@@ -21,5 +24,21 @@ router.route('/users/:id')
   .put(users.update)
   .delete(users.delete);
 
+//GROUPS
+router.route('/groups')
+  .get(groups.index)
+  .post(groups.create);
+
+router.route('/groups/:id')
+  .get(groups.show)
+  .put(groups.update);
+
+//COMMENTS
+router.route('/groups/:id/comments')
+  .post(comments.create);
+
+//EVENTS
+router.route('/events')
+  .get(events.index);
 
 module.exports = router;
