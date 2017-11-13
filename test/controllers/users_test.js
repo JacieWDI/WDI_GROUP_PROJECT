@@ -165,5 +165,23 @@ describe('User tests', ()=> {
     });
   });
 
+  describe('POST /api/users', () => {
 
+    it('should return a 201 response', done => {
+      api
+        .post('/api/users')
+        .set('Accept', 'application/json')
+        .send({
+          user: {
+            userName: 'Mavis',
+            email: 'mavis@mavis.com',
+            password: 'password',
+            passwordConfirmation: 'password'
+          }
+        })
+        .expect(201, done);
+    });
+
+
+  });
 });
