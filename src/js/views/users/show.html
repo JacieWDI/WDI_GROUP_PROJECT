@@ -1,0 +1,17 @@
+<h1>{{ vm.user.userName }}'s profile'</h1>
+
+<ul>
+  <li>Username: {{vm.user.userName}}</li>
+  <li>First name: {{vm.user.firstName}}</li>
+  <li>Last name: {{vm.user.lastName}}</li>
+  <li>Image: {{vm.user.image}}</li>
+  <!-- <button><h4><a ui-sref="usersEdit({ id: vm.user.id })">Edit</a></h4></button>
+  <button><h4><a href="#" ng-click="vm.delete(vm.user)">Delete Account</a></h4></button> -->
+
+  <div class="control">
+    <button class="button is-link" ui-sref="usersEdit({ id: vm.user.id })">Edit</button>
+  </div>
+  <!-- <div class="">
+    <button><h4><a href="#" ng-click="vm.delete(vm.user)">Delete Account</a></h4></button>
+  </div> -->
+</ul>
