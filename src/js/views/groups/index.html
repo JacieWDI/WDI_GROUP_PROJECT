@@ -1,5 +1,26 @@
-{{ vm.groups }}
+<!-- <div class="columns" ng-repeat="groups in vm.groups">
+  <div class="column" ng-repeat="group in groups"> -->
+    <!-- <div class="notification is-info"> -->
+      <!-- <p class="title">{{ group.event }}</p>
+      <p class="subtitle">{{ group._id }}</p>
+      <a ui-sref="groupsShow({ id: vm.group.id })">CLICK HERE</a> -->
+    <!-- </div> -->
+  <!-- </div>
+</div>
+</div> -->
 
-{{ vm.group.event }}
-
-{{ 1+1 }}
+<ul class="groups">
+  <li class="column notification is-info" ng-repeat="group in vm.groups">
+    <p>{{ group.event }}</p>
+    <p>{{ group._id }}</p>
+    <a ui-sref="groupsShow({ id: group._id })">JOIN CHAT</a>
+    <section>
+      <ul>
+        <li ng-repeat="comment in group.comments">
+          <p>Author: <a ui-sref="usersShow({id: comment.createdBy.id })">{{ comment.createdBy.userName }}</a></p>
+          <p>{{ comment.body }}</p>
+        </li>
+      </ul>
+    </section>
+  </li>
+</ul>

@@ -9,7 +9,8 @@ function commentCreate(req, res) {
     .exec()
     .then(group => {
       if(!group) return res.status(404).json({ message: 'Group not found.' });
-      req.body.createdBy = req.user;
+      console.log(req.user);
+      req.body.createdBy = req.user.userId;
       group.comments.push(req.body); // create an embedded record
       group.save();
 

@@ -43,6 +43,11 @@ function Router(
       url: '/groups',
       templateUrl: '/js/views/groups/index.html',
       controller: 'groupsIndexCtrl as vm'
+    })
+    .state('groupsShow', {
+      url: '/groups/:id',
+      templateUrl: '/js/views/groups/show.html',
+      controller: 'groupsShowCtrl as vm'
     });
 
   $urlRouterProvider.otherwise('/');
