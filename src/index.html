@@ -26,6 +26,9 @@
         <a class="navbar-item" ui-sref="#" ng-if="main.user">
           Hi, {{ main.user.userName }}!
         </a>
+        <a class="navbar-item" href="#" ng-if="main.user">
+        <div class ="nav-img" style="background-image: url('{{main.user.image}}');"></div>
+        </a>
         <a class="navbar-item" ui-sref="register" ng-if="!main.user">
           Register
         </a>

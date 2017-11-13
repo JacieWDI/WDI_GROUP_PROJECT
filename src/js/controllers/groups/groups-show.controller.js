@@ -14,6 +14,7 @@ function groupsShowCtrl(Group, $stateParams, $rootScope) {
       .$promise
       .then(res => {
         vm.group = res;
+        vm.comment = null;
       });
   };
 }
