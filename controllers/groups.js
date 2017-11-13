@@ -3,6 +3,7 @@ const Group = require('../models/group');
 function groupsIndex(req, res) {
   Group
     .find()
+    .populate('comments.createdBy')
     .exec()
     .then(groups => res.status(200).json(groups))
     .catch(() => res.status(500).json({ message: 'Something went wrong.' }));
@@ -18,6 +19,7 @@ function groupsCreate(req, res) {
 function groupsShow(req, res) {
   Group
     .findById(req.params.id)
+    .populate('comments.createdBy')
     .exec()
     .then(group => {
       if (!group) return res.status(404).json({ message: 'Group not found.' });

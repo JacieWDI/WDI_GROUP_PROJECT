@@ -5,6 +5,7 @@ const authentications = require('../controllers/authentications');
 const users = require('../controllers/users');
 const groups = require('../controllers/groups');
 const events = require('../controllers/events');
+const comments = require('../controllers/comments');
 
 //AUTHENTICATION
 router.route('/register')
@@ -31,6 +32,10 @@ router.route('/groups')
 router.route('/groups/:id')
   .get(groups.show)
   .put(groups.update);
+
+//COMMENTS
+router.route('/groups/:id/comments')
+  .post(comments.create);
 
 //EVENTS
 router.route('/events')

@@ -1,0 +1,13 @@
+<h1>GROUP CHAT!!</h1>
+
+{{ group.event }}
+<section>
+  <ul>
+    <li ng-repeat="comment in group.comments">
+      <p>Author: <a ui-sref="usersShow({id: comment.createdBy.id })">{{ comment.createdBy.userName }}</a></p>
+      <p>{{ comment.body }}</p>
+    </li>
+  </ul>
+</section>
+</li>
+</ul>
