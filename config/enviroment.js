@@ -5,5 +5,7 @@ module.exports = {
     production: process.env.MONGODB_URI,
     development: 'mongodb://localhost/wdip3-development',
     test: 'mongodb://localhost/wdip3-test'
-  }
+  },
+  //Below is to resolve mongod 4 issues with port on JC's mac
+  env: process.env.NODE_ENV || 'development'
 };
