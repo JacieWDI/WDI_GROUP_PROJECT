@@ -28,7 +28,9 @@ User
 
 Group
   .create([{
-    event: 12345
+    event: 123
+  }, {
+    event: 456
   }])
   .then((groups) => console.log(`${groups.length} groups created!`))
   .catch((err) => console.log(err))

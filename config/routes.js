@@ -23,11 +23,11 @@ router.route('/users/:id')
   .delete(users.delete);
 
 //GROUPS
-router.route('groups')
+router.route('/groups')
   .get(groups.index)
   .post(groups.create);
 
-router.route('groups/:id')
+router.route('/groups/:id')
   .get(groups.show)
   .put(groups.update);
 
