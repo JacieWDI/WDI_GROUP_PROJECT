@@ -1,12 +1,11 @@
 const mongoose   = require('mongoose');
 mongoose.Promise = require('bluebird');
+const express = require('express');
+const app = express();
+const enviroment = app.get('env');
 
-const { dbURI } = require('../config/enviroment');
-mongoose.connect(dbURI);
-
-// const enviroment = app.get('env');
-// const { db }    = require('./config/enviroment');
-// mongoose.connect(db[enviroment], { useMongoClient: true });
+const { db } = require('../config/enviroment');
+mongoose.connect(db[enviroment]);
 
 const User = require('../models/user');
 User.collection.drop();
@@ -17,9 +16,10 @@ User
     firstName: 'Matt',
     lastName: 'Yates',
     email: 'matt@matt.com',
-    image: 'image'
+    image: 'image',
+    password: 'password',
+    passwordConfirmation: 'password'
   }])
-
   .then((users) => console.log(`${users.length} users created!`))
   .catch((err) => console.log(err))
   .finally(() => mongoose.connection.close());

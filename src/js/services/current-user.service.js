@@ -17,6 +17,7 @@ function currentUserService(
   //not vm, becuase we will not be binding data to a view, but a service
 
   self.getUser = () => {
+    console.log('i run');
     const decoded = $auth.getPayload();
 
     if(decoded) {
