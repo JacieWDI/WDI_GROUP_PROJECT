@@ -2,8 +2,12 @@ angular
   .module('groupProject')
   .directive('googleMap', googleMap);
 
-googleMap.$inject = ['$window'];
-function googleMap($window) {
+  // const map = document.getElementsByClassName('map');
+  // let map = null;
+
+
+googleMap.$inject = ['$window', '$http'];
+function googleMap($window, $http) {
   return {
     restrict: 'E',
     replace: true,
@@ -12,10 +16,15 @@ function googleMap($window) {
       center: '='
     },
     link(scope, element) {
-      new $window.google.maps.Map(element[0], {
+      // make the call to the api ==> you will get possibly an arry of stuff
+
+      const map = new $window.google.maps.Map(element[0], {
         zoom: 14,
         center: scope.center
       });
+      //loop trough the array an generate one marker
+
+
     }
   };
 }
