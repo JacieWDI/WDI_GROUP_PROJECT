@@ -1,32 +1,45 @@
 /* globals api, expect, describe, beforeEach, afterEach, it */
 
 require('../spec_helper');
-
 const User = require('../../models/user');
+const jwt = require('jsonwebtoken');
+const { secret } = require('../../config/enviroment');
 
 describe('User tests', ()=> {
 
   beforeEach(done => {
-    User.collection.remove();
+    User.collection.drop();
     done();
   });
 
   afterEach(done => {
-    User.collection.remove();
+    User.collection.drop();
     done();
   });
 
   describe('GET /api/users', ()=> {
-
+    let token;
     beforeEach(done => {
-      User.create({
-        userName: 'Mavis',
-        firstName: 'Mavis',
-        lastName: 'Mavis',
-        email: 'mavis@mavis.com',
-        image: 'image'
-      })
-        .then(() => done())
+      User
+        .create({
+          userName: 'Mavis',
+          email: 'mavis@mavis.com',
+          password: 'password',
+          passwordConfirmation: 'password'
+        })
+        .then(user => {
+          return api
+            .post('/api/login')
+            .set('Accept', 'application/json')
+            .send({
+              email: 'mavis@mavis.com',
+              password: 'password'
+            });
+        })
+        .then(res => {
+          token = res.body.token;
+          done();
+        })
         .catch(done);
     });
 
@@ -34,13 +47,18 @@ describe('User tests', ()=> {
       api
         .get('/api/users')
         .set('Accept', 'application/json')
-        .expect(200, done);
+        .set('Authorization', `Bearer ${token}`)
+        .end((err, res) => {
+          expect(res.status).to.eq(200);
+          done();
+        });
     });
 
     it('should respond with a JSON object', done => {
       api
         .get('/api/users')
         .set('Accept', 'application/json')
+        .set('Authorization', `Bearer ${token}`)
         .end((err, res) => {
           expect(res.header['content-type'])
             .to.be.eq('application/json; charset=utf-8');
@@ -52,6 +70,7 @@ describe('User tests', ()=> {
       api
         .get('/api/users')
         .set('Accept', 'application/json')
+        .set('Authorization', `Bearer ${token}`)
         .end((err, res) => {
           expect(res.body).to.be.an('array');
           done();
@@ -61,32 +80,29 @@ describe('User tests', ()=> {
     it('should return an array of user objects', done => {
       api.get('/api/users')
         .set('Accept', 'application/json')
+        .set('Authorization', `Bearer ${token}`)
         .end((err, res) => {
           expect(res.body)
             .and.be.an('array')
             .and.have.property(0)
             .and.have.all.keys([
-              '_id',
+              'id',
               'userName',
-              'firstName',
-              'lastName',
-              'email',
-              'image',
-              '__v',
-              'passwordHash'
+              'email'
             ]);
           done();
         });
     });
 
-    it('user objects should have properities: _id, userName, firstName, lastName, email, image, __v', done => {
+    it('user objects should have properties: _id userName, email', done => {
       api.get('/api/users')
         .set('Accept', 'application/json')
+        .set('Authorization', `Bearer ${token}`)
         .end((err, res) => {
           const firstUser = res.body[0];
 
           expect(firstUser)
-            .to.have.property('_id')
+            .to.have.property('id')
             .and.to.be.a('string');
 
           expect(firstUser)
@@ -94,23 +110,7 @@ describe('User tests', ()=> {
             .and.to.be.a('string');
 
           expect(firstUser)
-            .to.have.property('firstName')
-            .and.to.be.a('string');
-
-          expect(firstUser)
-            .to.have.property('lastName')
-            .and.to.be.a('string');
-
-          expect(firstUser)
             .to.have.property('email')
-            .and.to.be.a('string');
-
-          expect(firstUser)
-            .to.have.property('__v')
-            .and.to.be.a('number');
-
-          expect(firstUser)
-            .to.have.property('passwordHash')
             .and.to.be.a('string');
 
           done();
@@ -118,32 +118,45 @@ describe('User tests', ()=> {
     });
 
     describe('Make more than one user', () => {
+      let token;
 
       beforeEach(done => {
         User.create([
           {
             userName: 'Milly',
-            firstName: 'Milly',
-            lastName: 'Milly',
             email: 'milly@milly.com',
-            image: 'image'
+            password: 'password',
+            passwordConfirmation: 'password'
           },
           {
             userName: 'Matt',
-            firstName: 'Matt',
-            lastName: 'Yates',
             email: 'matt@matt.com',
-            image: 'image'
+            password: 'password',
+            passwordConfirmation: 'password'
           }
         ])
-        .then(() => done())
-        .catch(done);
+          .then(user => {
+            return api
+              .post('/api/login')
+              .set('Accept', 'application/json')
+              .set('Authorization', `Bearer ${token}`)
+              .send({
+                email: 'mavis@mavis.com',
+                password: 'password'
+              });
+          })
+          .then(res => {
+            token = res.body.token;
+            done();
+          })
+          .catch(done);
       });
 
       it('should return three users', done => {
         api
           .get('/api/users')
           .set('Accept', 'application/json')
+          .set('Authorization', `Bearer ${token}`)
           .end((err, res) => {
             expect(res.body.length).to.equal(3);
             done();
@@ -152,23 +165,5 @@ describe('User tests', ()=> {
     });
   });
 
-  describe('POST /api/users', () => {
 
-    it('should return a 201 response', done => {
-      api
-        .post('/api/users')
-        .set('Accept', 'application/json')
-        .send({
-          user: {
-            userName: 'Mavis',
-            firstName: 'Mavis',
-            lastName: 'Mavis',
-            email: 'mavis@mavis.com',
-            image: 'image'
-          }
-        })
-        .expect(201, done);
-    });
-
-  });
 });
