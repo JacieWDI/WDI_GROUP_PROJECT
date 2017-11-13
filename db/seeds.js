@@ -10,6 +10,9 @@ mongoose.connect(db[enviroment]);
 const User = require('../models/user');
 User.collection.drop();
 
+const Group = require('../models/group');
+Group.collection.drop();
+
 User
   .create([{
     userName: 'Matt',
@@ -21,5 +24,12 @@ User
     passwordConfirmation: 'password'
   }])
   .then((users) => console.log(`${users.length} users created!`))
+  .catch((err) => console.log(err));
+
+Group
+  .create([{
+    event: 12345
+  }])
+  .then((groups) => console.log(`${groups.length} groups created!`))
   .catch((err) => console.log(err))
   .finally(() => mongoose.connection.close());
