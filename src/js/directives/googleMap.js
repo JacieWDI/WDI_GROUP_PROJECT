@@ -51,9 +51,11 @@ function googleMap($window, $http) {
         infowindow = new google.maps.InfoWindow({
           content: `
           <div class="infowindow">
-            <h3>${location.title}</h3>
-            <h3>${location.start_time}</h3>
-            <h3>${location.venue_address}</h3>
+            <h3><b>EVENT:</b> ${location.title}</h3>
+            <h3><b>VENUE:</b> ${location.venue_name}</h3>
+            <h3><b>ADDRESS:</b> ${location.address}</h3>
+            <h3><b>CITY:</b> ${location.city_name}</h3>
+            <h3><b>DATE AND START TIME:</b> ${location.start_time}</h3>
           </div>
           `
           // adress field will not render
