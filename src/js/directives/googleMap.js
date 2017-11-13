@@ -4,6 +4,8 @@ angular
   .module('groupProject')
   .directive('googleMap', googleMap);
 
+let infowindow = null;
+
 googleMap.$inject = ['$window', '$http'];
 
 function googleMap($window, $http) {
@@ -44,7 +46,9 @@ function googleMap($window, $http) {
         });
       }
       function createInfoWindow(marker, location) {
-        const infowindow = new google.maps.InfoWindow({
+        if(infowindow) infowindow.close();
+
+        infowindow = new google.maps.InfoWindow({
           content: `
           <div class="infowindow">
             <h3>${location.title}</h3>
@@ -60,6 +64,10 @@ function googleMap($window, $http) {
     }
   };
 }
+
+// NOTES
+
+// custom marker to add in, if statement if the field value is empty
 
 
 // url: 'http://api.eventful.com/rest/events/search?app_key=4NdXJf3wjWsTGctn&keywords=books&location=San+Diego&date=Future'
