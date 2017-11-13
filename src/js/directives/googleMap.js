@@ -8,10 +8,13 @@ function googleMap($window) {
     restrict: 'E',
     replace: true,
     template: '<div class="google-map"></div>',
+    scope: {
+      center: '='
+    },
     link(scope, element) {
       new $window.google.maps.Map(element[0], {
         zoom: 14,
-        center: { lat: 51.5, lng: -0.07 }
+        center: scope.center
       });
     }
   };
