@@ -2,8 +2,9 @@ const express         = require('express');
 const morgan          = require('morgan');
 const bodyParser      = require('body-parser');
 const router          = require('./config/routes');
-const expressJWT      = require('express-jwt');
-const { db, port, secret }    = require('./config/enviroment');
+const expressJWT           = require('express-jwt');
+//Below, env added to resolve mongod 4 issues with port on JC's mac
+const { env, db, port, secret }    = require('./config/enviroment');
 const customResponses = require('./lib/customResponses');
 const errorHandler    = require('./lib/errorHandler');
 const cors             = require('cors');
@@ -44,6 +45,10 @@ function jwtErrorHandler(err, req, res, next){
 
 app.use('/api', router);
 app.get('/*', (req, res) => res.sendFile(`${__dirname}/public/index.html`));
-app.listen(port, () => console.log(`Express is up and running on port: ${port}`));
+
+//Below is to resolve mongod 4 issues with port on JC's mac
+if (env !== 'test') {
+  app.listen(port, () => console.log(`Express is up and running on port: ${port}`));
+}
 
 module.exports = app;
