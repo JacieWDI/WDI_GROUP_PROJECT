@@ -40,18 +40,21 @@
   background-size: cover;
 }
 
-div.tile.is-parent{
-   background-color: red;
-   margin: 5px;
-   padding: 15px;
-}
-
-div.tile.is-ancestor.top{
+div.tile.is-parent.profile{
   height: 25vh;
-  // background-color: red;
+  background-color: rgb(0, 209, 178);
+  margin: 5px;
+}
+div.tile.is-parent.image{
+  height: 25vh;
+  background-color: rgb(0, 209, 178);
+  margin: 5px;
 }
 
 div.tile.is-ancestor.bottom{
   height: 75vh;
-  background-color: blue;
+  background-color: rgb(0, 209, 178);
+  color: white;
+  margin: 10px;
+
 }
