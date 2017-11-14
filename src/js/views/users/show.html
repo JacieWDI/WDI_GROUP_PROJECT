@@ -1,61 +1,74 @@
-
-  <div class="tile is-ancestor">
-  <div class="tile is-vertical is-12">
-    <!-- <div class="tile"> -->
-      <div class="tile is-parent is-12by6">
-        <article class="tile is-child is-6by3 notification is-info">
-          <p class="title">Profile info</p>
-          <p class="title"><h1>{{ vm.user.userName }}'s profile'</h1></p>
-          <p class="subtitle"><ul>
-            <li>Username: {{vm.user.userName}}</li>
-            <li>First name: {{vm.user.firstName}}</li>
-            <li>Last name: {{vm.user.lastName}}</li>
+<!-- <div class="container">
+  <div class="notification">
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-12">
+        <div class="tile">
+        <div class="tile is-parent">
+          <article class="tile is-child is-6">
+            <p class="title">Profile info</p>
+            <p class="title"><h1>{{ vm.user.userName }}'s profile'</h1></p>
+            <p class="subtitle"><ul>
+              <li>Username: {{vm.user.userName}}</li>
+              <li>First name: {{vm.user.firstName}}</li>
+              <li>Last name: {{vm.user.lastName}}</li>
             </p>
-              <div class="control">
-                <button class="button is-link" ui-sref="usersEdit({ id: vm.user.id })">Edit</button>
-              </div>
-          <!-- <figure class="image is-4by3">
-            <img src="https://bulma.io/images/placeholders/640x480.png">
-          </figure> -->
+            <div class="control">
+              <button class="button is-link" ui-sref="usersEdit({ id: vm.user.id })">Edit</button>
+            </div>
         </article>
-
-        <article class="tile is-child is-6by3 notification is-info">
+        <article class="tile is-child is-6">
           <p class="title">Profile Picture</p>
           <p class="subtitle"></p>
-          <!-- <figure class="image is-4by3"> -->
-            <div class ="show-img" style="background-image: url('{{vm.user.image}}');">
-              </div>
-          <!-- </figure> -->
+          <div class ="show-img" style="background-image: url('{{vm.user.image}}');">
+          </div>
         </article>
       </div>
-    <!-- </div> -->
 
-    <div class="tile is-parent is-vertical is-12 ">
-      <article class="tile is-child is-12by6 notification is-danger ">
-        <p class="title">Events</p>
-        <p class="subtitle">add links to event groups</p>
-        <div class="content">
+      <div class="tile is-parent is-12by6">
+        <div class="tile is-parent is-vertical is-12 ">
+          <article class="tile is-child is-12by6 notification is-danger ">
+            <p class="title">Events</p>
+            <p class="subtitle">add links to event groups</p>
+            <div class="content">
+            </div>
+          </article>
         </div>
-      </article>
+      </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
+<div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <p class="title">Profile info</p>
+            <p class="title"><h1>{{ vm.user.userName }}'s profile'</h1></p>
+            <p class="subtitle"><ul>
+              <li>Username: {{vm.user.userName}}</li>
+              <li>First name: {{vm.user.firstName}}</li>
+              <li>Last name: {{vm.user.lastName}}</li>
+              </p>
+                <div class="control">
+                  <button class="button is-link" ui-sref="usersEdit({ id: vm.user.id })">Edit</button>
+                </div>
+         </div>
 
+           <div class="tile is-parent">
+             <p class="title">Profile Picture</p>
+             <p class="subtitle"></p>
+             <!-- <figure class="image is-4by3"> -->
+               <div class ="show-img" style="background-image: url('{{vm.user.image}}');">
+                 </div>
+              </div>
+     </div>
+  <div class="tile is-ancestor">
+      <div class="tile is-12">
+               <div class=" tile is-parent is-info">
+                 <p class="title">Events</p>
+                 <p class="subtitle">add links to event groups</p>
+                 <div class="content">
+                  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- to change height of boxes uses css, they will remain responsive -->
+         </div>
+         </div>
+  </div>
