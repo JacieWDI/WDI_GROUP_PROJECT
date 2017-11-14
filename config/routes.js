@@ -7,6 +7,7 @@ const groups = require('../controllers/groups');
 const events = require('../controllers/events');
 const comments = require('../controllers/comments');
 
+
 //AUTHENTICATION
 router.route('/register')
   .post(authentications.register);
