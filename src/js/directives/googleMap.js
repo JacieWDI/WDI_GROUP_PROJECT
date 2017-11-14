@@ -47,6 +47,7 @@ function googleMap($window, $http) {
       }
       function createInfoWindow(marker, location) {
         if(infowindow) infowindow.close();
+        // const vm = this;
 
         infowindow = new google.maps.InfoWindow({
           content: `
@@ -57,8 +58,11 @@ function googleMap($window, $http) {
             <h3><b>CITY:</b> ${location.city_name}</h3>
             <h3><b>DATE AND START TIME:</b> ${location.start_time}</h3>
             <h3><b>ID:</b> ${location.id}</h3>
+
+
+
             <button>
-                <a>Read More</a>
+                <a ui-sref="eventsShow({id: vm.location.id })">Read More</a>
             </button>
           </div>
           `

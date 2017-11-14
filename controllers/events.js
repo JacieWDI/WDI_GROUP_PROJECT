@@ -11,6 +11,8 @@ function eventsIndex(req, res, next) {
     .catch(next);
 }
 
+
+
 module.exports = {
   index: eventsIndex
 };

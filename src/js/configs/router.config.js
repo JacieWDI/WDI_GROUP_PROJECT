@@ -52,6 +52,10 @@ function Router(
     .state('eventsIndex', {
       url: '/events',
       templateUrl: '/js/views/events/index.html'
+    })
+    .state('eventShow', {
+      url: '/events/:id',
+      templateUrl: '/js/views/events/show.html'
     });
 
 
