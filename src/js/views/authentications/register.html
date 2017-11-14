@@ -1,45 +1,43 @@
-<div class="container">
+<div class="container is-fullhd">
   <div class="notification">
+    <form ng-submit="vm.submitForm()">
+      <div class="field">
+        <label class="label">Username</label>
+        <div class="control">
+          <input type="text" name="userName" ng-model="vm.user.userName" class="input" placeholder="username">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input type="text" name="email" ng-model="vm.user.email" placeholder="email" class="input">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Image</label>
+        <div class="control">
+          <input type="text" name="image" ng-model="vm.user.image" placeholder="image url" class="input">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <input type="text" name="password" ng-model="vm.user.password" placeholder="password" class="input">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Password Confirmation</label>
+        <div class="control">
+          <input type="text" name="passwordConfirmation" ng-model="vm.user.passwordConfirmation" placeholder="confirm password" class="input">
+        </div>
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">Submit</button>
+        </div>
+      </div>
+    </form>
 
 
-<form ng-submit="vm.submitForm()">
-  <div class="field">
-    <label class="label">Username</label>
-    <div class="control">
-      <input type="text" name="userName" ng-model="vm.user.userName" class="input" placeholder="username">
-    </div>
   </div>
-  <div class="field">
-    <label class="label">Email</label>
-    <div class="control">
-      <input type="text" name="email" ng-model="vm.user.email" placeholder="email" class="input">
-    </div>
-  </div>
-  <div class="field">
-    <label class="label">Image</label>
-    <div class="control">
-      <input type="text" name="image" ng-model="vm.user.image" placeholder="image url" class="input">
-    </div>
-  </div>
-  <div class="field">
-    <label class="label">Password</label>
-    <div class="control">
-      <input type="text" name="password" ng-model="vm.user.password" placeholder="password" class="input">
-    </div>
-  </div>
-  <div class="field">
-    <label class="label">Password Confirmation</label>
-    <div class="control">
-      <input type="text" name="passwordConfirmation" ng-model="vm.user.passwordConfirmation" placeholder="confirm password" class="input">
-    </div>
-  </div>
-  <div class="field is-grouped">
-    <div class="control">
-      <button class="button is-link">Submit</button>
-    </div>
-  </div>
-</form>
-
-
-</div>
 </div>
