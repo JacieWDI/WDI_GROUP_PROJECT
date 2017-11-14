@@ -6,7 +6,8 @@ function eventsIndex(req, res, next) {
     uri: 'http://api.eventful.com/json/events/search?app_key=4NdXJf3wjWsTGctn&category=music&page_size=5'
   })
     .then(data => {
-      return res.status(200).json(data);
+      const events = JSON.parse(data);
+      return res.status(200).json(events);
     })
     .catch(next);
 }
@@ -14,10 +15,11 @@ function eventsIndex(req, res, next) {
 function eventsShow(req, res, next) {
   rp({
     method: 'GET',
-    uri: 'http://api.eventful.com/json/events/search?app_key=4NdXJf3wjWsTGctn&category=music&page_size=1'
+    uri: `http://api.eventful.com/json/events/get?app_key=4NdXJf3wjWsTGctn&id=${req.params.id}`
   })
     .then(data => {
-      return res.status(200).json(data);
+      const event = JSON.parse(data);
+      return res.status(200).json(event);
     })
     .catch(next);
 }

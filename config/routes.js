@@ -45,4 +45,7 @@ router.route('/groups/:id/comments/:commentId')
 router.route('/events')
   .get(events.index);
 
+router.route('/events/:id')
+  .get(events.show);
+
 module.exports = router;
