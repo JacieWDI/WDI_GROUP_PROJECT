@@ -19,7 +19,7 @@ function googleMap($window, $http) {
     link(scope, element) {
 
       const map = new $window.google.maps.Map(element[0], {
-        zoom: 14,
+        zoom: 6,
         center: scope.center
       });
 
@@ -56,9 +56,14 @@ function googleMap($window, $http) {
             <h3><b>ADDRESS:</b> ${location.address}</h3>
             <h3><b>CITY:</b> ${location.city_name}</h3>
             <h3><b>DATE AND START TIME:</b> ${location.start_time}</h3>
+            <h3><b>ID:</b> ${location.id}</h3>
+            <button>
+                <a>Read More</a>
+            </button>
           </div>
           `
-          // adress field will not render
+          // const read
+
         });
         infowindow.open(map, marker);
       }
