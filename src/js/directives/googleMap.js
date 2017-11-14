@@ -28,7 +28,7 @@ function googleMap($window, $http, $state, $compile) {
 
       $http.get('http://localhost:7000/api/events')
         .then(function successCallback(response){
-          const data = JSON.parse(response.data);
+          const data = response.data;
           console.log(data);
           data.events.event.forEach((location) => {
             addMarker(location);
@@ -47,23 +47,6 @@ function googleMap($window, $http, $state, $compile) {
           createInfoWindow(marker, location);
         });
       }
-
-
-      // google.maps.event.addListener(
-      // marker,
-      // 'click',
-      // (function( marker , scope, localLatLng ){
-      //   return function(){
-      //     var content = '<div id="infowindow_content" ng-include src="\'infowindow.html\'"></div>';
-      //     scope.latLng = localLatLng;
-      //     var compiled = $compile(content)(scope);
-      //     scope.$apply();
-      //     infowindow.setContent( compiled[0].innerHTML );
-      //     infowindow.open( Map , marker );
-      //   };//return fn()
-      // })( marker , scope, scope.markers[i].locations )
-
-
 
       function createInfoWindow(marker, location) {
         if(infowindow) infowindow.close();
@@ -92,10 +75,3 @@ function googleMap($window, $http, $state, $compile) {
     }
   };
 }
-
-// NOTES
-
-// custom marker to add in, if statement if the field value is empty
-
-
-// url: 'http://api.eventful.com/rest/events/search?app_key=4NdXJf3wjWsTGctn&keywords=books&location=San+Diego&date=Future'
