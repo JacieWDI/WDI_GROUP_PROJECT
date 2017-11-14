@@ -1,3 +1,5 @@
+<div class="container">
+  <div class="notification">
 <h1>{{ vm.group.event }} chat!</h1>
 
 <section>
@@ -7,11 +9,9 @@
       <p>{{ comment.createdBy.image  }}</p>
       <p>Comment: {{ comment.body }}</p>
       <p>Time: {{ comment.createdAt }}</p>
-    </div>
     <button class="button is-link" ng-submit="deleteComment(vm.comment)">Delete</button>
-    </div>
-    </li>
-  </ul>
+</li>
+</ul>
 </section>
 
 <form ng-submit="vm.commentCreate()">
@@ -23,3 +23,5 @@
     <button class="button is-link">Submit</button>
   </div>
 </form>
+</div>
+</div>
