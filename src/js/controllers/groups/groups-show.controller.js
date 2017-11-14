@@ -2,8 +2,8 @@ angular
   .module('groupProject')
   .controller('groupsShowCtrl', groupsShowCtrl);
 
-groupsShowCtrl.$inject = ['Group', '$stateParams', '$rootScope'];
-function groupsShowCtrl(Group, $stateParams, $rootScope) {
+groupsShowCtrl.$inject = ['Group', '$stateParams', '$rootScope', '$state'];
+function groupsShowCtrl(Group, $stateParams, $rootScope, $state) {
   const vm = this;
 
   vm.group = Group.get({ id: $stateParams.id });
@@ -16,5 +16,15 @@ function groupsShowCtrl(Group, $stateParams, $rootScope) {
         vm.group = res;
         vm.comment = null;
       });
+  };
+
+  vm.deleteComment = () => {
+    Group
+    console.log('clicked');
+      // .remove({ id: $stateParams.id }, vm.comment)//UNSURE!!!
+      // .$promise
+      // .then(() => {
+      //   $state.go('home');
+      // });
   };
 }
