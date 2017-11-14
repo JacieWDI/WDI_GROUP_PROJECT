@@ -2,8 +2,6 @@
 
 require('../spec_helper');
 const User = require('../../models/user');
-const jwt = require('jsonwebtoken');
-const { secret } = require('../../config/enviroment');
 
 describe('Authentication tests', function() {
 
@@ -23,18 +21,33 @@ describe('Authentication tests', function() {
         .post('/api/register')
         .set('Accept', 'application/json')
         .send({
-          user: {
-            userName: 'Mavis',
-            email: 'mavis@mavis.com',
-            password: 'password',
-            passwordConfirmation: 'password'
-          }
+          userName: 'Mavis',
+          email: 'mavis@mavis.com',
+          password: 'password',
+          passwordConfirmation: 'password'
         })
         .end((err, res) => {
           expect(res.status).to.eq(201);
           expect(res.body).to.be.a('object');
           expect(res.body.message).to.eq('Thank you for registering.');
           expect(res.body.token).to.be.a('string');
+          done();
+        });
+    });
+    it('should not register user without email', function(done) {
+      api
+        .post('/api/register')
+        .set('Accept', 'application/json')
+        .send({
+          userName: 'Mavis',
+          password: 'password',
+          passwordConfirmation: 'password'
+        })
+        .end((err, res) => {
+          expect(res.status).to.eq(401);
+          expect(res.body).to.be.a('object');
+          expect(res.body.errors).to.eq('ValidationError: email: Path `email` is required.');
+          expect(res.body.message).to.eq('Bad Request.');
           done();
         });
     });

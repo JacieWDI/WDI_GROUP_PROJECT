@@ -2,8 +2,6 @@
 
 require('../spec_helper');
 const User = require('../../models/user');
-const jwt = require('jsonwebtoken');
-const { secret } = require('../../config/enviroment');
 
 describe('User tests', ()=> {
 
@@ -27,7 +25,7 @@ describe('User tests', ()=> {
           password: 'password',
           passwordConfirmation: 'password'
         })
-        .then(user => {
+        .then(() => {
           return api
             .post('/api/login')
             .set('Accept', 'application/json')
@@ -135,7 +133,7 @@ describe('User tests', ()=> {
             passwordConfirmation: 'password'
           }
         ])
-          .then(user => {
+          .then(() => {
             return api
               .post('/api/login')
               .set('Accept', 'application/json')
@@ -165,23 +163,5 @@ describe('User tests', ()=> {
     });
   });
 
-  describe('POST /api/users', () => {
 
-    it('should return a 201 response', done => {
-      api
-        .post('/api/users')
-        .set('Accept', 'application/json')
-        .send({
-          user: {
-            userName: 'Mavis',
-            email: 'mavis@mavis.com',
-            password: 'password',
-            passwordConfirmation: 'password'
-          }
-        })
-        .expect(201, done);
-    });
-
-
-  });
 });
