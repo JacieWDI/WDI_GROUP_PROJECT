@@ -19,7 +19,9 @@ function authenticationsRegister(req, res, next){
 
 function authenticationsLogin(req, res, next){
   User
-    .findOne({ email: req.body.email })
+    .findOne({
+      email: req.body.email
+    })
     .exec()
     .then(user => {
       if (!user || !user.validatePassword(req.body.password)) {

@@ -34,20 +34,20 @@ describe('Authentication tests', function() {
           done();
         });
     });
-    it('should not register user without email', function(done) {
+    it('should not register a user without a password', function(done) {
       api
         .post('/api/register')
         .set('Accept', 'application/json')
         .send({
           userName: 'Mavis',
-          password: 'password',
+          email: 'mavis@mavis.com',
           passwordConfirmation: 'password'
         })
         .end((err, res) => {
-          expect(res.status).to.eq(401);
+          expect(res.status).to.eq(400);
           expect(res.body).to.be.a('object');
-          expect(res.body.errors).to.eq('ValidationError: email: Path `email` is required.');
-          expect(res.body.message).to.eq('Bad Request.');
+          expect(res.body.errors).to.eq('ValidationError: password: required');
+          expect(res.body.message).to.eq('Bad Request');
           done();
         });
     });
