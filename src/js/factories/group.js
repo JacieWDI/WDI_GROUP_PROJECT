@@ -12,9 +12,7 @@ function Group(
 ){
   return $resource(`${API}/groups/:id`, { id: '@_id'}, {
     'update': { method: 'PUT' },
-    'comment': {
-      url: `${API}/groups/:id/comments`,
-      method: 'POST'
-    }
+    'createComment': { url: `${API}/groups/:id/comments`, method: 'POST' },
+    'deleteComment': { url: `${API}/groups/:id/comments/:commentId`, method: 'DELETE' }
   });
 }

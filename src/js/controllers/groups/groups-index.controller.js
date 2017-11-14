@@ -13,7 +13,7 @@ function groupsIndexCtrl(Group) {
       .$promise
       .then(groups => {
         vm.groups = groups;
-        console.log(vm.groups);
+        // console.log(vm.groups);
       });
   }
 

@@ -10,7 +10,7 @@ function commentCreate(req, res, next) {
       req.body.createdBy = req.user.userId;
       group.comments.push(req.body); // create an embedded record
       group.save();
-
+      console.log(group);
       return res.status(201).json(group);
     })
     .catch(next);
