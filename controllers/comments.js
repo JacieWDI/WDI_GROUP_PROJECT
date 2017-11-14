@@ -10,7 +10,7 @@ function commentCreate(req, res, next) {
       req.body.createdBy = req.user.userId;
       group.comments.push(req.body); // create an embedded record
       group.save();
-      console.log(group);
+      // console.log(group);
       return res.status(201).json(group);
     })
     .catch(next);
@@ -23,13 +23,14 @@ function commentDelete(req, res) {
     .then(group => {
       if(!group) return res.status(404).json({ message: 'No group found!'});
       const comment = group.comments.id(req.params.commentId);
-      console.log(comment.createdBy, req.user.userId);
-      // if (comment.createdBy === req.user.Id) {
-      comment.remove();
-      group.save();
-      // } else {
-      //   return res.status(401).json({ message: 'You are not authorised to delete this comment!'})
-      // }
+      console.log('userId', req.user.userId);
+      console.log('createdbyId', comment.createdBy);
+      if (req.user.userId == comment.createdBy) {
+        comment.remove();
+        group.save();
+      } else {
+        return res.status(401).json({ message: 'You are not authorised to delete this comment!'});
+      }
     })
     .then(group => res.status(200).json(group))
     .catch(err => res.status(500).json(err));
