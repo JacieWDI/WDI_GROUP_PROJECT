@@ -1,3 +1,5 @@
+<div class="container">
+  <div class="notification">
 <h1>{{ vm.group.event }} chat!</h1>
 
   <ul>
@@ -8,9 +10,10 @@
       <p>Comment: {{ comment.body }}</p>
       <p>Time: {{ comment.createdAt | date : format : timezone }}</p>
       <p>Time: {{ comment.createdAt | date:"MM/dd/yyyy 'at' h:mma" | lowercase }}</p>
-      <button class="button is-link" ng-click="vm.commentDelete(comment)">Delete</button>
+      <button class="button is-link" ng-click="vm.commentDelete(comment)" ng-if="main.user.id === comment.createdBy.id">Delete</button>
     </li>
   </ul>
+  </section>
 
 <form ng-submit="vm.commentCreate()">
   <div class="field">
@@ -21,3 +24,5 @@
     <button class="button is-link">Submit</button>
   </div>
 </form>
+</div>
+</div>

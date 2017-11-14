@@ -909,16 +909,16 @@ User
     passwordConfirmation: 'password'
 
 
-}])
-.then((users) => console.log(`${users.length} users created!`))
-.catch((err) => console.log(err));
+  }])
+  .then((users) => console.log(`${users.length} users created!`))
+  .catch((err) => console.log(err));
 
 Group
-.create([{
-  event: 123
-}, {
-  event: 456
-}])
-.then((groups) => console.log(`${groups.length} groups created!`))
-.catch((err) => console.log(err))
-.finally(() => mongoose.connection.close());
+  .create([{
+    event: 123
+  }, {
+    event: 456
+  }])
+  .then((groups) => console.log(`${groups.length} groups created!`))
+  .catch((err) => console.log(err))
+  .finally(() => mongoose.connection.close());
