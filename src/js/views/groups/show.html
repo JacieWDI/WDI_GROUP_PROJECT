@@ -10,7 +10,7 @@
       <p>Comment: {{ comment.body }}</p>
       <p>Time: {{ comment.createdAt | date : format : timezone }}</p>
       <p>Time: {{ comment.createdAt | date:"MM/dd/yyyy 'at' h:mma" | lowercase }}</p>
-      <button class="button is-link" ng-click="vm.commentDelete(comment)">Delete</button>
+      <button class="button is-link" ng-click="vm.commentDelete(comment)" ng-if="main.user.id === comment.createdBy.id">Delete</button>
     </li>
   </ul>
   </section>

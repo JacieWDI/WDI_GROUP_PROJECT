@@ -5,7 +5,7 @@ angular
 groupsShowCtrl.$inject = ['Group', '$stateParams', '$rootScope', '$state'];
 function groupsShowCtrl(Group, $stateParams, $rootScope, $state) {
   const vm = this;
-  console.log('group show loaded');
+  // console.log('group show loaded');
   vm.commentCreate = commentCreate;
   vm.commentDelete = commentDelete;
   getTheGroup();
@@ -30,13 +30,13 @@ function groupsShowCtrl(Group, $stateParams, $rootScope, $state) {
   }
 
   function commentDelete(comment) {
-    console.log(comment);
+    // console.log(comment);
     Group
-      .deleteComment({ id: $stateParams.id, commentId: comment._id })//UNSURE!!!
+      .deleteComment({ id: $stateParams.id, commentId: comment._id })
       .$promise
       .then(() => {
         getTheGroup();
-        console.log('clicked');
+        // console.log('clicked');
       });
   }
 }
