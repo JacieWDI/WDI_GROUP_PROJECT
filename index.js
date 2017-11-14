@@ -21,7 +21,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(`${__dirname}/public`));
 
-
 app.use('/api', expressJWT({ secret: secret })
   .unless({
     path: [
@@ -32,7 +31,6 @@ app.use('/api', expressJWT({ secret: secret })
 );
 
 app.use(jwtErrorHandler);
-
 
 function jwtErrorHandler(err, req, res, next){
   if (err.name !== 'UnauthorizedError') return next();
