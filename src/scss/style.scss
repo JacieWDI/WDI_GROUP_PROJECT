@@ -25,19 +25,17 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-// see below to style heigh of bulma boxes for user page
-article.tile.is-child.is-6by3.notification.is-info{
-
-  height: 40vh;
-}
 
 article.tile.is-child.is-6by3.notification.is-info{
-
-  height: 40vh;
+  height: 25vh;
 }
 
 div.tile.is-parent{
    background-color: red;
-   margin: 15px;
-   padding: 15px;
+   margin: 5px;
+   // padding: 15px;
+}
+
+div.tile.is-ancestor.bottom{
+  height: 75vh;
 }
