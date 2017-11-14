@@ -44,10 +44,44 @@ describe('Authentication tests', function() {
           passwordConfirmation: 'password'
         })
         .end((err, res) => {
-          expect(res.status).to.eq(400);
+          expect(res.status).to.eq(500);
           expect(res.body).to.be.a('object');
-          expect(res.body.errors).to.eq('ValidationError: password: required');
-          expect(res.body.message).to.eq('Bad Request');
+          expect(res.body.errors).to.eq();
+          expect(res.body.message).to.eq();
+          done();
+        });
+    });
+    it('should not register a user without an email', function(done) {
+      api
+        .post('/api/register')
+        .set('Accept', 'application/json')
+        .send({
+          userName: 'Mavis',
+          password: 'password',
+          passwordConfirmation: 'password'
+        })
+        .end((err, res) => {
+          expect(res.status).to.eq(500);
+          expect(res.body).to.be.a('object');
+          expect(res.body.errors).to.eq();
+          expect(res.body.message).to.eq();
+          done();
+        });
+    });
+    it('should not register a user with no password confirmation', function(done) {
+      api
+        .post('/api/register')
+        .set('Accept', 'application/json')
+        .send({
+          userName: 'Mavis',
+          email: 'mavis@mavis.com',
+          password: 'password'
+        })
+        .end((err, res) => {
+          expect(res.status).to.eq(500);
+          expect(res.body).to.be.a('object');
+          expect(res.body.errors).to.eq();
+          expect(res.body.message).to.eq();
           done();
         });
     });
