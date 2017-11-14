@@ -1,7 +1,7 @@
 // const User = require('../models/user');
 const Group = require('../models/group');
 
-function commentCreate(req, res) {
+function commentCreate(req, res, next) {
   Group
     .findById(req.params.id)
     .exec()
@@ -13,7 +13,7 @@ function commentCreate(req, res) {
 
       return res.status(201).json(group);
     })
-    .catch((err) => res.status(500).json({ message: err }));
+    .catch(next);
 }
 
 function commentDelete(req, res) {

@@ -1,22 +1,22 @@
 const Group = require('../models/group');
 
-function groupsIndex(req, res) {
+function groupsIndex(req, res, next) {
   Group
     .find()
     .populate('comments.createdBy')
     .exec()
     .then(groups => res.status(200).json(groups))
-    .catch(() => res.status(500).json({ message: 'Something went wrong.' }));
+    .catch(next);
 }
 
-function groupsCreate(req, res) {
+function groupsCreate(req, res, next) {
   Group
     .create(req.body)
     .then((group) => res.status(201).json(group))
-    .catch(() => res.status(500).json({ message: 'Something went wrong.' }));
+    .catch(next);
 }
 
-function groupsShow(req, res) {
+function groupsShow(req, res, next) {
   Group
     .findById(req.params.id)
     .populate('comments.createdBy')
@@ -25,10 +25,10 @@ function groupsShow(req, res) {
       if (!group) return res.status(404).json({ message: 'Group not found.' });
       return res.status(200).json(group);
     })
-    .catch(() => res.status(500).json({ message: 'Something went wrong.' }));
+    .catch(next);
 }
 
-function groupsUpdate(req, res) {
+function groupsUpdate(req, res, next) {
   Group
     .findByIdAndUpdate(req.params.id, req.body.user, { new: true, runValidators: true })
     .exec()
@@ -36,7 +36,7 @@ function groupsUpdate(req, res) {
       if (!group) return res.status(404).json({ message: 'Group not found.' });
       return res.status(200).json({ group });
     })
-    .catch(() => res.status(500).json({ message: 'Something went wrong.' }));
+    .catch(next);
 }
 
 module.exports = {

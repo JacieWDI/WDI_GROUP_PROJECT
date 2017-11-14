@@ -1,6 +1,5 @@
-{{vm.user}}
-
-<form ng-submit="vm.submit(vm.user)">
+{{ vm.user }}
+<form ng-submit="vm.submitForm()">
   <div class="field">
     <label class="label">Username</label>
     <div class="control">
@@ -39,7 +38,7 @@
 
   <div class="field is-grouped">
     <div class="control">
-      <button class="button is-link">Submit</button>
+      <button type="submit" class="button is-link">Submit</button>
     </div>
   </div>
 </form>

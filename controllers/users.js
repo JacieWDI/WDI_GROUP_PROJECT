@@ -1,21 +1,21 @@
 const User = require('../models/user');
 
-function usersIndex(req, res) {
+function usersIndex(req, res, next) {
   User
     .find()
     .exec()
     .then(users => res.status(200).json(users))
-    .catch(() => res.status(500).json({ message: 'Something went wrong.' }));
+    .catch(next);
 }
 
-function usersCreate(req, res) {
+function usersCreate(req, res, next) {
   User
     .create(req.body)
     .then((user) => res.status(201).json(user))
-    .catch(() => res.status(500).json({ message: 'Something went wrong.' }));
+    .catch(next);
 }
 
-function usersShow(req, res) {
+function usersShow(req, res, next) {
   User
     .findById(req.params.id)
     .exec()
@@ -23,21 +23,21 @@ function usersShow(req, res) {
       if (!user) return res.status(404).json({ message: 'User not found.' });
       return res.status(200).json(user);
     })
-    .catch(() => res.status(500).json({ message: 'Something went wrong.' }));
+    .catch(next);
 }
 
-function usersUpdate(req, res) {
+function usersUpdate(req, res, next) {
   User
-    .findByIdAndUpdate(req.params.id, req.body.user, { new: true, runValidators: true })
+    .findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true })
     .exec()
     .then(user => {
       if (!user) return res.status(404).json({ message: 'User not found.' });
       return res.status(200).json({ user });
     })
-    .catch(() => res.status(500).json({ message: 'Something went wrong.' }));
+    .catch(next);
 }
 
-function usersDelete(req, res) {
+function usersDelete(req, res, next) {
   User
     .findByIdAndRemove(req.params.id)
     .exec()
@@ -45,7 +45,7 @@ function usersDelete(req, res) {
       if (!user) return res.status(404).json({ message: 'User not found.' });
       return res.sendStatus(204);
     })
-    .catch(() => res.status(500).json({ message: 'Something went wrong.' }));
+    .catch(next);
 }
 
 module.exports = {

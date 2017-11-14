@@ -30,12 +30,12 @@ function Router(
       controller: 'loginController as vm'
     })
     .state('usersShow', {
-      url: '/students/:id',
+      url: '/users/:id',
       templateUrl: '/js/views/users/show.html',
       controller: 'usersShowCtrl as vm'
     })
     .state('usersEdit', {
-      url: '/students/:id/edit',
+      url: '/users/:id/edit',
       templateUrl: '/js/views/users/edit.html',
       controller: 'usersEditCtrl as vm'
     })
