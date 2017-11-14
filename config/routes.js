@@ -37,6 +37,9 @@ router.route('/groups/:id')
 router.route('/groups/:id/comments')
   .post(comments.create);
 
+router.route('/groups/:id/comments/:commentId')
+  .delete(comments.delete);
+
 //EVENTS
 router.route('/events')
   .get(events.index);
