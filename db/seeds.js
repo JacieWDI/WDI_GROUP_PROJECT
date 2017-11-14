@@ -29,7 +29,7 @@ User
     firstName: 'marleen',
     lastName: 'esser',
     email: 'marleen@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/9.jpg',
+    image: 'https://randomuser.me/api/portraits/women/9.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -38,7 +38,7 @@ User
     firstName: 'Richard',
     lastName: 'knight',
     email: 'ki@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/20.jpg',
+    image: 'https://randomuser.me/api/portraits/men/20.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -47,7 +47,7 @@ User
     firstName: 'brad',
     lastName: 'herrera',
     email: 'braddy@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/85.jpg',
+    image: 'https://randomuser.me/api/portraits/men/85.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -56,7 +56,7 @@ User
     firstName: 'filipa',
     lastName: 'pedersen',
     email: 'pedersen@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/16.jpg',
+    image: 'https://randomuser.me/api/portraits/women/16.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -65,7 +65,7 @@ User
     firstName: 'java',
     lastName: 'script',
     email: 'js@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/43.jpg',
+    image: 'https://randomuser.me/api/portraits/women/43.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -74,7 +74,7 @@ User
     firstName: 'tody',
     lastName: 'nixon',
     email: 'nixon@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/72.jpg',
+    image: 'https://randomuser.me/api/portraits/men/72.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -83,7 +83,7 @@ User
     firstName: 'josephine',
     lastName: 'kistensen',
     email: 'j.kristensen@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/67.jpg',
+    image: 'https://randomuser.me/api/portraits/women/67.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -92,7 +92,7 @@ User
     firstName: 'emy',
     lastName: 'lecomte',
     email: 'e.lecomte@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/11.jpg',
+    image: 'https://randomuser.me/api/portraits/women/11.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -101,7 +101,7 @@ User
     firstName: 'eemeli',
     lastName: 'paavola',
     email: 'pavola@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/49.jpg',
+    image: 'https://randomuser.me/api/portraits/men/49.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -110,7 +110,7 @@ User
     firstName: 'alisa',
     lastName: 'rush',
     email: 'rush@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/92.jpg',
+    image: 'https://randomuser.me/api/portraits/women/92.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -119,7 +119,7 @@ User
     firstName: 'elya',
     lastName: 'guillot',
     email: 'guillot@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/17.jpg',
+    image: 'https://randomuser.me/api/portraits/women/17.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -128,7 +128,7 @@ User
     firstName: 'xavier',
     lastName: 'white',
     email: 'white@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/97.jpg',
+    image: 'https://randomuser.me/api/portraits/men/97.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -137,7 +137,7 @@ User
     firstName: 'erico',
     lastName: 'barbosa',
     email: 'white@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/47.jpg',
+    image: 'https://randomuser.me/api/portraits/men/47.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -146,7 +146,7 @@ User
     firstName: 'jasmine',
     lastName: 'ouellet',
     email: 'ouellet@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/57.jpg',
+    image: 'https://randomuser.me/api/portraits/women/57.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -155,7 +155,7 @@ User
     firstName: 'leon',
     lastName: 'graham',
     email: 'gra@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/41.jpg',
+    image: 'https://randomuser.me/api/portraits/men/41.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -164,7 +164,7 @@ User
     firstName: 'sady',
     lastName: 'wright',
     email: 'wright@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/20.jpg',
+    image: 'https://randomuser.me/api/portraits/women/20.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -173,7 +173,7 @@ User
     firstName: 'florian',
     lastName: 'may',
     email: 'may@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/2.jpg',
+    image: 'https://randomuser.me/api/portraits/men/2.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -182,7 +182,7 @@ User
     firstName: 'leta',
     lastName: 'ramos',
     email: 'ramos@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/96.jpg',
+    image: 'https://randomuser.me/api/portraits/women/96.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -191,7 +191,7 @@ User
     firstName: 'niklas',
     lastName: 'latvala',
     email: 'latvala@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/45.jpg',
+    image: 'https://randomuser.me/api/portraits/men/45.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -200,7 +200,7 @@ User
     firstName: 'lenni',
     lastName: 'kalio',
     email: 'kalio@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/82.jpg',
+    image: 'https://randomuser.me/api/portraits/men/82.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -209,7 +209,7 @@ User
     firstName: 'nathan',
     lastName: 'daniels',
     email: 'daniels@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/9.jpg',
+    image: 'https://randomuser.me/api/portraits/men/9.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -218,7 +218,7 @@ User
     firstName: 'veronia',
     lastName: 'munoz',
     email: 'munoz@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/52.jpg',
+    image: 'https://randomuser.me/api/portraits/women/52.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -227,8 +227,8 @@ User
     gender: 'male',
     firstName: 'Orlando',
     lastName: 'ramos',
-    email: 'matt@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/23.jpg',
+    email: 'ramos@matt.com',
+    image: 'https://randomuser.me/api/portraits/men/23.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -237,7 +237,7 @@ User
     firstName: 'aaliyah',
     lastName: 'taylor',
     email: 'aaliyah@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/38.jpg',
+    image: 'https://randomuser.me/api/portraits/women/38.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -246,7 +246,7 @@ User
     firstName: 'hannah',
     lastName: 'taylor',
     email: 'taylor@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/70.jpg',
+    image: 'https://randomuser.me/api/portraits/women/70.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -255,7 +255,7 @@ User
     firstName: 'ugo',
     lastName: 'lucas',
     email: 'lucas@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/64.jpg',
+    image: 'https://randomuser.me/api/portraits/men/64.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -264,7 +264,7 @@ User
     firstName: 'judith',
     lastName: 'harper',
     email: 'harper@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/0.jpg',
+    image: 'https://randomuser.me/api/portraits/women/0.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -273,7 +273,7 @@ User
     firstName: 'stanley',
     lastName: 'price',
     email: 'price@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/6.jpg',
+    image: 'https://randomuser.me/api/portraits/men/6.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -282,7 +282,7 @@ User
     firstName: 'ediane',
     lastName: 'nogeuira',
     email: 'nogeuira@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/65.jpg',
+    image: 'https://randomuser.me/api/portraits/women/65.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -291,7 +291,7 @@ User
     firstName: 'luis',
     lastName: 'miller',
     email: 'miller@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/27.jpg',
+    image: 'https://randomuser.me/api/portraits/men/27.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -300,7 +300,7 @@ User
     firstName: 'marjorie',
     lastName: 'mcdonald',
     email: 'marjorie@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/24.jpg',
+    image: 'https://randomuser.me/api/portraits/women/24.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -309,7 +309,7 @@ User
     firstName: 'daniel',
     lastName: 'kumar',
     email: 'kumar@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/14.jpg',
+    image: 'https://randomuser.me/api/portraits/men/14.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -318,7 +318,7 @@ User
     firstName: 'liam',
     lastName: 'harris',
     email: 'harris@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/75.jpg',
+    image: 'https://randomuser.me/api/portraits/men/75.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -327,7 +327,7 @@ User
     firstName: 'felix',
     lastName: 'olsen',
     email: 'olsen@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/66.jpg',
+    image: 'https://randomuser.me/api/portraits/men/66.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -336,7 +336,7 @@ User
     firstName: 'konrad',
     lastName: 'will',
     email: 'will@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/50.jpg',
+    image: 'https://randomuser.me/api/portraits/men/50.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -345,7 +345,7 @@ User
     firstName: 'judith',
     lastName: 'kinn',
     email: 'kinn@matt.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/24.jpg',
+    image: 'https://randomuser.me/api/portraits/women/24.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -354,7 +354,7 @@ User
     firstName: 'ahmet',
     lastName: 'baykam',
     email: 'baykam@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/16.jpg',
+    image: 'https://randomuser.me/api/portraits/men/16.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -363,7 +363,7 @@ User
     firstName: 'luke',
     lastName: 'gagnon',
     email: 'gagnon@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/66.jpg',
+    image: 'https://randomuser.me/api/portraits/men/66.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -372,7 +372,7 @@ User
     firstName: 'florence',
     lastName: 'hill',
     email: 'hill@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/73.jpg',
+    image: 'https://randomuser.me/api/portraits/women/73.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -381,7 +381,7 @@ User
     firstName: 'ella',
     lastName: 'thompson',
     email: 'hill@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/54.jpg',
+    image: 'https://randomuser.me/api/portraits/women/54.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -390,7 +390,7 @@ User
     firstName: 'liva',
     lastName: 'andersen',
     email: 'l.andersen@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/41.jpg',
+    image: 'https://randomuser.me/api/portraits/women/41.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -399,7 +399,7 @@ User
     firstName: 'gene',
     lastName: 'kempenaar',
     email: 'kempenaar@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/76.jpg',
+    image: 'https://randomuser.me/api/portraits/men/76.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -408,7 +408,7 @@ User
     firstName: 'anni',
     lastName: 'jarvela',
     email: 'kempenaar@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/86.jpg',
+    image: 'https://randomuser.me/api/portraits/women/86.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -417,7 +417,7 @@ User
     firstName: 'onal',
     lastName: 'abanuz',
     email: 'onal.abanuz@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/14.jpg',
+    image: 'https://randomuser.me/api/portraits/men/14.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -426,7 +426,7 @@ User
     firstName: 'fernando',
     lastName: 'ryan',
     email: 'ryan@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/9.jpg',
+    image: 'https://randomuser.me/api/portraits/men/9.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -435,7 +435,7 @@ User
     firstName: 'alberto',
     lastName: 'harris',
     email: 'harris@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/57.jpg',
+    image: 'https://randomuser.me/api/portraits/men/57.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -444,7 +444,7 @@ User
     firstName: 'lionel',
     lastName: 'sauer',
     email: 'sauer@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/94.jpg',
+    image: 'https://randomuser.me/api/portraits/men/94.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -453,7 +453,7 @@ User
     firstName: 'iiris',
     lastName: 'kivisto',
     email: 'sauer@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/45.jpg',
+    image: 'https://randomuser.me/api/portraits/women/45.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -462,7 +462,7 @@ User
     firstName: 'johan',
     lastName: 'sorensen',
     email: 'jo.sorensen@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/49.jpg',
+    image: 'https://randomuser.me/api/portraits/men/49.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -471,7 +471,7 @@ User
     firstName: 'holly',
     lastName: 'ramirez',
     email: 'rami@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/46.jpg',
+    image: 'https://randomuser.me/api/portraits/women/46.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -480,7 +480,7 @@ User
     firstName: 'thomas',
     lastName: 'robinson',
     email: 'robinson@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/4.jpg',
+    image: 'https://randomuser.me/api/portraits/men/4.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -489,7 +489,7 @@ User
     firstName: 'lyam',
     lastName: 'roy',
     email: 'roy@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/96.jpg',
+    image: 'https://randomuser.me/api/portraits/men/96.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -498,7 +498,7 @@ User
     firstName: 'lilly',
     lastName: 'turner',
     email: 'lilly@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/20.jpg',
+    image: 'https://randomuser.me/api/portraits/women/20.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -507,7 +507,7 @@ User
     firstName: 'afet',
     lastName: 'akbulut',
     email: 'akbulut@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/65.jpg',
+    image: 'https://randomuser.me/api/portraits/women/65.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -516,7 +516,7 @@ User
     firstName: 'francis',
     lastName: 'bradly',
     email: 'bradly@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/18.jpg',
+    image: 'https://randomuser.me/api/portraits/men/18.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -525,7 +525,7 @@ User
     firstName: 'auguste',
     lastName: 'guerin',
     email: 'guerin@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/82.jpg',
+    image: 'https://randomuser.me/api/portraits/men/82.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -534,7 +534,7 @@ User
     firstName: 'madison',
     lastName: 'davies',
     email: 'davies@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/37.jpg',
+    image: 'https://randomuser.me/api/portraits/women/37.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -543,7 +543,7 @@ User
     firstName: 'clayton',
     lastName: 'rhodes',
     email: 'davies@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/30.jpg',
+    image: 'https://randomuser.me/api/portraits/men/30.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -552,7 +552,7 @@ User
     firstName: 'jonathan',
     lastName: 'sanders',
     email: 'sanders@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/2.jpg',
+    image: 'https://randomuser.me/api/portraits/men/2.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -561,7 +561,7 @@ User
     firstName: 'elouan',
     lastName: 'delaforet',
     email: 'delaforet@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/28.jpg',
+    image: 'https://randomuser.me/api/portraits/men/28.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -570,7 +570,7 @@ User
     firstName: 'eliza',
     lastName: 'watts',
     email: 'watts@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/35.jpg',
+    image: 'https://randomuser.me/api/portraits/women/35.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -579,7 +579,7 @@ User
     firstName: 'becky',
     lastName: 'pearson',
     email: 'pearson@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/83.jpg',
+    image: 'https://randomuser.me/api/portraits/women/83.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -588,7 +588,7 @@ User
     firstName: 'nevaeh',
     lastName: 'kumar',
     email: 'nevy@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/42.jpg',
+    image: 'https://randomuser.me/api/portraits/women/42.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -597,7 +597,7 @@ User
     firstName: 'virgil',
     lastName: 'jordan',
     email: 'jordan@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/97.jpg',
+    image: 'https://randomuser.me/api/portraits/men/97.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -606,7 +606,7 @@ User
     firstName: 'oliver',
     lastName: 'schneider',
     email: 'schneider@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/71.jpg',
+    image: 'https://randomuser.me/api/portraits/men/71.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -615,7 +615,7 @@ User
     firstName: 'umut',
     lastName: 'koçyiğit',
     email: 'koçyiğit@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/48.jpg',
+    image: 'https://randomuser.me/api/portraits/men/48.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -624,7 +624,7 @@ User
     firstName: 'paula',
     lastName: 'smith',
     email: 'p.smith@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/18.jpg',
+    image: 'https://randomuser.me/api/portraits/women/18.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -633,7 +633,7 @@ User
     firstName: 'topias',
     lastName: 'saloum',
     email: 'saloum@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/95.jpg',
+    image: 'https://randomuser.me/api/portraits/men/95.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -642,7 +642,7 @@ User
     firstName: 'leonard',
     lastName: 'silva',
     email: 'leo@gma.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/19.jpg',
+    image: 'https://randomuser.me/api/portraits/men/19.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -651,7 +651,7 @@ User
     firstName: 'laurent',
     lastName: 'rougier',
     email: 'rougier@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/84.jpg',
+    image: 'https://randomuser.me/api/portraits/men/84.jpg',
     password: 'password',
     passwordConfirmation: 'password'
 
@@ -661,7 +661,7 @@ User
     firstName: 'anisio',
     lastName: 'das neves',
     email: 'daneves@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/19.jpg',
+    image: 'https://randomuser.me/api/portraits/men/19.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -670,7 +670,7 @@ User
     firstName: 'amelia',
     lastName: 'das neves',
     email: 'daneves@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/89.jpg',
+    image: 'https://randomuser.me/api/portraits/women/89.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -679,7 +679,7 @@ User
     firstName: 'margarita',
     lastName: 'bravo',
     email: 'bravo@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/27.jpg',
+    image: 'https://randomuser.me/api/portraits/women/27.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -688,7 +688,7 @@ User
     firstName: 'jen',
     lastName: 'jenkins',
     email: 'jenkins@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/35.jpg',
+    image: 'https://randomuser.me/api/portraits/women/35.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -697,7 +697,7 @@ User
     firstName: 'marouane',
     lastName: 'bossink',
     email: 'bossink@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/20.jpg',
+    image: 'https://randomuser.me/api/portraits/men/20.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -706,7 +706,7 @@ User
     firstName: 'alexa',
     lastName: 'schmidt',
     email: 'schmidt@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/42.jpg',
+    image: 'https://randomuser.me/api/portraits/women/42.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -715,7 +715,7 @@ User
     firstName: 'eline',
     lastName: 'gautier',
     email: 'gautier@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/51.jpg',
+    image: 'https://randomuser.me/api/portraits/women/51.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -724,7 +724,7 @@ User
     firstName: 'nadeem',
     lastName: 'schee',
     email: 'schee@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/48.jpg',
+    image: 'https://randomuser.me/api/portraits/men/48.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -733,7 +733,7 @@ User
     firstName: 'eren',
     lastName: 'akyürek',
     email: 'akyürek@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/18.jpg',
+    image: 'https://randomuser.me/api/portraits/men/18.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -742,7 +742,7 @@ User
     firstName: 'harold',
     lastName: 'cole',
     email: 'cole@gm.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/22.jpg',
+    image: 'https://randomuser.me/api/portraits/men/22.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -751,7 +751,7 @@ User
     firstName: 'maddison',
     lastName: 'foster',
     email: 'm.foster@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/41.jpg',
+    image: 'https://randomuser.me/api/portraits/women/41.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -760,7 +760,7 @@ User
     firstName: 'fatin',
     lastName: 'hamzaoğlu',
     email: 'hamzaoğlu@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/57.jpg',
+    image: 'https://randomuser.me/api/portraits/men/57.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -769,7 +769,7 @@ User
     firstName: 'amber',
     lastName: 'garza',
     email: 'garza@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/35.jpg',
+    image: 'https://randomuser.me/api/portraits/women/35.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -778,7 +778,7 @@ User
     firstName: 'jonas',
     lastName: 'leclercq',
     email: 'leclercq@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/72.jpg',
+    image: 'https://randomuser.me/api/portraits/men/72.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -787,7 +787,7 @@ User
     firstName: 'teo',
     lastName: 'aubert',
     email: 'aubert@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/16.jpg',
+    image: 'https://randomuser.me/api/portraits/men/16.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -796,7 +796,7 @@ User
     firstName: 'lily',
     lastName: 'thomas',
     email: 'thomas@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/95.jpg',
+    image: 'https://randomuser.me/api/portraits/women/95.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -805,7 +805,7 @@ User
     firstName: 'gabrielle',
     lastName: 'addy',
     email: 'addy@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/78.jpg',
+    image: 'https://randomuser.me/api/portraits/women/78.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -814,7 +814,7 @@ User
     firstName: 'jelger',
     lastName: 'vogelzang',
     email: 'vogelzang@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/84.jpg',
+    image: 'https://randomuser.me/api/portraits/men/84.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -823,7 +823,7 @@ User
     firstName: 'kalya',
     lastName: 'edwards',
     email: 'edwards@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/13.jpg',
+    image: 'https://randomuser.me/api/portraits/women/13.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -832,7 +832,7 @@ User
     firstName: 'jesus',
     lastName: 'harris',
     email: 'harris@ga.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/86.jpg',
+    image: 'https://randomuser.me/api/portraits/men/86.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -841,7 +841,7 @@ User
     firstName: 'tita',
     lastName: 'ramos',
     email: 'ramos@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/women/94.jpg',
+    image: 'https://randomuser.me/api/portraits/women/94.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -850,7 +850,7 @@ User
     firstName: 'lucian',
     lastName: 'ramones',
     email: 'ramones@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/54.jpg',
+    image: 'https://randomuser.me/api/portraits/men/54.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -859,7 +859,7 @@ User
     firstName: 'john',
     lastName: 'singh',
     email: 'e.singh@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/1.jpg',
+    image: 'https://randomuser.me/api/portraits/men/1.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
@@ -868,7 +868,7 @@ User
     firstName: 'ethan',
     lastName: 'singh',
     email: 'e.singh@gmail.com',
-    image: 'https://randomuser.me/api/portraits/thumb/men/1.jpg',
+    image: 'https://randomuser.me/api/portraits/men/1.jpg',
     password: 'password',
     passwordConfirmation: 'password'
   }, {
