@@ -52,7 +52,7 @@ div.tile.is-ancestor.bottom{
   // margin-bottom: 5px;
 
 }
-div.level-item{
+.level-item{
   padding:15px;
   height: 95vh;
   width:100px;
@@ -60,6 +60,7 @@ div.level-item{
   background:
               -webkit-linear-gradient(rgba(59, 0, 64, 1), rgba(31, 112, 216, 1) 80%),
               -webkit-linear-gradient(rgba(59, 0, 64, 1) 25%, rgba(31, 112, 216, 1) 80%);
+// background-image: url("paper.gif")
 
 }
 
