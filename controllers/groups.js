@@ -1,7 +1,7 @@
 const Group = require('../models/group');
 
 function groupsIndex(req, res, next) {
-  console.log('im hit');
+  console.log('hitting');
   console.log(req.params);
   Group
     .find({ eventId: req.params.id })

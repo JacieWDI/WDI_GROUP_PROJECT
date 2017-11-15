@@ -41,13 +41,11 @@ router.route('/groups/:id/comments/:commentId')
   .delete(comments.delete);
 
 //EVENTS
-router.route('/events/:lat/:lng')
-  .get(events.index);
-
-router.route('/events/:id')
-  .get(events.show);
-
 router.route('/events/:id/groups')
   .get(groups.index);
+router.route('/events/:lat/:lng')
+  .get(events.index);
+router.route('/events/:id')
+  .get(events.show);
 
 module.exports = router;

@@ -15,14 +15,16 @@ function eventsShowCtrl(Event, $stateParams, $http, API) {
       vm.event = response.data;
     });
 
+  Event
+    .findGroups({id: $stateParams.id})
+    .$promise
+    .then(groups => {
+      vm.groups = groups;
+      // console.log(vm.groups);
+    });
 
-  function fetchGroups() {
-    Event
-      .findGroups({id: $stateParams.id})
-      .$promise
-      .then(groups => {
-        vm.groups = groups;
-      });
-  }
-  fetchGroups();
+  // function fetchGroups() {
+  //
+  // }
+  // fetchGroups();
 }
