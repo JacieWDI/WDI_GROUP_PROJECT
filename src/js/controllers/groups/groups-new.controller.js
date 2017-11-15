@@ -2,21 +2,30 @@ angular
   .module('groupProject')
   .controller('groupsNewCtrl', groupsNewCtrl);
 
-groupsNewCtrl.$inject = ['Group'];
-function groupsNewCtrl(Group) {
+groupsNewCtrl.$inject = ['Group', '$state', 'currentUserService', '$stateParams'];
+function groupsNewCtrl(Group, $state, currentUserService, $stateParams) {
   const vm = this;
+  // vm.group = Group.get($stateParams.eventId);
+  console.log($stateParams.eventId);
+  vm.submitForm = newGroup;
+  // const eventId = $stateParams.id;
+  // vm.group.push(eventId);
 
-  // vm.submitForm = newGroup;
+  function newGroup() {
+    console.log('WORKING');
 
-  // function newGroup() {
-  //   Group
-  //     .save(vm.group)
-  //     .then(() => Group.login(vm.user))
-  //     .then(() => {
-  //       currentUserService.getUser();
-  //       $state.go('eventsIndex');
-  //     });
-  // }
+    vm.group.eventId = $stateParams.eventId;
+    console.log(vm.group);
+
+    // sending group data to API to be saved to the db.
+    Group
+      .save(vm.group)
+      .$promise
+      .then(() => {
+        // $state.go('groupsShow', { id: $stateParams.id });
+        $state.go('home');
+      });
+  }
 }
 
 
