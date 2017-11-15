@@ -1,1 +1,19 @@
+<section ng-hide="vm.data" class="hero">
+  <div class="hero-body loading">
+    <div class="container container-loading">
+        <img class= "loading-gif" src="/images/loading.gif" alt="loading">
+    </div>
+  </div>
+</section>
+
+<section ng-show="vm.data" class="hero">
+  <div class="hero-body loading">
+    <div class="container">
+      <div class="control search">
+        <input class="input" type="text" placeholder="Search">
+      </div>
+    </div>
+  </div>
+</section>
+
 <google-map center="{ lat: 51.509865, lng: -0.118092 }"></google-map>

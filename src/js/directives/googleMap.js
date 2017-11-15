@@ -4,6 +4,7 @@ angular
   .module('groupProject')
   .directive('googleMap', googleMap);
 
+
 let infowindow = null;
 
 googleMap.$inject = ['$window', '$http', '$state', '$compile', '$rootScope'];
@@ -31,9 +32,9 @@ function googleMap($window, $http, $state, $compile, $rootScope) {
           const data = response.data;
           console.log(data);
 
-          var broadcast = $rootScope.$broadcast('the data should be ready');
-          console.log(broadcast);
-
+          $rootScope.$broadcast('the data is ready, remove loading icon', {
+            data: response.data
+          });
 
           data.events.event.forEach((location) => {
             addMarker(location);
