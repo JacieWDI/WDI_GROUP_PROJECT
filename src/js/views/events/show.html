@@ -1,13 +1,41 @@
-<div>
-  <h3><b>EVENT:</b> {{ vm.event.title }} </h3>
-  <h3><b>VENUE:</b> {{ vm.event.venue }} </h3>
-  <h3><b>ADDRESS:</b> {{ vm.event.address }}</h3>
-  <h3><b>CITY:</b> {{ vm.event.city }}</h3>
-  <h3><b>DATE AND START TIME:</b> {{ vm.event.start_time }}</h3>
-  <h3><b>ID:</b> {{ vm.event.id }}</h3>
+<div class="notification">
+  <div class="tile is-ancestor top">
+    <div class="tile is-parent profile">
+      <ul>
+        <h1 class="title">EVENT DETAILS</h1>
+        <h3><b>EVENT:</b> {{ vm.event.title }} </h3>
+        <h3><b>VENUE:</b> {{ vm.event.venue_name }} </h3>
+        <h3><b>ADDRESS:</b> {{ vm.event.address }}</h3>
+        <h3><b>CITY:</b> {{ vm.event.city }}</h3>
+        <h3><b>DATE AND START TIME:</b> {{ vm.event.start_time }}</h3>
+        <h3><b>IMAGE:</b><div class ="home-img" style="background-image: url('{{ vm.event.image}}');"></div></h3>
+        <h3><b>ID:</b> {{ vm.event.id }}</h3>
+      </ul>
+    </div>
+    <div class="tile is-parent image">
+      <p class="title image"></p>
+      <h3>FOR GOOGLE MAP IMAGE LATER</h3>
+    </div>
+  </div>
+
+  //DELETE THIS DIV BLOCK IF WE DONT WANT DESCRIPTION
+  <div class="tile is-ancestor bottom">
+    <div class="tile is-12">
+      <div class="tile is-parent is-info">
+        <h3><b>DESCRIPTION:</b> {{ vm.event.description }}</h3>
+        <div class="tile is-children">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ $scope.Group.eventId }}
+  <div class="chat-groups" ng-if="vm.event.id === Group.eventId">
+    <h1>hello</h1>
+  </div>
+  <div class="control">
+    <button class="button is-link" ui-sref="groupsNew({ eventId: vm.event.id })">Create new group</button>
+  </div>
 </div>
 
-
-<div class="control">
-  <button class="button is-link" ui-sref="groupsNew({ eventId: vm.event.id })">Create new group</button>
 </div>

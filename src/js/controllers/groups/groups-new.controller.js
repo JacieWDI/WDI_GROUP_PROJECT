@@ -5,15 +5,14 @@ angular
 groupsNewCtrl.$inject = ['Group', '$state', 'currentUserService', '$stateParams'];
 function groupsNewCtrl(Group, $state, currentUserService, $stateParams) {
   const vm = this;
-  // vm.group = Group.get($stateParams.eventId);
+
   console.log($stateParams.eventId);
+
   vm.submitForm = newGroup;
-  // const eventId = $stateParams.id;
-  // vm.group.push(eventId);
+
+
 
   function newGroup() {
-    console.log('WORKING');
-
     vm.group.eventId = $stateParams.eventId;
     console.log(vm.group);
 
@@ -22,14 +21,7 @@ function groupsNewCtrl(Group, $state, currentUserService, $stateParams) {
       .save(vm.group)
       .$promise
       .then(() => {
-        // $state.go('groupsShow', { id: $stateParams.id });
-        $state.go('home');
+        $state.go('eventsShow', {id: $stateParams.eventId});
       });
   }
 }
-
-
-  // 1) create form in new.html
-  // 2) create function to handle form submit inside groupsNewCtrl
-  // 3) before sending the group to the API, set the eventId to vm.group using $stateParams
-  // 4) in the backend controller function for group create, before saving to database add fields for createdBy and members

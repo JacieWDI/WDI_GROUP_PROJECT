@@ -27,12 +27,14 @@ router.route('/users/:id')
 
 //GROUPS
 router.route('/groups')
-  .get(groups.index)
   .post(groups.create);
 
 router.route('/groups/:id')
   .get(groups.show)
   .put(groups.update);
+
+router.route('/groups/find/:id')
+  .get(groups.index);
 
 //COMMENTS
 router.route('/groups/:id/comments')

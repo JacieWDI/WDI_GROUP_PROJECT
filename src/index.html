@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Explore More</title>
   <base href="/" />
-  <link rel="stylesheet" href="/scss/style.scss">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB22I-f_WLOasdvWLf9qQI4R8sE_7_zxs4&libraries=places" charset="utf-8"></script>
+  <link rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB22I-f_WLOasdvWLf9qQI4R8sE_7_zxs4&libraries=places" charset="utf-8"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- inject:js -->
   <!-- endinject -->
@@ -15,13 +16,14 @@
 
 </head>
 <body ng-controller="MainCtrl as main">
-      <nav class="navbar is-primary">
+
+      <nav class="navbar is-primary ">
         <div class="navbar-brand">
           <a class="navbar-item" ui-sref="eventsIndex">
             Explore More
           </a>
         </div>
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div id="navigationbar" class="navbar-menu">
           <div class="navbar-end">
             <a class="navbar-item" ui-sref="#" ng-if="main.user">
               Hi, {{ main.user.userName }}!
