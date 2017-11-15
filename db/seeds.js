@@ -542,7 +542,7 @@ User
     gender: 'male',
     firstName: 'clayton',
     lastName: 'rhodes',
-    email: 'davies@ga.com',
+    email: 'rhodes@ga.co',
     image: 'https://randomuser.me/api/portraits/men/30.jpg',
     password: 'password',
     passwordConfirmation: 'password'

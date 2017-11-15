@@ -1,0 +1,13 @@
+button{
+  font-family: 'Roboto', sans-serif;
+    border: none;
+
+}
+
+button.button.is-focused{
+  color: white;
+  border-radius: 25px;
+  background-color: black;
+  border: none;
+  text-align: center;
+}

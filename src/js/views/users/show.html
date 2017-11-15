@@ -1,23 +1,21 @@
 <!-- <div class="container is-fullhd"> -->
+
   <div class="notification">
     <div class="tile is-ancestor top">
-      <div class="tile is-parent profile">
+      <div class="tile is-parent profile ">
         <ul>
-          <p class="title">Profile info</p>
           <p class="title"><h1>{{ vm.user.userName }}'s profile'</h1></p>
-          <p class="subtitle">
             <li>Username: {{vm.user.userName}}</li>
             <li>First name: {{vm.user.firstName}}</li>
             <li>Last name: {{vm.user.lastName}}</li>
+            <li class="control">
+              <button class="button is-focused is-medium" ui-sref="usersEdit({ id: vm.user.id })">Edit</button>
+            </li>
           </ul>
-        </p>
-        <div class="control">
-          <button class="button is-link" ui-sref="usersEdit({ id: vm.user.id })">Edit</button>
-        </div>
       </div>
 
       <div class="tile is-parent image">
-        <p class="title image">Profile Picture</p>
+        <p class="title image"></p>
         <div class ="show-img" style="background-image: url('{{vm.user.image}}');">
         </div>
       </div>
@@ -26,11 +24,9 @@
     <div class="tile is-ancestor bottom">
       <div class="tile is-12">
         <div class="tile is-parent is-info">
-          <p class="title">Events</p>
-          <p class="subtitle">add links to event groups</p>
-        </div>
-        <div class="content"></div>
+          <h1 class="title">Events</h1>
+          <div class="tile is-children">
+          </div>
       </div>
     </div>
   </div>
-<!-- </div> -->

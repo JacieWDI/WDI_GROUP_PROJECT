@@ -1,0 +1,26 @@
+.nav-img {
+  text-align: center;
+  height: 80px;
+  width: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100px;
+}
+
+div.navbar-brand{
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+  height: 100px;
+}
+
+#navigationbar{
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    height: 100px;
+    $size-1: 3rem
+}
+
+.navbar-item.ng-scope{
+  font-size: 20px;
+}

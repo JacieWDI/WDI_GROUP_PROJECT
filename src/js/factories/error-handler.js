@@ -7,6 +7,7 @@ function errorHandler($rootScope) {
   return {
     responseError: err => {
       $rootScope.$broadcast('error', err);
+      console.log(errorHandler);
     }
   };
 }
