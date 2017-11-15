@@ -5,10 +5,28 @@ angular
 groupsShowCtrl.$inject = ['Group', '$stateParams', '$rootScope', '$state'];
 function groupsShowCtrl(Group, $stateParams, $rootScope, $state) {
   const vm = this;
-  // console.log('group show loaded');
+  console.log('group show loaded');
+
+  // vm.group = Group.get($stateParams);
+
   vm.commentCreate = commentCreate;
   vm.commentDelete = commentDelete;
+
+
   getTheGroup();
+
+  // createTheGroup();
+  // function createTheGroup() {
+  //   Group
+  //     .post({ id: $stateParams.id }, vm.group)
+  //     .$promise
+  //     .then(() => {
+  //       getTheGroup();
+  //       vm.comment = null;
+  //     });
+  // }
+
+
 
   function getTheGroup() {
     Group

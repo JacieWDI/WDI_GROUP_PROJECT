@@ -15,52 +15,53 @@
 
 </head>
 <body ng-controller="MainCtrl as main">
-  <nav class="navbar is-primary">
-    <div class="navbar-brand">
-      <a class="navbar-item" ui-sref="eventsIndex">
-        Explore More
-      </a>
-    </div>
-    <div id="navbarExampleTransparentExample" class="navbar-menu">
-      <div class="navbar-end">
-        <a class="navbar-item" ui-sref="#" ng-if="main.user">
-          Hi, {{ main.user.userName }}!
-        </a>
-        <a class="navbar-item" href="#" ng-if="main.user">
-        <div class ="nav-img" style="background-image: url('{{main.user.image}}');"></div>
-        </a>
-        <a class="navbar-item" ui-sref="register" ng-if="!main.user">
-          Register
-        </a>
-        <a class="navbar-item" ui-sref="login" ng-if="!main.user">
-          Login
-        </a>
-        <a class="navbar-item" ui-sref="groupsIndex" ng-if="main.user">
-          Groups
-        </a>
-
-        <div class="navbar-item has-dropdown is-hoverable is-right" ng-if="main.user">
-          <a class="navbar-link" href="#">
-            Account
+      <nav class="navbar is-primary">
+        <div class="navbar-brand">
+          <a class="navbar-item" ui-sref="eventsIndex">
+            Explore More
           </a>
-          <div class="navbar-dropdown is-right">
-            <a class="navbar-item" href="#">
-              Signed in as: {{ main.user.userName }}
+        </div>
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" ui-sref="#" ng-if="main.user">
+              Hi, {{ main.user.userName }}!
             </a>
-            <a class="navbar-item" ui-sref="usersShow({ id: main.user.id })">
-              <span class="icon">
-                <i class="fa fa-user"></i>
-              </span> My Profile
+            <a class="navbar-item" href="#" ng-if="main.user">
+              <div class ="nav-img" style="background-image: url('{{main.user.image}}');"></div>
             </a>
-            <a class="navbar-item" href="#" ng-click="main.logout()">
-              <span class="icon">
-                <i class="fa fa-sign-out"></i>
-              </span> Logout
+            <a class="navbar-item" ui-sref="register" ng-if="!main.user">
+              Register
             </a>
+            <a class="navbar-item" ui-sref="login" ng-if="!main.user">
+              Login
+            </a>
+            <a class="navbar-item" ui-sref="groupsIndex" ng-if="main.user">
+              Groups
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable is-right" ng-if="main.user">
+              <a class="navbar-link" href="#">
+                Account
+              </a>
+              <div class="navbar-dropdown is-right">
+                <a class="navbar-item" href="#">
+                  Signed in as: {{ main.user.userName }}
+                </a>
+                <a class="navbar-item" ui-sref="usersShow({ id: main.user.id })">
+                  <span class="icon">
+                    <i class="fa fa-user"></i>
+                  </span> My Profile
+                </a>
+                <a class="navbar-item" href="#" ng-click="main.logout()">
+                  <span class="icon">
+                    <i class="fa fa-sign-out"></i>
+                  </span> Logout
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+
   </nav>
   <main ui-view></main>
   <div ng-show="main.message" class="my-message notification is-{{ main.messageType }}" role="alert">
