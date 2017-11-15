@@ -7,7 +7,6 @@ MainCtrl.$inject = [
   '$rootScope',
   'currentUserService',
   '$state',
-  //added timeout
   '$timeout'
 ];
 
@@ -17,9 +16,7 @@ function MainCtrl(
   currentUserService,
   $state,
   $timeout
-
 ) {
-
   const vm = this;
 
   vm.isNavCollapsed = true;
