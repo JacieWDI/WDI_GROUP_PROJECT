@@ -1,0 +1,31 @@
+.nav-img {
+  text-align: center;
+  height: 80px;
+  width: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100px;
+}
+
+div.navbar-brand{
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+  height: 100px;
+}
+
+#navigationbar{
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    height: 100px;
+    $size-1: 3rem
+}
+
+a.navbar-item{
+  font-size: 25px;
+  font-weight: 500px;
+}
+a.navbar-link{
+  font-size: 25px;
+  font-weight: 500px;
+}
