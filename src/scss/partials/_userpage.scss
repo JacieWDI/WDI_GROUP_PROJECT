@@ -16,10 +16,6 @@ div.tile.is-parent.profile{
 border-radius: 15px;
 }
 
-
-
-
-
 div.tile.is-parent.image{
   height: 25vh;
   background:
@@ -28,7 +24,7 @@ div.tile.is-parent.image{
   margin-left: 10px;
   color: white;
   border-radius: 15px;
- padding: 10px;
+  padding: 10px;
 }
 
 div.tile.is-ancestor.bottom{
@@ -46,6 +42,7 @@ div.tile.is-ancestor.bottom{
 
 div.show-img{
   border-radius: 100px;
+
 }
 
 div.tile.is-ancestor.bottom{
@@ -54,4 +51,24 @@ div.tile.is-ancestor.bottom{
   margin: 15px;
   // margin-bottom: 5px;
 
+}
+div.level-item{
+  padding:15px;
+  height: 95vh;
+  width:100px;
+  // border-radius: 15px;
+  background:
+              -webkit-linear-gradient(rgba(59, 0, 64, 1), rgba(31, 112, 216, 1) 80%),
+              -webkit-linear-gradient(rgba(59, 0, 64, 1) 25%, rgba(31, 112, 216, 1) 80%);
+
+}
+
+
+div.level-left{
+  height: 95vh;
+  width: 25%;
+  background:
+              -webkit-linear-gradient(rgba(59, 0, 64, 1), rgba(255, 0, 136, 1) 80%),
+              -webkit-linear-gradient(rgba(59, 0, 64, 1) 25%, rgba(255, 0, 136, 1) 80%);
+// border-radius: 15px;
 }

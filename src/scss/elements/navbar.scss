@@ -21,6 +21,11 @@ div.navbar-brand{
     $size-1: 3rem
 }
 
-.navbar-item.ng-scope{
-  font-size: 20px;
+a.navbar-item{
+  font-size: 25px;
+  font-weight: 500px;
+}
+a.navbar-link{
+  font-size: 25px;
+  font-weight: 500px;
 }
