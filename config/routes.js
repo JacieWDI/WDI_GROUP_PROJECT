@@ -42,7 +42,7 @@ router.route('/groups/:id/comments/:commentId')
   .delete(comments.delete);
 
 //EVENTS
-router.route('/events')
+router.route('/events/:lat/:lng')
   .get(events.index);
 
 router.route('/events/:id')

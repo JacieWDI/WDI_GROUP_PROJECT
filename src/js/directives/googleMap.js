@@ -6,10 +6,11 @@ angular
 
 
 let infowindow = null;
+const markers  = [];
 
-googleMap.$inject = ['$window', '$http', '$state', '$compile', '$rootScope'];
+googleMap.$inject = ['$window', '$http', '$state', '$compile', '$rootScope', 'API'];
 
-function googleMap($window, $http, $state, $compile, $rootScope) {
+function googleMap($window, $http, $state, $compile, $rootScope, API) {
   return {
     restrict: 'E',
     replace: true,
@@ -23,23 +24,33 @@ function googleMap($window, $http, $state, $compile, $rootScope) {
       };
 
       const map = new $window.google.maps.Map(element[0], {
-        zoom: 3,
+        zoom: 13,
         center: scope.center
       });
 
-      $http.get('http://localhost:7000/api/events')
-        .then(function successCallback(response){
-          const data = response.data;
-          console.log(data);
+      $rootScope.$on('newPlaceData', (e, newPlace) => {
+        markers.forEach(function(marker) {
+          marker.setMap(null);
 
-          $rootScope.$broadcast('the data is ready, remove loading icon', {
-            data: response.data
-          });
-
-          data.events.event.forEach((location) => {
-            addMarker(location);
-          });
         });
+
+        map.setCenter(newPlace);
+        map.setZoom(13);
+
+        $http
+          .get(`${API}/events/${newPlace.lat}/${newPlace.lng}`)
+          .then(response => {
+            const data = response.data;
+            console.log(data);
+            $rootScope.$broadcast('the data is ready, remove loading icon', {
+              data: response.data
+            });
+
+            data.events.event.forEach(location => {
+              addMarker(location);
+            });
+          });
+      });
 
       function addMarker(location) {
         const latLng = { lat: parseFloat(location.latitude), lng: parseFloat(location.longitude) };
@@ -49,6 +60,9 @@ function googleMap($window, $http, $state, $compile, $rootScope) {
           map: map,
           icon: '/images/note.png'
         });
+
+        markers.push(marker);
+
         marker.addListener('click', () => {
           createInfoWindow(marker, location);
         });
