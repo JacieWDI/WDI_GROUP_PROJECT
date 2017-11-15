@@ -12,6 +12,12 @@ function groupsIndex(req, res, next) {
 function groupsCreate(req, res, next) {
   // req.body.createdBy = req.user
   // create members array on req.body and push current user id into it
+
+  req.body.createdBy = req.user.userId;
+  req.body.members = [req.user.userId];
+  console.log(req.body);
+
+
   Group
     .create(req.body)
     .then((group) => res.status(201).json(group))
