@@ -2,5 +2,7 @@ angular
   .module('groupProject', [
     'ui.router',
     'ngResource',
-    'satellizer'
+    'satellizer',
+    'angular-loading-bar',
+    'ngAnimate'
   ]);
