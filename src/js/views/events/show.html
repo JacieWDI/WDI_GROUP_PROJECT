@@ -4,16 +4,21 @@
   <h3><b>ADDRESS:</b> {{ vm.event.address }}</h3>
   <h3><b>CITY:</b> {{ vm.event.city }}</h3>
   <h3><b>DATE AND START TIME:</b> {{ vm.event.start_time }}</h3>
-  <h3><b>DESCRIPTION:</b> {{ vm.event.description }}</h3>
   <h3><b>IMAGE:</b><div class ="home-img" style="background-image: url('{{ vm.event.image}}');"></div></h3>
-  <h3><b>ID:</b> {{ vm.event.id }}</h3>
 </div>
 
-{{ $scope.Group.eventId }}
-
-<div class="chat-groups" ng-if="vm.event.id === Group.eventId">
-<h1>hello</h1>
-</div>
+<ul class="groups-for-event">
+  <li class="column notification is-info" ng-repeat="group in vm.groups">
+    <p>{{ group.name }}</p>
+    <p>{{ group.image }}</p>
+    <p>{{ group.description }}</p>
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
+      </div>
+    </div>
+  </li>
+</ul>
 
 
 <div class="control">

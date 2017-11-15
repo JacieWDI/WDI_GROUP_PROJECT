@@ -13,7 +13,7 @@ function groupsShowCtrl(Group, $stateParams, $rootScope, $state, currentUserServ
 
   vm.commentCreate = commentCreate;
   vm.commentDelete = commentDelete;
-  vm.updateGroup = update;
+  vm.updateGroup = join;
 
   getTheGroup();
 
@@ -45,7 +45,7 @@ function groupsShowCtrl(Group, $stateParams, $rootScope, $state, currentUserServ
       });
   }
 
-  function update() {
+  function join() {
     Group
       .update({ id: $stateParams.id }, {})
       .$promise
@@ -53,14 +53,5 @@ function groupsShowCtrl(Group, $stateParams, $rootScope, $state, currentUserServ
         vm.group.members = group.members;
       });
 
-
-    // Group
-    //   // .get(vm.userId)
-    //   .update({ id: $stateParams.eventId }, vm.group.members)
-    //   .$promise
-    //   .then(() => {
-    //     $state.go('eventsShow', { id: $stateParams.eventId });
-    //   });
-    //   console.log(vm.group.members);
   }
 }

@@ -33,8 +33,8 @@ router.route('/groups/:id')
   .get(groups.show)
   .put(groups.update);
 
-router.route('/groups/find/:id')
-  .get(groups.index);
+// router.route('/groups/find/:id')
+//   .get(groups.index);
 
 //COMMENTS
 router.route('/groups/:id/comments')
@@ -49,5 +49,8 @@ router.route('/events')
 
 router.route('/events/:id')
   .get(events.show);
+
+router.route('/events/:id/groups')
+  .get(groups.index);
 
 module.exports = router;
