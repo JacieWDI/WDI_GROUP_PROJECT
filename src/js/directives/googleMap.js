@@ -4,11 +4,12 @@ angular
   .module('groupProject')
   .directive('googleMap', googleMap);
 
+
 let infowindow = null;
 
-googleMap.$inject = ['$window', '$http', '$state', '$compile'];
+googleMap.$inject = ['$window', '$http', '$state', '$compile', '$rootScope'];
 
-function googleMap($window, $http, $state, $compile) {
+function googleMap($window, $http, $state, $compile, $rootScope) {
   return {
     restrict: 'E',
     replace: true,
@@ -22,7 +23,7 @@ function googleMap($window, $http, $state, $compile) {
       };
 
       const map = new $window.google.maps.Map(element[0], {
-        zoom: 6,
+        zoom: 3,
         center: scope.center
       });
 
@@ -30,6 +31,11 @@ function googleMap($window, $http, $state, $compile) {
         .then(function successCallback(response){
           const data = response.data;
           console.log(data);
+
+          $rootScope.$broadcast('the data is ready, remove loading icon', {
+            data: response.data
+          });
+
           data.events.event.forEach((location) => {
             addMarker(location);
           });
@@ -40,8 +46,8 @@ function googleMap($window, $http, $state, $compile) {
 
         const marker = new $window.google.maps.Marker({
           position: latLng,
-          map: map
-          // add in marker icon here
+          map: map,
+          icon: '/images/note.png'
         });
         marker.addListener('click', () => {
           createInfoWindow(marker, location);

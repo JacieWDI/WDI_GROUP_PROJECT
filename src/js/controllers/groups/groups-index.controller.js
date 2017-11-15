@@ -16,7 +16,6 @@ function groupsIndexCtrl(Group) {
         // console.log(vm.groups);
       });
   }
-
   fetchGroups();
 
 }

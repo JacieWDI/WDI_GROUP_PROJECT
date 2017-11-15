@@ -1,6 +1,21 @@
 <div class="container">
   <div class="notification">
-    <h1>{{ vm.group.event }} chat!</h1>
+    <a ui-sref="eventsShow({ id: vm.group.eventId })"><h1>{{ vm.group.name }} chat!</h1></a>
+    <!-- <div>
+      <h3><b>EVENT:</b> {{ event.title }} </h3>
+      <h3><b>VENUE:</b> {{ vm.event.venue_name }} </h3>
+      <h3><b>ADDRESS:</b> {{ vm.event.address }}</h3>
+      <h3><b>CITY:</b> {{ vm.event.city }}</h3>
+      <h3><b>DATE AND START TIME:</b> {{ vm.event.start_time }}</h3>
+      <h3><b>DESCRIPTION:</b> {{ vm.event.description }}</h3>
+      <h3><b>IMAGE:</b><div class ="home-img" style="background-image: url('{{ vm.event.image}}');"></div></h3>
+      <h3><b>ID:</b> {{ vm.event.id }}</h3>
+    </div> -->
+    <div>
+      <h3><b>CHAT:</b> {{ vm.group.name}} </h3>
+        <h3><b>IMAGE:</b><div class ="home-img" style="background-image: url('{{ vm.group.image}}');"></div></h3>
+      <h3><b>DESCRIPTION:</b> {{ vm.group.description}} </h3>
+    </div>
     <ul>
       <li class="column notification is-info" ng-repeat="comment in vm.group.comments">
         <p>Author: {{ comment.createdBy.userName }}</p>
@@ -25,5 +40,9 @@
       <button class="button is-link">Submit</button>
     </div>
   </form>
+
+  <div class="control" ng-if="vm.group.members.indexOf(main.user.id) === -1">
+    <button class="button is-link" ng-click="vm.updateGroup()">Join Group</button>
+  </div>
 
 </div>
