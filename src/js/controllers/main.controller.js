@@ -35,6 +35,7 @@ function MainCtrl(
   $rootScope.$on('loggedIn', () => {
     console.log('fired, huzzah!!!');
     vm.user = currentUserService.currentUser;
+    console.log(vm.user);
   });
 
   $rootScope.$on('loggedOut', () => {

@@ -33,9 +33,6 @@ router.route('/groups/:id')
   .get(groups.show)
   .put(groups.update);
 
-router.route('/groups/find/:id')
-  .get(groups.index);
-
 //COMMENTS
 router.route('/groups/:id/comments')
   .post(comments.create);
@@ -44,9 +41,10 @@ router.route('/groups/:id/comments/:commentId')
   .delete(comments.delete);
 
 //EVENTS
-router.route('/events')
+router.route('/events/:id/groups')
+  .get(groups.index);
+router.route('/events/:lat/:lng')
   .get(events.index);
-
 router.route('/events/:id')
   .get(events.show);
 

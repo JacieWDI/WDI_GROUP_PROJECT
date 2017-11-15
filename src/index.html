@@ -6,8 +6,8 @@
   <title>Explore More</title>
   <base href="/" />
   <link rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8E13UtxeGEGGDKygW6eZ6vZWNHis3bQM"></script>
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB22I-f_WLOasdvWLf9qQI4R8sE_7_zxs4&libraries=places" charset="utf-8"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- inject:js -->
   <!-- endinject -->
@@ -16,53 +16,52 @@
 
 </head>
 <body ng-controller="MainCtrl as main">
+  <nav class="navbar is-primary ">
+    <div class="navbar-brand">
+      <a class="navbar-item" ui-sref="eventsIndex">
+        Explore More
+      </a>
+    </div>
+    <div id="navigationbar" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" ui-sref="#" ng-if="main.user">
+          Hi, {{ main.user.userName }}!
+        </a>
+        <a class="navbar-item" href="#" ng-if="main.user">
+          <div class ="nav-img" style="background-image: url('{{main.user.image}}');"></div>
+        </a>
+        <a class="navbar-item" ui-sref="register" ng-if="!main.user">
+          Register
+        </a>
+        <a class="navbar-item" ui-sref="login" ng-if="!main.user">
+          Login
+        </a>
+        <a class="navbar-item" ui-sref="groupsIndex" ng-if="main.user">
+          Groups
+        </a>
 
-      <nav class="navbar is-primary ">
-        <div class="navbar-brand">
-          <a class="navbar-item" ui-sref="eventsIndex">
-            Explore More
+        <div class="navbar-item has-dropdown is-hoverable is-right" ng-if="main.user">
+          <a class="navbar-link" href="#">
+            Account
           </a>
-        </div>
-        <div id="navigationbar" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item" ui-sref="#" ng-if="main.user">
-              Hi, {{ main.user.userName }}!
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="#">
+              Signed in as: {{ main.user.userName }}
             </a>
-            <a class="navbar-item" href="#" ng-if="main.user">
-              <div class ="nav-img" style="background-image: url('{{main.user.image}}');"></div>
+            <a class="navbar-item" ui-sref="usersShow({ id: main.user._id })">
+              <span class="icon">
+                <i class="fa fa-user"></i>
+              </span> My Profile
             </a>
-            <a class="navbar-item" ui-sref="register" ng-if="!main.user">
-              Register
+            <a class="navbar-item" href="#" ng-click="main.logout()">
+              <span class="icon">
+                <i class="fa fa-sign-out"></i>
+              </span> Logout
             </a>
-            <a class="navbar-item" ui-sref="login" ng-if="!main.user">
-              Login
-            </a>
-            <a class="navbar-item" ui-sref="groupsIndex" ng-if="main.user">
-              Groups
-            </a>
-
-            <div class="navbar-item has-dropdown is-hoverable is-right" ng-if="main.user">
-              <a class="navbar-link" href="#">
-                Account
-              </a>
-              <div class="navbar-dropdown is-right">
-                <a class="navbar-item" href="#">
-                  Signed in as: {{ main.user.userName }}
-                </a>
-                <a class="navbar-item" ui-sref="usersShow({ id: main.user.id })">
-                  <span class="icon">
-                    <i class="fa fa-user"></i>
-                  </span> My Profile
-                </a>
-                <a class="navbar-item" href="#" ng-click="main.logout()">
-                  <span class="icon">
-                    <i class="fa fa-sign-out"></i>
-                  </span> Logout
-                </a>
-              </div>
-            </div>
           </div>
         </div>
+      </div>
+    </div>
   </nav>
 
   <main ui-view></main>
