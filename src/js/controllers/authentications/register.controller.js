@@ -5,12 +5,16 @@ angular
 registerController.$inject = [
   '$state',
   '$auth',
-  'currentUserService'
+  'currentUserService',
+  '$scope',
+  '$rootScope'
 ];
 function registerController(
   $state,
   $auth,
-  currentUserService
+  currentUserService,
+  $scope,
+  $rootScope
 ) {
   const vm = this;
 
@@ -19,11 +23,21 @@ function registerController(
   function register() {
     $auth
       .signup(vm.user)
-      .then(() => $auth.login(vm.user))
-      .then(() => {
-        currentUserService.getUser();
-        $state.go('eventsIndex');
+      .then(res => {
+        if (res.status === 201) {
+          $auth
+            .login(vm.user)
+            .then(() => {
+              currentUserService.getUser();
+              $state.go('eventsIndex');
+            });
+        }
+      })
+      .catch(() => {
+        $rootScope.$broadcast('displayMessage', {
+          type: 'warning',
+          content: 'Incorrect Credentials.'
+        });
       });
-
   }
 }

@@ -63,5 +63,8 @@
     </div>
   </nav>
   <main ui-view></main>
+  <div ng-show="main.message" class="my-message notification is-{{ main.messageType }}" role="alert">
+    {{ main.message }}
+  </div>
 </body>
 </html>
