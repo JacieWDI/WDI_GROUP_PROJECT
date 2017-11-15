@@ -8,9 +8,13 @@ const commentSchema = new mongoose.Schema({
 });
 
 const groupSchema = new mongoose.Schema({
-  event: Number,
-  //event id from eventful API
-  comments: [commentSchema]
+  name: { type: String, trim: true},
+  image: { type: String, trim: true},
+  description: { type: String, trim: true},
+  eventId: { type: String, trim: true},
+  comments: [commentSchema],
+  createdBy: {type: mongoose.Schema.ObjectId, ref: 'User'},
+  members: [{type: mongoose.Schema.ObjectId, ref: 'User'}]
 });
 
 module.exports = mongoose.model('Group', groupSchema);

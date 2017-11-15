@@ -17,7 +17,8 @@ function Router(
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: '/js/views/home.html'
+      templateUrl: '/js/views/home.html',
+      controller: 'usersIndexCtrl as vm'
     })
     .state('register', {
       url: '/register',
@@ -43,6 +44,11 @@ function Router(
       url: '/groups',
       templateUrl: '/js/views/groups/index.html',
       controller: 'groupsIndexCtrl as vm'
+    })
+    .state('groupsNew', {
+      url: '/groups/new/:eventId',
+      templateUrl: '/js/views/groups/new.html',
+      controller: 'groupsNewCtrl as vm'
     })
     .state('groupsShow', {
       url: '/groups/:id',

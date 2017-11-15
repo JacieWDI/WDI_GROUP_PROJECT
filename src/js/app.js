@@ -4,5 +4,6 @@ angular
     'ngResource',
     'satellizer',
     'angular-loading-bar',
-    'ngAnimate'
+    'ngAnimate',
+    'angular.filter'
   ]);
