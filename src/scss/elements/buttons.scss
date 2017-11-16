@@ -2,8 +2,12 @@
   margin: auto;
 }
 
-.button {
-  width: 150px;
-  box-shadow: 1px black solid;
+.btn.button{
+  background-color: white;
+  width: 200px;
+}
 
+.btn.button:hover{
+  background-color: $color-purple;
+  color: white;
 }

@@ -1,27 +1,25 @@
-<h1>New Group</h1>
-<!-- form for new group here -->
-<div class="notification">
+<div class="notification form">
   <form ng-submit="vm.submitForm()">
     <div class="field">
-      <label class="label">Group Name</label>
+      <label class="label form-label">Group Name</label>
       <div class="control">
-        <input type="text" name="name" ng-model="vm.group.name" class="input" placeholder="Group Name">
+        <input type="text" name="name" ng-model="vm.group.name" class="input" placeholder="Please choose a name for your group">
       </div>
     </div>
     <div class="field">
-      <label class="label">Image</label>
+      <label class="label form-label">Image</label>
       <div class="control">
-        <input type="text" name="image" ng-model="vm.group.image" placeholder="image" class="input">
+        <input type="text" name="image" ng-model="vm.group.image" placeholder="Please add a link for a group image" class="input">
       </div>
     </div>
     <div class="field">
-      <label class="label">Description</label>
+      <label class="label form-label">Description</label>
       <div class="control">
-        <input type="text" name="description" ng-model="vm.group.description" placeholder="description" class="input">
+        <input type="text" name="description" ng-model="vm.group.description" placeholder="Please provide a brief description" class="input">
       </div>
       <div class="field is-grouped">
-        <div class="control">
-          <button class="button is-link">Submit</button>
+        <div class="control button-container">
+          <input type="submit" class="btn button">
         </div>
       </div>
     </div>

@@ -1,0 +1,30 @@
+.eventdetail{
+  border: 4px solid $color-black;
+  margin: 0 auto;
+  height: 300px;
+  width: 300px;
+}
+  .creategroup-btn {
+  width: 292px;
+  background-color: $color-purple;
+  &:hover {
+    background-color: black;
+  }
+  }
+
+.street-img {
+  border: 4px solid $color-black;
+  margin: 0 auto;
+  height: 300px;
+  width: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.allgroups{
+  border: 4px solid $color-black;
+  margin: 0 auto;
+  height: 300px;
+  width: 300px;
+}
