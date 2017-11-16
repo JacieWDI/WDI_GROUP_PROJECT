@@ -24,7 +24,7 @@ div.navbar-brand{
     font-family: 'Roboto', sans-serif;
     text-transform:uppercase;
     font-weight: bold;
-    height: 100px;
+    height: 80px;
     $size-1: 3rem
 }
 
@@ -65,32 +65,17 @@ a.navbar-link{
   }
 }
 
-// .navbar-item.has-dropdown.is-hoverable.is-right:hover{
-//   background-color: #D867FF;
-//   color: black;
-// }
-
-// .drop:hover{
-//   background-color: #D867FF;
-//   color: black;
-// }
-
-// .navbar-link:hover{
-//   background-color: #D867FF;
-//   color: black;
-// }
-
 .icon{
   color: black;
 }
 
 .nav-logo {
   text-align: center;
-  height: 100px;
-  width: 130px;
+  height: 80px;
+  width: 80px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-left: 10px;
+  margin-left: 25px;
   margin-top: 5px;
 }

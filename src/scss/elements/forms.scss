@@ -4,8 +4,10 @@
 .form {
   margin: 0 auto;
   width: 600px;
-  box-shadow: 10px 10px 5px $color-purple;
+  border-style:solid;
+  border-color:$color-purple;
   margin-top: 50px;
+  background-color: white;
 }
 
 .form-label {
@@ -14,4 +16,5 @@
 
 .input {
   font-size: 13px;
+  border-color: $color-purple;
 }
