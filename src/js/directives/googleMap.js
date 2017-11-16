@@ -86,8 +86,6 @@ function googleMap($window, $http, $state, $compile, $rootScope, API) {
 
         infowindow = new google.maps.InfoWindow({
           content: compiledContent[0]
-          // const read
-
         });
         infowindow.open(map, marker);
       }
