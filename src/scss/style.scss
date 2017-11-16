@@ -1,14 +1,20 @@
 @import "helpers/variables";
 
-
+@import "partials/userpage";
+@import "partials/landingpage";
+@import "elements/buttons";
+@import "elements/navbar";
+@import "elements/forms";
+@import "elements/design";
+@import "partials/chatpage";
 @import "elements/footer";
-@import "elements/loading";
 @import "elements/searchbar";
 @import "elements/googlemap";
 @import "elements/design";
 @import "elements/buttons";
 @import "elements/navbar";
 @import "elements/design";
+@import "elements/forms";
 
 @import "partials/userpage";
 @import "partials/landingpage";
@@ -30,7 +36,7 @@
   float: left;
   height: 400px;
   width: 400px;
-  background: red;
+  background: black;
 }
 
 .read-more{
