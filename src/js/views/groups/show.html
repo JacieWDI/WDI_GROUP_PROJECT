@@ -20,21 +20,21 @@
     </div>
   </div>
 
-<h3 class="warning" ng-if="!vm.membersArray.includes(main.user._id)">to comment, please join the chat</h3>
-<form ng-submit="vm.commentCreate()" ng-if="vm.membersArray.includes(main.user._id)">
-  <div class="field">
-    <div class="control column">
-      <textarea class="textarea comment-box" placeholder="type your comment here..." ng-model="vm.comment.body"></textarea>
+  <h3 class="warning" ng-if="!vm.membersArray.includes(main.user._id)">to comment, please join the chat</h3>
+  <form ng-submit="vm.commentCreate()" ng-if="vm.membersArray.includes(main.user._id)">
+    <div class="field">
+      <div class="control column">
+        <textarea class="textarea comment-box" placeholder="type your comment here..." ng-model="vm.comment.body"></textarea>
+      </div>
+      <button class="button is-link">Submit</button>
     </div>
-    <button class="button is-link">Submit</button>
-  </div>
-</form>
+  </form>
 
-<div class="control">
-  <p class="button is-link" ng-click="vm.updateGroup()">
-    <span ng-if="!vm.membersArray.includes(main.user._id)">Join</span>
-    <span ng-if="vm.membersArray.includes(main.user._id)">Leave</span> Group
-  </p>
-</div>
+  <div class="control">
+    <p class="button is-link" ng-click="vm.updateGroup()">
+      <span ng-if="!vm.membersArray.includes(main.user._id)">Join</span>
+      <span ng-if="vm.membersArray.includes(main.user._id)">Leave</span> Group
+    </p>
+  </div>
 
 </div>
