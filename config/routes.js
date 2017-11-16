@@ -11,7 +11,6 @@ const comments = require('../controllers/comments');
 //AUTHENTICATION
 router.route('/register')
   .post(authentications.register);
-
 router.route('/login')
   .post(authentications.login);
 
@@ -19,7 +18,6 @@ router.route('/login')
 router.route('/users')
   .get(users.index)
   .post(users.create);
-
 router.route('/users/:id')
   .get(users.show)
   .put(users.update)
@@ -28,7 +26,6 @@ router.route('/users/:id')
 //GROUPS
 router.route('/groups')
   .post(groups.create);
-
 router.route('/groups/:id')
   .get(groups.show)
   .put(groups.update);
@@ -36,7 +33,6 @@ router.route('/groups/:id')
 //COMMENTS
 router.route('/groups/:id/comments')
   .post(comments.create);
-
 router.route('/groups/:id/comments/:commentId')
   .delete(comments.delete);
 
