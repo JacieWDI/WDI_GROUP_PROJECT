@@ -58,7 +58,7 @@ p.title.image{
 
 }
 
-// MATT'S LOADING STYLES
+// MATT'S MAP STYLES
 
 
 .loading {
@@ -67,14 +67,23 @@ p.title.image{
 
 .loading-gif {
   height: 40px;
-  visible: hidden;
 }
 
-// MATT'S SEARCH STYLES
+.loading-icon {
+font-size: 18px;
+}
 
 .search {
   width: 600px;
+  height: 35px;
+  padding-left: 10px;
+  font-size: 12px;
 }
+
+.search-icon {
+  padding-right: 10px;
+}
+
 
 .level-left{
 background-color: red;

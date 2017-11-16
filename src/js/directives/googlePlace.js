@@ -15,6 +15,7 @@ function googleAutocomplete($window, $rootScope) {
 
       inputAutocomplete.addListener('place_changed', getPlaceData);
 
+
       function getPlaceData() {
         const newPlace = inputAutocomplete.getPlace();
         const placeLatLng = {
