@@ -1,8 +1,20 @@
 @import "partials/userpage";
+@import "partials/landingpage";
 @import "elements/buttons";
 @import "elements/navbar";
+<<<<<<< HEAD
 @import "elements/design";
 @import "partials/chatpage";
+=======
+@import "elements/footer";
+@import "elements/loading";
+@import "elements/searchbar";
+
+.animation{
+  @import "elements/design";
+}
+
+>>>>>>> 10ad69ece5b880bc434cf305ccb08f06580b9e45
 
 .google-map {
   height: 100vh;
@@ -14,92 +26,6 @@
   margin: 1px;
 }
 
-.homepage-board {
-  max-width: 1000px;
-}
-
-.home-img {
-  margin: 0 auto;
-  height: 100px;
-  width: 100px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  float: right;
-}
-
-.show-img {
-  margin: 0 auto;
-  height: 150px;
-  width: 150px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-p.title.image{
-  display:inline-block;
-}
-
-
-.home-img.box{
- max-width:200px;
- clear: both;
- width:100%;
- border-style: solid;
-  overflow: hidden;
-}
-.footer.ng-scope{
-
- clear: both;
-
-
-  overflow:auto;
-
-}
-
-// MATT'S MAP STYLES
-
-
-.loading {
-  padding: 1rem 1.5rem;
-}
-
-.loading-gif {
-  height: 40px;
-}
-
-.loading-icon {
-font-size: 18px;
-}
-
-.search {
-  width: 600px;
-  height: 35px;
-  padding-left: 10px;
-  font-size: 12px;
-}
-
-.search-icon {
-  padding-right: 10px;
-}
-
-
-.level-left{
-background-color: red;
-}
-.level-right{
-background-color: blue;
-}
-
-.profiledetails{
-  font-size:15px;
-}
-h1.ng-binding{
-    font-size:15px;
-}
-.ng-binding{
-  font-size:15px;
-  text-decoration: none;
-}
+// .homepage-board {
+//   max-width: 200px;
+// }

@@ -9,16 +9,14 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB22I-f_WLOasdvWLf9qQI4R8sE_7_zxs4&libraries=places" charset="utf-8"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://use.fontawesome.com/f1e0dac19d.js"></script>
   <!-- inject:js -->
   <!-- endinject -->
   <!-- inject:css -->
   <!-- endinject -->
 
 </head>
-
 <body ng-controller="MainCtrl as main">
-  <nav class="navbar is-primary ">
+  <nav class="navbar ">
     <div class="navbar-brand">
       <a class="navbar-item" ui-sref="eventsIndex">
         Explore More
@@ -65,32 +63,7 @@
       </div>
     </div>
   </nav>
-  <div class="design">
-    <span> <!-- Square container -->
-      <div clas="color"></div> <!-- Bars -->
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-      <div clas="color"></div>
-    </span>
-  </div>
+
 
   <main ui-view></main>
   <div ng-show="main.message" class="my-message notification is-{{ main.messageType }}" role="alert">
