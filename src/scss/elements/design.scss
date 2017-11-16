@@ -19,7 +19,9 @@
 //     position: absolute;
 // }
 
-
+.container-fluid{
+  background-color: black;
+}
 
 .design{
   body {
@@ -29,7 +31,7 @@ span {
   position: relative;
   display: block;
   max-width: 100%;
-  height: 55vh;
+  height: 53vh;
   /* padding-bottom: 10px; */
   overflow: hidden;
   background: #141414;
