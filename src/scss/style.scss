@@ -1,25 +1,18 @@
 @import "helpers/variables";
+@import "helpers/mixins";
 
-@import "partials/userpage";
-@import "partials/landingpage";
-@import "elements/buttons";
-@import "elements/navbar";
-@import "elements/forms";
-@import "elements/design";
-@import "partials/chatpage";
-@import "elements/footer";
-@import "elements/searchbar";
-@import "elements/googlemap";
-@import "elements/design";
-@import "elements/buttons";
-@import "elements/navbar";
-@import "elements/design";
-@import "elements/forms";
-
-@import "partials/userpage";
+@import "partials/eventspage";
 @import "partials/landingpage";
 @import "partials/chatpage";
 @import "partials/profilepage";
+
+@import "elements/footer";
+@import "elements/searchbar";
+@import "elements/googlemap";
+@import "elements/buttons";
+@import "elements/navbar";
+@import "elements/design";
+@import "elements/forms";
 
 
 .google-map {
@@ -34,10 +27,10 @@
   width: 400px;
   background: black;
 }
-
-.read-more{
-  margin: 1px;
-}
+//
+// .read-more{
+//   margin: 1px;
+// }
 
 // .homepage-board {
 //   max-width: 200px;

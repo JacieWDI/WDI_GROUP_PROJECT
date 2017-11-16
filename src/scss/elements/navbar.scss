@@ -34,9 +34,16 @@ a.navbar-item{
   color: white;
 }
 
+$dropdown-content-background-color: black;
+
 a.navbar-item:hover{
   background-color: #D867FF;
   color: black;
+}
+
+.navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
+  color: black;
+  background: #D867FF;
 }
 
 a.navbar-link{
@@ -45,15 +52,28 @@ a.navbar-link{
   color: white;
 }
 
+.navbar-dropdown {
+  background: black;
+
+  a.navbar-item.drop, i {
+    color: white;
+
+    &:hover {
+      background: #D867FF;
+      color: white;
+    }
+  }
+}
+
 // .navbar-item.has-dropdown.is-hoverable.is-right:hover{
 //   background-color: #D867FF;
 //   color: black;
 // }
 
-.drop:hover{
-  background-color: #D867FF;
-  color: black;
-}
+// .drop:hover{
+//   background-color: #D867FF;
+//   color: black;
+// }
 
 // .navbar-link:hover{
 //   background-color: #D867FF;

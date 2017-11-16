@@ -1,5 +1,5 @@
 <div class="columns">
-  <div class="column is-one-third blue">
+  <div class="column is-one-third profile">
     <div class="profile-img" style="background-image: url('{{vm.user.image}}');"></div>
     <h1 class="title">{{vm.user.firstName }} {{vm.user.lastName}}</h1>
     <h2 class="subtitle">{{ vm.user.userName }}</h2>
@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <div class="column is-two-thirds red">
+  <div class="column is-two-thirds">
     <h1 class="title">EVENTS & CHATS</h1>
     <div class="columns user-groups" ng-repeat="groups in vm.user.joinedGroups | chunkBy: 3">
       <div class="column green" ng-repeat="group in groups">

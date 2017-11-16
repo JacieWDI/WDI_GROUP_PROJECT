@@ -1,6 +1,6 @@
-<div class="notification">
-  <div class="tile is-ancestor top">
-    <div class="tile is-parent profile">
+<div class="container">
+  <div class="notification event">
+    <div class="tile is-12 eventdetail">
       <ul>
         <h1 class="title">EVENT DETAILS</h1>
         <h3><b>EVENT:</b> {{ vm.event.title }} </h3>
@@ -8,51 +8,42 @@
         <h3><b>ADDRESS:</b> {{ vm.event.address }}</h3>
         <h3><b>CITY:</b> {{ vm.event.city }}</h3>
         <h3><b>DATE AND START TIME:</b> {{ vm.event.start_time }}</h3>
-        <h3><b>IMAGE:</b><div class ="home-img" style="background-image: url('{{ vm.event.image}}');"></div></h3>
-
-
-        <h3><b>ID:</b> {{ vm.event.id }}</h3>
+        <!-- <h3><b>IMAGE:</b><div class ="home-img" style="background-image: url('{{ vm.event.image}}');"></div></h3> -->
+        <!-- <h3><b>ID:</b> {{ vm.event.id }}</h3> -->
+        <button class="button is-link creategroup-btn" ui-sref="groupsNew({ eventId: vm.event.id })">Create new group</button>
       </ul>
-
-    </div>
-    <div class="tile is-parent image">
-
     </div>
   </div>
 
-  <!-- //DELETE THIS DIV BLOCK IF WE DONT WANT DESCRIPTION -->
-  <div class="tile is-ancestor bottom">
-    <div class="tile is-12">
-      <div class="tile is-parent is-info">
+  <div class="notification eventmapper">
+    <div class="tile is-12 street-img">
+      <street-view center="{ lat: vm.event.latitude, lng: vm.event.longitude }"></street-view>
+    </div>
+  </div>
 
-<div class="tile is-children">
-</div>
-</div>
-</div>
-</div>
-
-{{ $scope.Group.eventId }}
-<div class="chat-groups" ng-if="vm.event.id === Group.eventId">
+  <!-- {{ $scope.Group.eventId }}
+  <div class="chat-groups" ng-if="vm.event.id === Group.eventId">
   <h1>hello</h1>
-</div>
-<div class="control">
-  <button class="button is-link" ui-sref="groupsNew({ eventId: vm.event.id })">Create new group</button>
-</div>
-</div>
-
-<div class="events">
-  <h1 class="title">EVENTS & CHATS</h1>
-  <ul class="groups-for-user">
-    <li class="column" ng-repeat="group in vm.groups">
-      <div class ="chat-profile-img" style="background-image: url('{{ group.image }}');">
-        <h2>{{ group.name }}</h2>
-        <h3>{{ group.description }}</h3>
-          <button class="button is-link profile-btn" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
-      </div>
-
-    </li>
-  </ul>
-</div>
+</div> -->
+<!-- <div class="control">
+</div> -->
 
 
-<street-view center="{ lat: vm.event.latitude, lng: vm.event.longitude }"></street-view>
+<div class="notification groupscreated">
+  <div class="tile is-12 allgroups">
+    <ul class="groups-for-event">
+      <li class="column notification is-info" ng-repeat="group in vm.groups">
+        <p>{{ group.name }}</p>
+        <p>{{ group.image }}</p>
+        <p>{{ group.description }}</p>
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</div>
