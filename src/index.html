@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Explore More</title>
   <base href="/" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB22I-f_WLOasdvWLf9qQI4R8sE_7_zxs4&libraries=places" charset="utf-8"></script>
@@ -16,89 +17,88 @@
 
 </head>
 <body ng-controller="MainCtrl as main">
-<nav class="navbar" id="navigationbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <div class ="nav-logo" style="background-image: url('images/logo.png');"></div>
-    <button class="button navbar-burger" ng-class="{'is-active': main.toggle }" ng-click="main.toggle = !main.toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
+  <nav class="navbar" id="navigationbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <div class ="nav-logo" style="background-image: url('images/logo.png');"></div>
+      <button class="button navbar-burger" ng-class="{'is-active': main.toggle }" ng-click="main.toggle = !main.toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
 
-  <div class="navbar-menu" ng-class="{'is-active' : main.toggle }">
-    <div class="navbar-end">
-      <a class="navbar-item" ui-sref="usersShow({ id: main.user._id })"ng-if="main.user">
-        Hi, {{ main.user.userName }}!
-      </a>
-      <a class="navbar-item" ui-sref="usersShow({ id: main.user._id })" ng-if="main.user">
-        <div class ="nav-img" style="background-image: url('{{main.user.image}}');"></div>
-      </a>
-      <a class="navbar-item" ui-sref="register" ng-if="!main.user">
-        Register
-      </a>
-      <a class="navbar-item" ui-sref="login" ng-if="!main.user">
-        Login
-      </a>
-      <a class="navbar-item" ui-sref="groupsIndex" ng-if="main.user">
-        Groups
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable is-right" ng-if="main.user">
-        <a class="navbar-link" href="#">
-          Account
+    <div class="navbar-menu" ng-class="{'is-active' : main.toggle }">
+      <div class="navbar-end">
+        <a class="navbar-item" ui-sref="usersShow({ id: main.user._id })"ng-if="main.user">
+          Hi, {{ main.user.userName }}!
         </a>
-        <div class="navbar-dropdown is-right">
-          <a class="navbar-item" href="#">
-            Signed in as: {{ main.user.userName }}
+        <a class="navbar-item" ui-sref="usersShow({ id: main.user._id })" ng-if="main.user">
+          <div class ="nav-img" style="background-image: url('{{main.user.image}}');"></div>
+        </a>
+        <a class="navbar-item" ui-sref="register" ng-if="!main.user">
+          Register
+        </a>
+        <a class="navbar-item" ui-sref="login" ng-if="!main.user">
+          Login
+        </a>
+        <a class="navbar-item" ui-sref="groupsIndex" ng-if="main.user">
+          Groups
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable is-right" ng-if="main.user">
+          <a class="navbar-link" href="#">
+            Account
           </a>
-          <a class="navbar-item" ui-sref="usersShow({ id: main.user._id })">
-            <span class="icon">
-              <i class="fa fa-user"></i>
-            </span> My Profile
-          </a>
-          <a class="navbar-item" href="#" ng-click="main.logout()">
-            <span class="icon">
-              <i class="fa fa-sign-out"></i>
-            </span> Logout
-          </a>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="#">
+              Signed in as: {{ main.user.userName }}
+            </a>
+            <a class="navbar-item" ui-sref="usersShow({ id: main.user._id })">
+              <span class="icon">
+                <i class="fa fa-user"></i>
+              </span> My Profile
+            </a>
+            <a class="navbar-item" href="#" ng-click="main.logout()">
+              <span class="icon">
+                <i class="fa fa-sign-out"></i>
+              </span> Logout
+            </a>
+          </div>
         </div>
       </div>
+    </nav>
+
+
+    <div class="design">
+      <span> <!-- Square container -->
+        <div clas="color"></div> <!-- Bars -->
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+      </span>
     </div>
-  </div>
-</div>
-</nav>
 
-<div class="design">
-  <span> <!-- Square container -->
-    <div clas="color"></div> <!-- Bars -->
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-    <div clas="color"></div>
-  </span>
-</div>
-
-<main ui-view></main>
-<div ng-show="main.message" class="my-message notification is-{{ main.messageType }}" role="alert">
-  {{ main.message }}
-</div>
-</body>
-</html>
+    <main ui-view></main>
+    <div ng-show="main.message" class="my-message notification is-{{ main.messageType }}" role="alert">
+      {{ main.message }}
+    </div>
+  </body>
+  </html>

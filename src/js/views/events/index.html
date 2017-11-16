@@ -1,17 +1,13 @@
 <section class="hero">
   <div class="hero-body loading">
     <div class="container">
-      <div class="control search">
-        <input ng-model="chosenPlace" google-autocomplete/>
+      <div class="control">
+        <i class="fa fa-search search-icon" aria-hidden="true"></i>
+        <input class ="search" ng-model="chosenPlace" placeholder="Where are you?" google-autocomplete/>
+        <i ng-show="vm.loadingGif" class="fa fa-spinner fa-pulse fa-3x fa-fw loading-icon"></i>
       </div>
     </div>
   </div>
 </section>
-
-<div class="hero-body loading">
-  <div ng-hide="vm.data" class="container container-loading">
-      Searching... please wait <img class= "loading-gif" src="/images/loading.gif" alt="loading">
-  </div>
-</div>
 
 <google-map center="{ lat: 51.509865, lng: -0.118092 }"></google-map>
