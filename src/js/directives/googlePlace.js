@@ -14,9 +14,7 @@ function googleAutocomplete($window, $rootScope) {
       const inputAutocomplete = new $window.google.maps.places.Autocomplete(element[0], options);
 
       inputAutocomplete.addListener('place_changed', getPlaceData);
-      // // $rootScope.$broadcast('the place has changed,', {
-      //   data: getPlaceData.data
-      // });
+
 
       function getPlaceData() {
         const newPlace = inputAutocomplete.getPlace();
