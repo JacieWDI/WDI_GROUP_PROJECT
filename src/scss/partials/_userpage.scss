@@ -29,9 +29,9 @@ div.tile.is-parent.image{
 
 div.tile.is-ancestor.bottom{
   height: 200px;
-  background:
-              -webkit-linear-gradient(rgba(59, 0, 64, 1), rgba(31, 112, 216, 1) 80%),
-              -webkit-linear-gradient(rgba(59, 0, 64, 1) 25%, rgba(31, 112, 216, 1) 80%);
+  background:rgb(31, 112, 216);
+              // -webkit-linear-gradient(rgba(59, 0, 64, 1), rgba(31, 112, 216, 1) 80%),
+              // -webkit-linear-gradient(rgba(59, 0, 64, 1) 25%, rgba(31, 112, 216, 1) 80%);
   margin-left: 5px;
   margin-top: 5px;
   color: white;

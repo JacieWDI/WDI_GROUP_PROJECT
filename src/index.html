@@ -50,15 +50,15 @@
             Account
           </a>
           <div class="navbar-dropdown is-right">
-            <a class="navbar-item" href="#">
+            <!-- <a class="navbar-item" href="#">
               Signed in as: {{ main.user.userName }}
-            </a>
-            <a class="navbar-item" ui-sref="usersShow({ id: main.user._id })">
+            </a> -->
+            <a class="navbar-item" class="drop" ui-sref="usersShow({ id: main.user._id })">
               <span class="icon">
                 <i class="fa fa-user"></i>
               </span> My Profile
             </a>
-            <a class="navbar-item" href="#" ng-click="main.logout()">
+            <a class="navbar-item" class="drop" href="#" ng-click="main.logout()">
               <span class="icon">
                 <i class="fa fa-sign-out"></i>
               </span> Logout

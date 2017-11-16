@@ -1,23 +1,18 @@
-// MATT'S SEARCH STYLES
-
 .search {
+  text-align: center;
+}
+
+.search-bar {
   width: 600px;
+  line-height: 40px;
+  padding-left: 10px;
+  font-size: 15px;
+
+}
+.search-icon {
+  padding-right: 10px;
 }
 
-.level-left{
-background-color: red;
-}
-.level-right{
-background-color: blue;
-}
-
-.profiledetails{
-  font-size:15px;
-}
-h1.ng-binding{
-    font-size:15px;
-}
-.ng-binding{
-  font-size:15px;
-  text-decoration: none;
+.loading-icon {
+  font-size: 25px;
 }

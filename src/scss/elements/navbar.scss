@@ -6,28 +6,62 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 100px;
+  border-color: white;
+  border-style:solid;
 }
+.nav-img:hover {
+  border-color: black;
+}
+
 
 div.navbar-brand{
   background-color: black;
   font-family: 'Roboto', sans-serif;
-
 }
 
 #navigationbar{
     background-color: black;
     font-family: 'Roboto', sans-serif;
+    text-transform:uppercase;
+    font-weight: bold;
     height: 100px;
     $size-1: 3rem
 }
 
 a.navbar-item{
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500px;
+  color: white;
 }
+
+a.navbar-item:hover{
+  background-color: #D867FF;
+  color: black;
+}
+
 a.navbar-link{
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500px;
+  color: white;
+}
+
+// .navbar-item.has-dropdown.is-hoverable.is-right:hover{
+//   background-color: #D867FF;
+//   color: black;
+// }
+
+.drop:hover{
+  background-color: #D867FF;
+  color: black;
+}
+
+// .navbar-link:hover{
+//   background-color: #D867FF;
+//   color: black;
+// }
+
+.icon{
+  color: black;
 }
 
 .nav-logo {
