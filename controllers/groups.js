@@ -1,9 +1,7 @@
 const Group = require('../models/group');
 
 function groupsIndex(req, res, next) {
-
-  Group
-    .find({ eventId: req.params.id })
+  Group.find({ eventId: req.params.id })
     .populate('comments.createdBy createdBy members')
     .exec()
     .then(groups => {
@@ -16,15 +14,13 @@ function groupsCreate(req, res, next) {
   req.body.createdBy = req.user.userId;
   req.body.members = [req.user.userId];
 
-  Group
-    .create(req.body)
-    .then((group) => res.status(201).json(group))
+  Group.create(req.body)
+    .then(group => res.status(201).json(group))
     .catch(next);
 }
 
 function groupsShow(req, res, next) {
-  Group
-    .findById(req.params.id)
+  Group.findById(req.params.id)
     .populate('comments.createdBy createdBy members')
     .exec()
     .then(group => {
@@ -35,8 +31,7 @@ function groupsShow(req, res, next) {
 }
 
 function groupsUpdate(req, res, next) {
-  Group
-    .findById(req.params.id)
+  Group.findById(req.params.id)
     .exec()
     .then(group => {
       if (group.members.indexOf(req.user.userId) === -1) {

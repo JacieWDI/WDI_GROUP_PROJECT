@@ -11,16 +11,16 @@ function googleAutocomplete($window, $rootScope) {
         componentRestrictions: {}
       };
 
-      const inputAutocomplete = new $window.google.maps.places.Autocomplete(element[0], options);
+      const inputAutocomplete = new $window.google.maps.places.Autocomplete(
+        element[0],
+        options
+      );
 
       inputAutocomplete.addListener('place_changed', getPlaceData);
-
 
       function getPlaceData() {
         // addLoadingGif
         $rootScope.$broadcast('addLoadingGif');
-
-
 
         const newPlace = inputAutocomplete.getPlace();
         const placeLatLng = {

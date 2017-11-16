@@ -3,7 +3,9 @@ const rp = require('request-promise');
 function eventsIndex(req, res, next) {
   rp({
     method: 'GET',
-    uri: `http://api.eventful.com/json/events/search?app_key=4NdXJf3wjWsTGctn&category=music&page_size=5&where=${req.params.lat},${req.params.lng}&within=2`
+    uri: `http://api.eventful.com/json/events/search?app_key=4NdXJf3wjWsTGctn&category=music&page_size=5&where=${
+      req.params.lat
+    },${req.params.lng}&within=2`
   })
     .then(data => {
       const events = JSON.parse(data);
@@ -15,7 +17,9 @@ function eventsIndex(req, res, next) {
 function eventsShow(req, res, next) {
   rp({
     method: 'GET',
-    uri: `http://api.eventful.com/json/events/get?app_key=4NdXJf3wjWsTGctn&id=${req.params.id}`
+    uri: `http://api.eventful.com/json/events/get?app_key=4NdXJf3wjWsTGctn&id=${
+      req.params.id
+    }`
   })
     .then(data => {
       const event = JSON.parse(data);

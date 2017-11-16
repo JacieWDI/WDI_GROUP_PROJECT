@@ -1,6 +1,4 @@
-angular
-  .module('groupProject')
-  .controller('MainCtrl', MainCtrl);
+angular.module('groupProject').controller('MainCtrl', MainCtrl);
 
 MainCtrl.$inject = [
   '$transitions',
@@ -40,7 +38,7 @@ function MainCtrl(
   });
 
   $rootScope.$on('error', (e, err) => {
-    if(err.status === 401) {
+    if (err.status === 401) {
       $state.go('login');
       $rootScope.$broadcast('displayMessage', {
         type: 'danger',
@@ -64,7 +62,7 @@ function MainCtrl(
   }
 
   function closeMessage() {
-    vm.message     = null;
+    vm.message = null;
     vm.messageType = null;
   }
 }

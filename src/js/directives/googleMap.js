@@ -1,14 +1,18 @@
 /* global google:ignore */
 
-angular
-  .module('groupProject')
-  .directive('googleMap', googleMap);
-
+angular.module('groupProject').directive('googleMap', googleMap);
 
 let infowindow = null;
-const markers  = [];
+const markers = [];
 
-googleMap.$inject = ['$window', '$http', '$state', '$compile', '$rootScope', 'API'];
+googleMap.$inject = [
+  '$window',
+  '$http',
+  '$state',
+  '$compile',
+  '$rootScope',
+  'API'
+];
 
 function googleMap($window, $http, $state, $compile, $rootScope, API) {
   return {
@@ -44,7 +48,10 @@ function googleMap($window, $http, $state, $compile, $rootScope, API) {
       });
 
       function addMarker(location) {
-        const latLng = { lat: parseFloat(location.latitude), lng: parseFloat(location.longitude) };
+        const latLng = {
+          lat: parseFloat(location.latitude),
+          lng: parseFloat(location.longitude)
+        };
 
         const marker = new $window.google.maps.Marker({
           position: latLng,
@@ -60,7 +67,7 @@ function googleMap($window, $http, $state, $compile, $rootScope, API) {
       }
 
       function createInfoWindow(marker, location) {
-        if(infowindow) infowindow.close();
+        if (infowindow) infowindow.close();
 
         const infoWindowContent = `
         <div class="infowindow">
@@ -79,7 +86,6 @@ function googleMap($window, $http, $state, $compile, $rootScope, API) {
         });
         infowindow.open(map, marker);
       }
-
     }
   };
 }

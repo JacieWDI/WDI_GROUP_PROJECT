@@ -17,18 +17,22 @@
 
 </head>
 <body ng-controller="MainCtrl as main">
-  <nav class="navbar ">
+  <nav class="navbar" id="navigationbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" ui-sref="eventsIndex">
-        Explore More
-      </a>
+      <div class ="nav-logo" style="background-image: url('images/logo.png');" ui-sref="eventsIndex"></div>
+      <button class="button navbar-burger" ng-class="{'is-active': main.toggle }" ng-click="main.toggle = !main.toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <div id="navigationbar" class="navbar-menu">
+
+    <div class="navbar-menu" ng-class="{'is-active' : main.toggle }">
       <div class="navbar-end">
-        <a class="navbar-item" ui-sref="#" ng-if="main.user">
+        <a class="navbar-item" ui-sref="usersShow({ id: main.user._id })"ng-if="main.user">
           Hi, {{ main.user.userName }}!
         </a>
-        <a class="navbar-item" href="#" ng-if="main.user">
+        <a class="navbar-item" ui-sref="usersShow({ id: main.user._id })" ng-if="main.user">
           <div class ="nav-img" style="background-image: url('{{main.user.image}}');"></div>
         </a>
         <a class="navbar-item" ui-sref="register" ng-if="!main.user">
@@ -62,13 +66,39 @@
           </div>
         </div>
       </div>
+    </nav>
+
+
+    <div class="design">
+      <span> <!-- Square container -->
+        <div clas="color"></div> <!-- Bars -->
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+        <div clas="color"></div>
+      </span>
     </div>
-  </nav>
 
-
-  <main ui-view></main>
-  <div ng-show="main.message" class="my-message notification is-{{ main.messageType }}" role="alert">
-    {{ main.message }}
-  </div>
-</body>
-</html>
+    <main ui-view></main>
+    <div ng-show="main.message" class="my-message notification is-{{ main.messageType }}" role="alert">
+      {{ main.message }}
+    </div>
+  </body>
+  </html>

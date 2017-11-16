@@ -1,6 +1,4 @@
-angular
-  .module('groupProject')
-  .directive('streetView', streetView);
+angular.module('groupProject').directive('streetView', streetView);
 
 streetView.$inject = ['$window', '$timeout'];
 function streetView($window, $timeout) {
@@ -17,7 +15,6 @@ function streetView($window, $timeout) {
       // listen for broadcast data received, then run initMap();
 
       function initMap() {
-
         const latLng = {
           lat: parseFloat(scope.center.lat),
           lng: parseFloat(scope.center.lng)
@@ -29,13 +26,15 @@ function streetView($window, $timeout) {
         });
 
         var panorama = new $window.google.maps.StreetViewPanorama(
-          element.children()[1], {
+          element.children()[1],
+          {
             position: latLng,
             pov: {
               heading: 34,
               pitch: 10
             }
-          });
+          }
+        );
         map.setStreetView(panorama);
       }
     }
