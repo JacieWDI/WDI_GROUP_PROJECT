@@ -1,14 +1,50 @@
-.chat-box {
-  background-color: black;
+.chat-header {
+  background-color: $color-black;
+  border: 8px solid $color-pink;
+  margin: 10px;
     h1 {
       font-size: 30px;
     }
 }
 
-
-.chat-header {
-  background-color: orange;
+.columns.chat-box {
+  border: 4px solid $color-black;
 }
+
+.chat-box{
+  .chat-left {
+    // background-color: $color-black;
+    text-align: center;
+  }
+  margin: 10px;
+  h3 {
+    font-size: 24px;
+  }
+  p.fa {
+    float: right;
+    font-size: 30px;
+    color: $color-magenta;
+    &:hover {
+      font-size: 32px;
+      color: $color-black;
+    }
+    .time {
+      color: black;
+      padding-left: 10px;
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+}
+.chat-face-img {
+  text-align: center;
+  height: 75px;
+  width: 75px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100px;
+}
+
 
 .chat-img {
   margin: 0 auto;
