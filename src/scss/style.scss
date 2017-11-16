@@ -1,7 +1,12 @@
+@import "helpers/variables";
+
+
 @import "partials/userpage";
 @import "partials/landingpage";
 @import "elements/buttons";
 @import "elements/navbar";
+@import "elements/design";
+@import "partials/chatpage";
 @import "elements/footer";
 @import "elements/loading";
 @import "elements/searchbar";
@@ -11,10 +16,22 @@
 
 
 
+.google-map {
+  height: 100vh;
+  width: 100%;
+  display: inline-block;
+}
 
+#map, #pano {
+  float: left;
+  height: 400px;
+  width: 400px;
+  background: red;
+}
 
-
-
+.read-more{
+  margin: 1px;
+}
 
 // .homepage-board {
 //   max-width: 200px;
