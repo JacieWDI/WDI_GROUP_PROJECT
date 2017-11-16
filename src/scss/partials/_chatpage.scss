@@ -1,8 +1,27 @@
 .chat-box {
   background-color: black;
+    h1 {
+      font-size: 30px;
+    }
 }
 
 
 .chat-header {
   background-color: orange;
+}
+
+.chat-img {
+  margin: 0 auto;
+  height: 400px;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h3 {
+    font-size: 40px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+  }
 }
