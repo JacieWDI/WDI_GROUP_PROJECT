@@ -1,9 +1,17 @@
+.warning {
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  background-color: $color-magenta;
+  color: $color-black;
+}
+
 .chat-header {
   background-color: $color-black;
-  border: 8px solid $color-pink;
+  border: 6px solid $color-mint;
   margin: 10px;
     h1 {
-      font-size: 30px;
+      font-size: 20px;
     }
 }
 
@@ -22,10 +30,10 @@
   }
   p.fa {
     float: right;
-    font-size: 30px;
+    font-size: 20px;
     color: $color-magenta;
     &:hover {
-      font-size: 32px;
+      font-size: 22px;
       color: $color-black;
     }
     .time {
@@ -53,8 +61,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  h3 {
-    font-size: 40px;
+  h2 {
+    font-size: 35px;
     margin: 0 auto;
     padding: 5px;
     background-color: rgba(0,0,0,0.7);
