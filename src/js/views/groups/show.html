@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="notification">
+  <div class="notification chat-box">
     <a ui-sref="eventsShow({ id: vm.group.eventId })"><h1>GO TO EVENT</h1></a>
     <a ui-sref="usersShow({ id: main.user._id })"><h1>GO TO TO PROFILE</h1></a>
-    <div>
+    <div class ="chat-header">
       <h3><b>CHAT:</b> {{ vm.group.name}} chat</h3>
       <h3><b>IMAGE:</b><div class ="chat-img" style="background-image: url('{{ vm.group.image}}');"></div></h3>
       <h3><b>DESCRIPTION:</b> {{ vm.group.description}} </h3>
