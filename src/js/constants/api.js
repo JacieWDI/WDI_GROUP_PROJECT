@@ -1,3 +1,1 @@
-angular
-  .module('groupProject')
-  .constant('API', 'http://localhost:7000/api');
+angular.module('groupProject').constant('API', 'https://localhost:7000/api');
