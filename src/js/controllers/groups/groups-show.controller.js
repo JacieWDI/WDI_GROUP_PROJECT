@@ -2,18 +2,13 @@ angular
   .module('groupProject')
   .controller('groupsShowCtrl', groupsShowCtrl);
 
-groupsShowCtrl.$inject = ['Group', '$stateParams', '$rootScope', '$state', 'currentUserService', '$scope'];
-function groupsShowCtrl(Group, $stateParams, $rootScope, $state, currentUserService, $scope) {
+groupsShowCtrl.$inject = ['Group', '$stateParams'];
+function groupsShowCtrl(Group, $stateParams ) {
   const vm = this;
-  console.log('group show loaded');
-
-  // vm.group = Group.get($stateParams);
-
-  //GET EVENT INFO AND PASS INTO vm.event - $rootScope?
 
   vm.commentCreate = commentCreate;
   vm.commentDelete = commentDelete;
-  vm.updateGroup = join;
+  vm.updateGroup = update;
 
   getTheGroup();
 
@@ -22,8 +17,16 @@ function groupsShowCtrl(Group, $stateParams, $rootScope, $state, currentUserServ
       .get({ id: $stateParams.id })
       .$promise
       .then(group => {
+        vm.membersArray = [];
         vm.group = group;
+        createMemberIdArray(group.members);
       });
+  }
+
+  function createMemberIdArray(members) {
+    for (var i = 0; i < members.length; i++) {
+      vm.membersArray.push(members[i].id);
+    }
   }
 
   function commentCreate() {
@@ -45,12 +48,12 @@ function groupsShowCtrl(Group, $stateParams, $rootScope, $state, currentUserServ
       });
   }
 
-  function join() {
+  function update() {
     Group
       .update({ id: $stateParams.id }, {})
       .$promise
-      .then(group => {
-        vm.group.members = group.members;
+      .then(() => {
+        getTheGroup();
       });
 
   }

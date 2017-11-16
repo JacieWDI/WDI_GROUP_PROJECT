@@ -73,3 +73,12 @@ div.level-left{
               -webkit-linear-gradient(rgba(59, 0, 64, 1) 25%, rgba(255, 0, 136, 1) 80%);
 // border-radius: 15px;
 }
+
+.show-img {
+  margin: 0 auto;
+  height: 150px;
+  width: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

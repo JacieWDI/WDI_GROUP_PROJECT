@@ -1,40 +1,54 @@
 <div class="container">
-  <div class="notification">
-    <a ui-sref="eventsShow({ id: vm.group.eventId })"><h1>BACK TO EVENT</h1></a>
-    <div>
-      <h3><b>CHAT:</b> {{ vm.group.name}} chat</h3>
-      <h3><b>IMAGE:</b><div class ="home-img" style="background-image: url('{{ vm.group.image}}');"></div></h3>
-      <h3><b>DESCRIPTION:</b> {{ vm.group.description}} </h3>
+  <div class="notification chat-header">
+    <a ui-sref="eventsShow({ id: vm.group.eventId })"><h1>GO TO EVENT</h1></a>
+    <a ui-sref="usersShow({ id: main.user._id })"><h1>GO TO PROFILE</h1></a>
+
+    <div class ="chat-img" style="background-image: url('{{vm.group.image}}');">
+      <h3>{{ vm.group.name | uppercase }}</h3>
+      <h3>{{ vm.group.description | lowercase }}</h3>
     </div>
-    <ul>
-      <li class="column notification is-info" ng-repeat="comment in vm.group.comments">
-        <p>Author: {{ comment.createdBy.userName }}</p>
-        <div class ="nav-img notification is-info" style="background-image: url('{{ comment.createdBy.image }}');"></div>
-        <p>Comment: {{ comment.body }}</p>
-        <p>Time: {{ comment.createdAt | date:"MM/dd/yyyy 'at' h:mma" | lowercase }}</p>
-        <button class="button is-link" ng-click="vm.commentDelete(comment)" ng-if="main.user.id === comment.createdBy.id">Delete</button>
-      </li>
-    </ul>
-  </section>
-
-
-  <form ng-submit="vm.commentCreate()">
-    <div class="field">
-      <label class="label">Comment</label>
-      <div class="control">
-        <textarea class="textarea" placeholder="your comment..." ng-model="vm.comment.body"></textarea>
-      </div>
-      <!-- <div class="control" ng-if="vm.group.members.indexOf(main.user.id) !== -1"> -->
-        <button class="button is-link">Submit</button>
-      <!-- </div> -->
-    </div>
-  </form>
-
-  {{vm.group.members}}
-  {{main.user.id}}
-
-  <div class="control" ng-if="vm.group.members.indexOf(main.user.id) === -1">
-    <button class="button is-link" ng-click="vm.updateGroup()">Join Group</button>
   </div>
+
+  <!-- <ul>
+
+    <li class="column is-four-fifths chat-box" ng-repeat="comment in vm.group.comments">
+      <p>Author: {{ comment.createdBy.userName }}</p>
+      <div class ="nav-img notification is-info" style="background-image: url('{{ comment.createdBy.image }}');"></div>
+      <p>Comment: {{ comment.body }}</p>
+      <p>Time: {{ comment.createdAt | date:"MM/dd/yyyy 'at' h:mma" | lowercase }}</p>
+      <h6 i class="fa fa-ban" ng-click="vm.commentDelete(comment)" ng-if="main.user._id === comment.createdBy.id"></h6>
+    </li>
+    <li class="column chat-box"></li>
+  </ul> -->
+
+
+  <div class="columns chat-box" ng-repeat="comment in vm.group.comments">
+    <div class="column chat-box is-1 chat-left">
+      <p>{{ comment.createdBy.userName }}</p>
+      <div class ="chat-face-img notification is-info" style="background-image: url('{{ comment.createdBy.image }}');"></div>
+    </div>
+    <div class="column chat-box">
+      <h3>{{ comment.body }}</h3>
+      <p i class="fa fa-ban" ng-click="vm.commentDelete(comment)" ng-if="main.user._id === comment.createdBy.id"><span class="time">{{ comment.createdAt | date:"MM/dd/yyyy 'at' h:mma" | lowercase }}</span></p>
+    </div>
+  </div>
+
+<h3 ng-if="!vm.membersArray.includes(main.user._id)">To comment, please join the chat</h3>
+<form ng-submit="vm.commentCreate()" ng-if="vm.membersArray.includes(main.user._id)">
+  <div class="field">
+    <label class="label">Comment</label>
+    <div class="control">
+      <textarea class="textarea" placeholder="your comment..." ng-model="vm.comment.body"></textarea>
+    </div>
+    <button class="button is-link">Submit</button>
+  </div>
+</form>
+
+<div class="control">
+  <p class="button is-link" ng-click="vm.updateGroup()">
+    <span ng-if="!vm.membersArray.includes(main.user._id)">Join</span>
+    <span ng-if="vm.membersArray.includes(main.user._id)">Leave</span> Group
+  </p>
+</div>
 
 </div>

@@ -1,7 +1,4 @@
 <div class="level">
-
-
-
   <div class="level-left">
 
        <div class ="show-img" style="background-image: url('{{vm.user.image}}');">
@@ -13,7 +10,7 @@
         <li>Username: {{vm.user.userName}}</li>
         <li>First name: {{vm.user.firstName}}</li>
         <li>Last name: {{vm.user.lastName}}</li>
-        <li class="control"><button class="button is-focused is-medium" ui-sref="usersEdit({ id: vm.user.id })">Edit</button></li>
+        <li class="control"><button class="button is-focused is-medium" ui-sref="usersEdit({ id: main.user._id })">Edit</button></li>
       </ul>
     </div>
   </div>
