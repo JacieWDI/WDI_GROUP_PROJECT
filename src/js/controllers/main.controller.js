@@ -28,10 +28,6 @@ function MainCtrl(
     vm.isNavCollapsed = true;
   });
 
-  // function logout() {
-  //   currentUserService.removeUser();
-  // }
-
   $rootScope.$on('loggedIn', () => {
     console.log('fired, huzzah!!!');
     vm.user = currentUserService.currentUser;
