@@ -1,5 +1,7 @@
 <div class="level">
 
+
+
   <div class="level-left">
 
        <div class ="show-img" style="background-image: url('{{vm.user.image}}');">
@@ -18,5 +20,21 @@
 
    <div class="level-item">
       <h1 class="title">Events</h1>
+      <ul class="groups-for-user">
+        <li class="column notification is-info" ng-repeat="group in vm.user.joinedGroups">
+          <p>{{ group.name }}</p>
+          <p>{{ group.description }}</p>
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+
     </div>
+    <div class="level-item">
+    </div>
+
+
   </div>

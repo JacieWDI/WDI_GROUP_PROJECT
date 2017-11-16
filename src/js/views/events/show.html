@@ -22,7 +22,18 @@
   <div class="tile is-ancestor bottom">
     <div class="tile is-12">
       <div class="tile is-parent is-info">
-        <h3><b>DESCRIPTION:</b> {{ vm.event.description }}</h3>
+        <!-- <ul class="groups-for-event">
+          <li class="column notification is-info" ng-repeat="group in vm.groups">
+            <p>{{ group.name }}</p>
+            <p>{{ group.image }}</p>
+            <p>{{ group.description }}</p>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
+              </div>
+            </div>
+          </li>
+        </ul> -->
         <div class="tile is-children">
         </div>
       </div>
@@ -38,4 +49,15 @@
   </div>
 </div>
 
-</div>
+<ul class="groups-for-event">
+  <li class="column notification is-info" ng-repeat="group in vm.groups">
+    <p>{{ group.name }}</p>
+    <p>{{ group.image }}</p>
+    <p>{{ group.description }}</p>
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
+      </div>
+    </div>
+  </li>
+</ul>

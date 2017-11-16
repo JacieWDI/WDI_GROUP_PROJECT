@@ -1,6 +1,7 @@
 @import "partials/userpage";
 @import "elements/buttons";
 @import "elements/navbar";
+@import "elements/design";
 
 .google-map {
   height: 100vh;
@@ -28,20 +29,15 @@
 
 .show-img {
   margin: 0 auto;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 
-
 p.title.image{
-  display:inline-block;
-}
-
-div.show-img{
   display:inline-block;
 }
 
@@ -88,12 +84,12 @@ background-color: blue;
 }
 
 .profiledetails{
-  font-size:16px;
+  font-size:15px;
 }
 h1.ng-binding{
-    font-size:20px;
+    font-size:15px;
 }
 .ng-binding{
-  font-size:20px;
+  font-size:15px;
   text-decoration: none;
 }

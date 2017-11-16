@@ -1,22 +1,22 @@
 const Group = require('../models/group');
 
 function groupsIndex(req, res, next) {
+  console.log('hitting');
+  console.log(req.params);
   Group
     .find({ eventId: req.params.id })
-    .populate('comments.createdBy')
+    .populate('comments.createdBy createdBy members')
     .exec()
-    .then(groups => res.status(200).json(groups))
+    .then(groups => {
+      console.log(groups);
+      res.status(200).json(groups);
+    })
     .catch(next);
 }
 
 function groupsCreate(req, res, next) {
-  // req.body.createdBy = req.user
-  // create members array on req.body and push current user id into it
-
   req.body.createdBy = req.user.userId;
   req.body.members = [req.user.userId];
-  console.log(req.body);
-
 
   Group
     .create(req.body)
@@ -27,7 +27,7 @@ function groupsCreate(req, res, next) {
 function groupsShow(req, res, next) {
   Group
     .findById(req.params.id)
-    .populate('comments.createdBy')
+    .populate('comments.createdBy createdBy members')
     .exec()
     .then(group => {
       if (!group) return res.status(404).json({ message: 'Group not found.' });
