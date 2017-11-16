@@ -19,7 +19,7 @@
 <body ng-controller="MainCtrl as main">
   <nav class="navbar" id="navigationbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <div class ="nav-logo" style="background-image: url('images/logo.png');"></div>
+      <div class ="nav-logo" style="background-image: url('images/logo.png');" ui-sref="eventsIndex"></div>
       <button class="button navbar-burger" ng-class="{'is-active': main.toggle }" ng-click="main.toggle = !main.toggle">
         <span></span>
         <span></span>
