@@ -14,10 +14,20 @@ footer{
     }
     &.center-these {
       position: relative;
-      .ourpictures {
-        @include centerBackground;
-        height: 100px;
-        width: 100px;
+      .wrapper {
+        position: absolute;
+        width: 100%;
+        @include centerCentrally;
+        .ourpicture {
+          display: inline-block;
+          height:50px;
+          width: 50px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 100px;
+          margin: 0 10px;
+        }
       }
       h4 {
         position: absolute;
