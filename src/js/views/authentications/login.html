@@ -4,17 +4,20 @@
       <div class="field">
         <label class="label form-label">Email</label>
         <div class="control">
-          <input type="text" name="email" ng-model="vm.user.email" placeholder="email" class="input">
+          <input type="text" name="email" ng-model="vm.user.email" placeholder="Please enter your email address" class="input">
         </div>
       </div>
       <div class="field">
         <label class="label form-label">Password</label>
         <div class="control">
-          <input type="text" name="password" ng-model="vm.user.password" placeholder="password" class="input">
+          <input type="text" name="password" ng-model="vm.user.password" placeholder="Please enter your email password" class="input">
         </div>
       </div>
-      <div class="form-group">
-        <input type="submit" value="login" class="btn button is-success">
+
+      <div class="field is-grouped">
+        <div class="control button-container">
+          <input type="submit" class="btn button">
+        </div>
       </div>
     </form>
   </div>
