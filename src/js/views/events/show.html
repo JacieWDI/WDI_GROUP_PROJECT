@@ -1,6 +1,6 @@
-<div class="notification">
-  <div class="tile is-ancestor top">
-    <div class="tile is-parent profile">
+<div class="container">
+  <div class="notification event">
+    <div class="tile is-12 eventdetail">
       <ul>
         <h1 class="title">EVENT DETAILS</h1>
         <h3><b>EVENT:</b> {{ vm.event.title }} </h3>
@@ -8,70 +8,42 @@
         <h3><b>ADDRESS:</b> {{ vm.event.address }}</h3>
         <h3><b>CITY:</b> {{ vm.event.city }}</h3>
         <h3><b>DATE AND START TIME:</b> {{ vm.event.start_time }}</h3>
-        <h3><b>IMAGE:</b><div class ="home-img" style="background-image: url('{{ vm.event.image}}');"></div></h3>
-
-
-        <h3><b>ID:</b> {{ vm.event.id }}</h3>
+        <!-- <h3><b>IMAGE:</b><div class ="home-img" style="background-image: url('{{ vm.event.image}}');"></div></h3> -->
+        <!-- <h3><b>ID:</b> {{ vm.event.id }}</h3> -->
+        <button class="button is-link creategroup-btn" ui-sref="groupsNew({ eventId: vm.event.id })">Create new group</button>
       </ul>
-
-    </div>
-    <div class="tile is-parent image">
-      <!-- <p class="title image"></p> -->
-      <!-- <img class="streetview-show" src="https://maps.googleapis.com/maps/api/streetview?size=600x300&location={{ vm.event.latitude }},{{ vm.event.longitude }}&heading=151.78&pitch=-0.76&key=AIzaSyDv-mdQOjANbgQmRn4epMmtpZ6mJwMYkWw" alt=""> -->
-
-      <!-- <img src="      https://maps.googleapis.com/maps/api/js?key=AIzaSyB22I-f_WLOasdvWLf9qQI4R8sE_7_zxs4&libraries=places&location={{ vm.event.latitude }},{{ vm.event.longitude }}" alt=""> -->
-
-
-
-
-
-
     </div>
   </div>
 
-  <!-- //DELETE THIS DIV BLOCK IF WE DONT WANT DESCRIPTION -->
-  <div class="tile is-ancestor bottom">
-    <div class="tile is-12">
-      <div class="tile is-parent is-info">
-        <!-- <ul class="groups-for-event">
-        <li class="column notification is-info" ng-repeat="group in vm.groups">
+  <div class="notification eventmapper">
+    <div class="tile is-12 street-img">
+      <street-view center="{ lat: vm.event.latitude, lng: vm.event.longitude }"></street-view>
+    </div>
+  </div>
+
+  <!-- {{ $scope.Group.eventId }}
+  <div class="chat-groups" ng-if="vm.event.id === Group.eventId">
+  <h1>hello</h1>
+</div> -->
+<!-- <div class="control">
+</div> -->
+
+
+<div class="notification groupscreated">
+  <div class="tile is-12 allgroups">
+    <ul class="groups-for-event">
+      <li class="column notification is-info" ng-repeat="group in vm.groups">
         <p>{{ group.name }}</p>
         <p>{{ group.image }}</p>
         <p>{{ group.description }}</p>
         <div class="field is-grouped">
-        <div class="control">
-        <button class="button is-link" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
-      </div>
-    </div>
-  </li>
-</ul> -->
-<div class="tile is-children">
-</div>
-</div>
-</div>
+          <div class="control">
+            <button class="button is-link" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 
-{{ $scope.Group.eventId }}
-<div class="chat-groups" ng-if="vm.event.id === Group.eventId">
-  <h1>hello</h1>
 </div>
-<div class="control">
-  <button class="button is-link" ui-sref="groupsNew({ eventId: vm.event.id })">Create new group</button>
-</div>
-</div>
-
-<ul class="groups-for-event">
-  <li class="column notification is-info" ng-repeat="group in vm.groups">
-    <p>{{ group.name }}</p>
-    <p>{{ group.image }}</p>
-    <p>{{ group.description }}</p>
-    <div class="field is-grouped">
-      <div class="control">
-        <button class="button is-link" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
-      </div>
-    </div>
-  </li>
-</ul>
-
-
-<street-view center="{ lat: vm.event.latitude, lng: vm.event.longitude }"></street-view>
