@@ -1,16 +1,42 @@
-.footer{
-text-align: center;
-display: block;
-background: #333333;
-padding: -30px;
-height: 18vh;
+main {
+  margin-bottom: 10px;
+  min-height: 63vh;
 }
 
-.ourpicture{
-height:150px;
-width: 150px;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-border-radius: 100px;
+footer{
+  background: #333333;
+  padding: 20px;
+  margin-bottom: 0px!important;
+  section {
+    text-align: center;
+    .eventful-badge {
+      margin-bottom: 10px;
+    }
+    &.center-these {
+      position: relative;
+      .wrapper {
+        position: absolute;
+        width: 100%;
+        @include centerCentrally;
+        .ourpicture {
+          display: inline-block;
+          height:50px;
+          width: 50px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 100px;
+          margin: 0 10px;
+        }
+      }
+      h4 {
+        position: absolute;
+        width: 100%;
+        @include centerCentrally;
+        font-weight: bold;
+        font-size: 120%;
+        color: white;
+      }
+    }
+  }
 }
