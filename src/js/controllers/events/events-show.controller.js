@@ -2,10 +2,10 @@ angular
   .module('groupProject')
   .controller('eventsShowCtrl', eventsShowCtrl);
 
-eventsShowCtrl.$inject = ['Event', '$stateParams', '$http', 'API'];
+eventsShowCtrl.$inject = ['Event', '$stateParams', '$http', 'API', '$element'];
 
 
-function eventsShowCtrl(Event, $stateParams, $http, API) {
+function eventsShowCtrl(Event, $stateParams, $http, API, $element) {
   const vm = this;
   vm.group = Event;
 
@@ -13,6 +13,8 @@ function eventsShowCtrl(Event, $stateParams, $http, API) {
     .get(`${API}/events/${$stateParams.id}`)
     .then(function successCallback(response){
       vm.event = response.data;
+      // broadcast message saying data received.
+      console.log(vm.event, 'show me the money');
     });
 
   Event

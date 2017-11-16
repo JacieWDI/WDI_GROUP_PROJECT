@@ -4,7 +4,7 @@
       <div class="control">
         <i class="fa fa-search search-icon" aria-hidden="true"></i>
         <input class ="search" ng-model="chosenPlace" placeholder="Where are you?" google-autocomplete/>
-        <i ng-hide="vm.data" class="fa fa-spinner fa-pulse fa-3x fa-fw loading-icon"></i>
+        <i ng-show="vm.loadingGif" class="fa fa-spinner fa-pulse fa-3x fa-fw loading-icon"></i>
       </div>
     </div>
   </div>

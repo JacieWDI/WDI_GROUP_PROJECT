@@ -17,12 +17,16 @@ function googleAutocomplete($window, $rootScope) {
 
 
       function getPlaceData() {
+        // addLoadingGif
+        $rootScope.$broadcast('addLoadingGif');
+
+
+
         const newPlace = inputAutocomplete.getPlace();
         const placeLatLng = {
           lat: newPlace.geometry.location.lat(),
           lng: newPlace.geometry.location.lng()
         };
-
         $rootScope.$broadcast('newPlaceData', placeLatLng);
       }
     }

@@ -19,10 +19,6 @@ function googleMap($window, $http, $state, $compile, $rootScope, API) {
       center: '='
     },
     link(scope, element) {
-      scope.eventsShow = function() {
-        console.log('clicked');
-      };
-
       const map = new $window.google.maps.Map(element[0], {
         zoom: 13,
         center: scope.center
@@ -31,7 +27,6 @@ function googleMap($window, $http, $state, $compile, $rootScope, API) {
       $rootScope.$on('newPlaceData', (e, newPlace) => {
         markers.forEach(function(marker) {
           marker.setMap(null);
-
         });
 
         map.setCenter(newPlace);
@@ -41,11 +36,7 @@ function googleMap($window, $http, $state, $compile, $rootScope, API) {
           .get(`${API}/events/${newPlace.lat}/${newPlace.lng}`)
           .then(response => {
             const data = response.data;
-            console.log(data);
-            $rootScope.$broadcast('the data is ready, remove loading icon', {
-              data: response.data
-            });
-
+            $rootScope.$broadcast('removeLoadingGif');
             data.events.event.forEach(location => {
               addMarker(location);
             });
@@ -78,7 +69,6 @@ function googleMap($window, $http, $state, $compile, $rootScope, API) {
           <h3><b>ADDRESS:</b> ${location.address}</h3>
           <h3><b>CITY:</b> ${location.city_name}</h3>
           <h3><b>DATE AND START TIME:</b> ${location.start_time}</h3>
-          <h3><b>ID:</b> ${location.id}</h3>
           <a ui-sref="eventsShow({ id: '${location.id}' })">Read More</a>
         </div>
         `;

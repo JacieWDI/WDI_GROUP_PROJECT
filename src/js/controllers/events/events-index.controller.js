@@ -7,8 +7,16 @@ eventsIndexCtrl.$inject = ['Event', '$stateParams', '$rootScope'];
 function eventsIndexCtrl(Event, $stateParams, $rootScope) {
   const vm = this;
 
-  $rootScope.$on('the data is ready, remove loading icon', (event, args) => {
-    vm.data = args.data;
-  });
+  vm.loadingGif = false;
+
+  // listen for broadcast addLoadingGif, vm.loadingGif = true;
+  $rootScope.$on('addLoadingGif', () => vm.loadingGif = true);
+
+  $rootScope.$on('removeLoadingGif', () => vm.loadingGif = false);
+
+
+  // $rootScope.$on('removeLoadingGif', () => {
+  //   vm.loadingGif = false;
+  // });
 
 }

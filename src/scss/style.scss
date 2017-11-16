@@ -9,6 +9,13 @@
   display: inline-block;
 }
 
+#map, #pano {
+  float: left;
+  height: 400px;
+  width: 400px;
+  background: red;
+}
+
 .read-more{
   margin: 1px;
 }
