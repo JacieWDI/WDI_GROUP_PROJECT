@@ -16,15 +16,6 @@
 
     </div>
     <div class="tile is-parent image">
-      <!-- <p class="title image"></p> -->
-      <!-- <img class="streetview-show" src="https://maps.googleapis.com/maps/api/streetview?size=600x300&location={{ vm.event.latitude }},{{ vm.event.longitude }}&heading=151.78&pitch=-0.76&key=AIzaSyDv-mdQOjANbgQmRn4epMmtpZ6mJwMYkWw" alt=""> -->
-
-      <!-- <img src="      https://maps.googleapis.com/maps/api/js?key=AIzaSyB22I-f_WLOasdvWLf9qQI4R8sE_7_zxs4&libraries=places&location={{ vm.event.latitude }},{{ vm.event.longitude }}" alt=""> -->
-
-
-
-
-
 
     </div>
   </div>
@@ -33,18 +24,7 @@
   <div class="tile is-ancestor bottom">
     <div class="tile is-12">
       <div class="tile is-parent is-info">
-        <!-- <ul class="groups-for-event">
-        <li class="column notification is-info" ng-repeat="group in vm.groups">
-        <p>{{ group.name }}</p>
-        <p>{{ group.image }}</p>
-        <p>{{ group.description }}</p>
-        <div class="field is-grouped">
-        <div class="control">
-        <button class="button is-link" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
-      </div>
-    </div>
-  </li>
-</ul> -->
+
 <div class="tile is-children">
 </div>
 </div>
@@ -60,18 +40,19 @@
 </div>
 </div>
 
-<ul class="groups-for-event">
-  <li class="column notification is-info" ng-repeat="group in vm.groups">
-    <p>{{ group.name }}</p>
-    <p>{{ group.image }}</p>
-    <p>{{ group.description }}</p>
-    <div class="field is-grouped">
-      <div class="control">
-        <button class="button is-link" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
+<div class="events">
+  <h1 class="title">EVENTS & CHATS</h1>
+  <ul class="groups-for-user">
+    <li class="column" ng-repeat="group in vm.groups">
+      <div class ="chat-profile-img" style="background-image: url('{{ group.image }}');">
+        <h2>{{ group.name }}</h2>
+        <h3>{{ group.description }}</h3>
+          <button class="button is-link profile-btn" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
       </div>
-    </div>
-  </li>
-</ul>
+
+    </li>
+  </ul>
+</div>
 
 
 <street-view center="{ lat: vm.event.latitude, lng: vm.event.longitude }"></street-view>
