@@ -1,22 +1,20 @@
 .eventdetail{
-  border: 4px solid $color-black;
   margin: 0 auto;
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: auto;
+  text-align: center;
+  position: relative;
+  h1 {
+    padding-bottom: 30px;
+  }
 }
-  .creategroup-btn {
-  width: 292px;
-  background-color: $color-purple;
-  &:hover {
-    background-color: black;
-  }
-  }
+
 
 .street-img {
-  border: 4px solid $color-black;
-  margin: 0 auto;
-  height: 300px;
-  width: 300px;
+  margin-right: 0 auto;
+  height: 150px;
+  width: auto;
+  text-align: right;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,4 +25,26 @@
   margin: 0 auto;
   height: 300px;
   width: 300px;
+}
+
+.event-header {
+  margin: 0 auto;
+  align-items: center;
+}
+
+.create-chat {
+  cursor: pointer;
+  position: absolute;
+  align-items: center;
+  bottom: 0;
+  width: 98%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: $color-purple;
+  color: black;
+  transition: opacity 0.5s;
+  &:hover {
+    background: darken($color-purple, 10%);
+  }
 }

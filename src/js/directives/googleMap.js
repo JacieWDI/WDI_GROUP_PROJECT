@@ -131,7 +131,7 @@ function googleMap($window, $http, $state, $compile, $rootScope, API) {
         const marker = new $window.google.maps.Marker({
           position: latLng,
           map: map,
-          icon: '/images/note.png'
+          icon: '/images/notey.png'
         });
 
         markers.push(marker);

@@ -1,6 +1,5 @@
 @import "helpers/variables";
 @import "helpers/mixins";
-
 @import "partials/eventspage";
 @import "partials/landingpage";
 @import "partials/chatpage";
@@ -13,26 +12,3 @@
 @import "elements/navbar";
 @import "elements/design";
 @import "elements/forms";
-
-
-
-.google-map {
-  height: 100vh;
-  width: 100%;
-  display: inline-block;
-}
-
-#map, #pano {
-  float: left;
-  height: 400px;
-  width: 400px;
-  background: black;
-}
-//
-// .read-more{
-//   margin: 1px;
-// }
-
-// .homepage-board {
-//   max-width: 200px;
-// }

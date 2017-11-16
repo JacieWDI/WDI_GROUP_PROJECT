@@ -1,5 +1,36 @@
+.google-map {
+  height: 75vh  ;
+  width: 100%;
+  display: inline-block;
+}
+
+.map-container {
+  position: relative;
+}
+
+.gmnoprint{
+  display: none;
+}
+
+.gm-fullscreen-control{
+  display: none;
+}
+
+.hero-body {
+  margin-top: -35px;
+}
+
+#map, #pano {
+  float: left;
+  height: 400px;
+  width: 400px;
+  background: black;
+}
+
 .search {
   text-align: center;
+  position: absolute;
+  z-index: 2;
 }
 
 .search-bar {
@@ -7,10 +38,15 @@
   line-height: 40px;
   padding-left: 10px;
   font-size: 15px;
+  margin-top: 50px;
+  margin-left: 260px;
+
 
 }
 .search-icon {
   padding-right: 10px;
+  color: $color-purple;
+  font-size: 30px;
 }
 
 .loading-icon {
@@ -20,12 +56,3 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-//  .search-bar.ng-pristine.ng-untouched.ng-valid.ng-empty{
-//
-//    text-decoration: none;
-//    border:none;
-//  }
-// div.control.search{
-//   margin: 10px;
-//
-// }
