@@ -14,7 +14,11 @@ footer{
     }
     &.center-these {
       position: relative;
-      s
+      .ourpictures {
+        @include centerBackground;
+        height: 100px;
+        width: 100px;
+      }
       h4 {
         position: absolute;
         width: 100%;
