@@ -1,73 +1,28 @@
-<section class="columns">
-  <!-- <div class="column is-4 profile-left"> -->
-  <div class="column is-6">
-    <div class="">
+<div class="columns">
+  <div class="column is-one-third blue">
+    <div class="profile-img" style="background-image: url('{{vm.user.image}}');"></div>
+    <h1 class="title">{{vm.user.firstName }} {{vm.user.lastName}}</h1>
+    <h2 class="subtitle">{{ vm.user.userName }}</h2>
+    <h3>{{ vm.user.email }}</h3>
+    <hr>
+    <div class="profiledetails">
+      <h3 class="subtitle">Member of {{ vm.user.joinedGroups.length }} groups</h3>
+      <button class="button" ui-sref="usersEdit({ id: main.user._id })" ng-if="main.user._id === vm.user._id">Edit</button>
+    </div>
+  </div>
 
-      <div class ="profile-img" style="background-image: url('{{vm.user.image}}');"></div>
-      <div class="profiledetails">
-        <ul>
-          <li>USERNAME: {{vm.user.userName}}</li>
-          <li>FIRST NAME: {{vm.user.firstName}}</li>
-          <li>LAST NAME: {{vm.user.lastName}}</li>
-          <li class="control"><button class="button is-focused is-medium" ui-sref="usersEdit({ id: main.user._id })">Edit</button></li>
-        </ul>
+  <div class="column is-two-thirds red">
+    <h1 class="title">EVENTS & CHATS</h1>
+    <div class="columns user-groups" ng-repeat="groups in vm.user.joinedGroups | chunkBy: 3">
+      <div class="column green" ng-repeat="group in groups">
+        <div class="chat-profile-img" style="background-image: url('{{ group.image }}');">
+          <h2>{{ group.name }}</h2>
+          <h3>{{ group.description }}</h3>
+          <div class="join-chat" ui-sref="groupsShow({ id: group._id })">
+            JOIN CHAT
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="column is-6">
-    <div class="">
-      <h1 class="title">EVENTS & CHATS</h1>
-      <ul class="groups-for-user tile is-ancestor">
-        <li class="tile" ng-repeat="group in vm.user.joinedGroups">
-          <div class ="chat-profile-img" style="background-image: url('{{ group.image }}');">
-            <h2>{{ group.name }}</h2>
-            <h3>{{ group.description }}</h3>
-            <button class="button is-link profile-btn" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
-          </div>
-
-        </li>
-      </ul>
-    </div>
-  </div>
 </div>
-
-
-
-</section>
-<!-- <section class="level">
-  <div class="level-left">
-    <div class="level-item">
-
-      <div class ="profile-img" style="background-image: url('{{vm.user.image}}');"></div>
-      <div class="profiledetails">
-        <ul>
-          <li>USERNAME: {{vm.user.userName}}</li>
-          <li>FIRST NAME: {{vm.user.firstName}}</li>
-          <li>LAST NAME: {{vm.user.lastName}}</li>
-          <li class="control"><button class="button is-focused is-medium" ui-sref="usersEdit({ id: main.user._id })">Edit</button></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="level-right">
-    <div class="">
-      <h1 class="title">EVENTS & CHATS</h1>
-      <ul class="groups-for-user">
-        <li class="column" ng-repeat="group in vm.user.joinedGroups">
-          <div class ="chat-profile-img" style="background-image: url('{{ group.image }}');">
-            <h2>{{ group.name }}</h2>
-            <h3>{{ group.description }}</h3>
-            <button class="button is-link profile-btn" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
-          </div>
-
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-
-</section> -->
