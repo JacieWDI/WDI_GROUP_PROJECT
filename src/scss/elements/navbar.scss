@@ -16,13 +16,13 @@
 
 div.navbar-brand{
   background-color: black;
-  font-family: 'Roboto', sans-serif;
+  font-family:'Comfortaa', cursive;
 }
 
 #navigationbar{
     background-color: black;
-    font-family: 'Roboto', sans-serif;
-    text-transform:uppercase;
+    font-family:'Comfortaa', cursive;
+    text-transform:lowercase;
     font-weight: bold;
     height: 80px;
     $size-1: 3rem
@@ -37,13 +37,13 @@ a.navbar-item{
 $dropdown-content-background-color: black;
 
 a.navbar-item:hover{
-  background-color: #D867FF;
+  background-color: $color-purple;
   color: black;
 }
 
 .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
   color: black;
-  background: #D867FF;
+  background: $color-purple;
 }
 
 a.navbar-link{
@@ -59,7 +59,7 @@ a.navbar-link{
     color: white;
 
     &:hover {
-      background: #D867FF;
+      background: $color-purple;
       color: white;
     }
   }

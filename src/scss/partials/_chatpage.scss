@@ -1,3 +1,6 @@
+body {
+  // background-color: $color-mint;
+}
 .warning {
   font-size: 30px;
   text-align: center;
@@ -5,6 +8,9 @@
   background-color: $color-mint;
   color: $color-black;
   border-radius: 20px;
+  &:hover {
+    color: white;
+  }
 }
 
 .chat-header {
@@ -12,24 +18,26 @@
   border: 6px solid $color-mint;
   border-radius: 20px;
   margin: 10px;
-    h1 {
+  .chat-links-top {
+    padding-bottom: 10px;
+  }
+    a.chat-links {
       font-size: 16px;
       color: white;
       text-decoration: none;
-      padding-bottom: 10px;
-      text-align: left;
-    }
-    a {
-
+      margin: 0 auto;
+      padding: 0 10px 0 5px;
     }
 }
 
 .columns.chat-box {
-  border: 4px solid $color-black;
+  border: 2px solid $color-black;
   border-radius: 20px;
+  margin-top: 10px;
 }
 
 .chat-box{
+  background-color: white;
   .chat-left {
     text-align: center;
   }
@@ -49,6 +57,7 @@
       color: black;
       padding-left: 10px;
       font-family: 'Roboto', sans-serif;
+      font-size: 14px;
     }
   }
 }
@@ -67,7 +76,7 @@
   border-radius: 20px;
     &:hover {
       border: 2px solid $color-purple;
-      background-color: lighten($color-black, 90%);
+      background-color: darken($color-white, 3%);
     }
 }
 
@@ -85,5 +94,17 @@
     padding: 5px;
     background-color: rgba(0,0,0,0.7);
     color: white;
+    font-family:'Comfortaa', cursive;
   }
+}
+
+
+.chat-btns {
+  text-align: right;
+  margin: 30px auto;
+}
+
+.submit {
+  text-align: center;
+  margin: 30px auto;
 }

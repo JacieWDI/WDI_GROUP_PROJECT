@@ -1,12 +1,22 @@
 main {
   margin-bottom: 10px;
-  min-height: 63vh;
+  min-height: 70vh;
+
 }
 
 footer{
   background: #333333;
   padding: 20px;
   margin-bottom: 0px!important;
+  h2.meet-team {
+    color: white;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+  .columns{
+    height:80px;
+    background-color: #333333;
+  }
   section {
     text-align: center;
     .eventful-badge {
@@ -33,6 +43,8 @@ footer{
           background-size: cover;
           border-radius: 100px;
           margin: 0 10px;
+
+
 
         }
       }
