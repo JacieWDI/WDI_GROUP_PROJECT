@@ -15,6 +15,17 @@ Group.collection.drop();
 
 User.create([
   {
+    userName: 'matt',
+    gender: 'female',
+    firstName: 'Matt',
+    lastName: 'Yates',
+    email: 'matt@matt.com',
+    image:
+      'https://img.buzzfeed.com/buzzfeed-static/static/2017-10/19/10/enhanced/buzzfeed-prod-fastlane-01/enhanced-2704-1508425095-1.jpg?downsize=715:*&output-format=auto&output-quality=auto',
+    password: 'password',
+    passwordConfirmation: 'password'
+  },
+  {
     userName: 'duck2017',
     gender: 'female',
     firstName: 'marleen',

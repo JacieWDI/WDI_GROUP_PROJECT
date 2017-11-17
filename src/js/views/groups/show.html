@@ -1,7 +1,9 @@
 <div class="container">
   <div class="notification chat-header">
-    <a ui-sref="eventsShow({ id: vm.group.eventId })"><h1>GO TO EVENT</h1></a>
-    <a ui-sref="usersShow({ id: main.user._id })"><h1>GO TO PROFILE</h1></a>
+    <div class="chat-links-top">
+      <a class="chat-links" ui-sref="eventsShow({ id: vm.group.eventId })">EVENT</a>
+      <a class="chat-links" ui-sref="usersShow({ id: main.user._id })">PROFILE</a>
+    </div>
 
     <div class ="chat-img" style="background-image: url('{{vm.group.image}}');">
       <h2>{{ vm.group.name | uppercase }}</h2>
@@ -12,7 +14,10 @@
   <div class="columns chat-box" ng-repeat="comment in vm.group.comments">
     <div class="column chat-box is-1 chat-left">
       <p>{{ comment.createdBy.userName }}</p>
-      <div class ="chat-face-img notification is-info" style="background-image: url('{{ comment.createdBy.image }}');"></div>
+      <a ui-sref="usersShow({ id: comment.createdBy.id })">
+        <div class ="chat-face-img notification is-info" style="background-image: url('{{ comment.createdBy.image }}');">
+        </div>
+      </a>
     </div>
     <div class="column chat-box">
       <h3>{{ comment.body }}</h3>
@@ -20,20 +25,24 @@
     </div>
   </div>
 
-  <h3 class="warning" ng-if="!vm.membersArray.includes(main.user._id)">to comment, please join the chat</h3>
+  <a><h3 class="warning" ng-if="!vm.membersArray.includes(main.user._id)" ng-click="vm.updateGroup()">to comment, please join the chat</h3></a>
   <form ng-submit="vm.commentCreate()" ng-if="vm.membersArray.includes(main.user._id)">
     <div class="field">
       <div class="control column">
         <textarea class="textarea comment-box" placeholder="type your comment here..." ng-model="vm.comment.body"></textarea>
       </div>
-      <button class="button is-link">Submit</button>
+      <div class="submit control button-container">
+        <input type="submit" class="btn button">
+      </div>
     </div>
   </form>
 
-  <div class="control">
-    <p class="button is-link" ng-click="vm.updateGroup()">
-      <span ng-if="!vm.membersArray.includes(main.user._id)">Join</span>
-      <span ng-if="vm.membersArray.includes(main.user._id)">Leave</span> Group
+
+
+  <div class="control chat-btns">
+    <p class="button is-primary chat-btn" ng-click="vm.updateGroup()" ng-if="vm.membersArray.includes(main.user._id)">
+      <!-- <span ng-if="!vm.membersArray.includes(main.user._id)">Join</span> -->
+    Leave Group
     </p>
   </div>
 
