@@ -6,6 +6,7 @@
 
 .map-container {
   position: relative;
+  // margin: auto 0;
 }
 
 .gmnoprint{
@@ -31,6 +32,8 @@
   text-align: center;
   position: absolute;
   z-index: 2;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .search-bar {
@@ -39,7 +42,7 @@
   padding-left: 10px;
   font-size: 15px;
   margin-top: 50px;
-  margin-left: 260px;
+  // margin-left: 260px;
 
 
 }
@@ -50,7 +53,8 @@
 }
 
 .loading-icon {
-  font-size: 25px;
+  font-size: 30px;
+  color: white;
 }
 .hero-body{
   padding-top: 1rem;
