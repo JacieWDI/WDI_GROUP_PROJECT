@@ -58,7 +58,7 @@ Clone or download the repository and navigate to it's root in the terminal.
 
 ## Overview
 
-Several ideas were initially considered, mainly associated with using one of NASA's APIs. However, further discussions on how to create a functional purposeful app, a decision was made to focus on a location searchable music event app with group interaction.  The user experience design intention was to create a group interaction for people going to the same music events.
+Initially considered several themes during a quick brainstorming session, mainly associated with using one of NASA's APIs. However, further discussions on how to create a functional purposeful app, a decision was made to focus on a location searchable music event app with group interaction.  The user experience design intention was to create a group interaction for people going to the same music events.
 
 During planning stage of the project, we wireframed and planned as a group on a whiteboard before transferring the agreed content including assigned tasks into Trello and Adobe Illustrator / Adobe XD.
 
@@ -77,8 +77,9 @@ Image 3: Team Planning
 Planning together on a whiteboard was crucial to visualise the mechanics of the app whilst also breakdown the app into workable tasks to be divided amongst the group. We individually selected tasks which we may not have had time previously to focus on, in order to maximise learning opportunity. The project was completed with a mix of individual and pair-programming. 
 
 
-# ADD SNAPSHOT OF ILLUSTRATOR image 4
+![](src//images/Illustrator.png)
 
+Image 4: Adobe Illustrator Wireframe design
 
 ![](src//images/AdobeXDplay.png)
 
@@ -87,7 +88,6 @@ Image 5: Adobe XD Wireframe
 ![](src//images/TrelloSnapShot.png)
 
 Image 6: Snapshot of Working Trello Board
-
 
 The planning work completed was then transferred to usable packages for reference throughout remainder of project. Trello was used to review and divide remaining tasks whilst various Adobe packages to keep visual of initial design and layout.
 
@@ -135,40 +135,34 @@ The profile page gives the user a central page overview with their details and w
 
 ## Challenges
 
-During the planning stages, Bulma was selected as a framework to be used on the frontend styling due to it's lightweight nature in order for customisation. None of the group had used it so this was taken as an opportunity to expand into using other CSS frameworks.  Although, Bulma allowed minimal styling and followed a column-container system similar to the heavier, Bootstrap, the team found it a challenge to customise the Bulma framework components and elements. The full app was created to a minimal standard of styling for MVP, however, it took more time than initially planned and therefore not all styling was completed.
+During the planning stages, Bulma was selected as a framework to be used on the frontend styling due to it's lightweight nature in order for customisation. None of the group had used it so this was taken as an opportunity to expand into using other CSS frameworks.  Although, Bulma allowed minimal styling and followed a column-container system similar to the heavier, Bootstrap, the team found it a challenge to customise the Bulma framework components and elements. The full app was created to a minimal standard of styling for minimum viable product (MVP), however, it took more time than initially planned and therefore not all styling was completed.
 
+We found that sometimes it's more challenging to split up code or pair programme for certain functions. Also given the time constraints, we naturally divided to complete certain code which was more urgent in order to meet our MVP.
 
-- Working in a team
-- Working with APIs
-- Testing
-
-
-
-
-
-
+Initially, we set out looking at creating an application to look at all types of events. We scaled this back to focus on music which allowed us to theme our styling. The Eventful API was selected for this reason as it had multiple fields that we could potentially pull from, however, as we discovered as we progressed, some image fields seemed to be missing from their data.  We overcame some of these issues by pulling from Google street map.
 
 
 ## Wins
 
-- MVP
-- working in a team
-- 
+Build of backend server, this was straight forward as at this point we all had built a few applications which meant the start was fast track.
 
+We worked well as a team and learned whilst pair programming and how different features interlink and implementing in practise.
+
+Meeting minimum viable product and understanding when to let go of extra features due to time constraints.
+
+As challenging as Bulma can be to customise, it is always good to learn a new framework and challenge ourselves as a team.
 
 
 
 ## Additional Features to Implement
 
-- Fully responsive: Due to time constraints, the website is not responsive which was a design feature the team would have implemented given more time.
+- Fully responsive
 
-- Sound and music to be added
+- Uploading user photo: 
 
 - Using alternative / additional APIs 
 
 - Additional events other than music
-
-- uploading user photo
 
 - OAuth
 
