@@ -1,24 +1,24 @@
 <div class="columns event-header">
   <div class="column eventdetail blue">
-      <h1 class="title">EVENT DETAILS</h1>
+    <h1 class="title">EVENT DETAILS</h1>
+    <div class="details">
       <h2 class="subtitle"><b>EVENT NAME:</b> {{ vm.event.title }} </h2>
       <h2 class ="subtitle"><b>VENUE:</b> {{ vm.event.venue_name }} </h2>
       <h3 class = "subtitle"><b>ADDRESS:</b> {{ vm.event.address }}</h3>
       <h3 class = "subtitle"> {{ vm.event.city }}</h3>
       <h3><b>DATE AND START TIME:</b> {{ vm.event.start_time | date:"MM/dd/yyyy 'at' h:mma" }}</h3>
-      <div class="create-chat" ui-sref="groupsNew({ eventId: vm.event.id })">
-        <h2>CREATE GROUP CHAT</h2>
-      </div>
-  </div>
-
-  <div class="column is-two-thirds red">
-    <div class="street-img">
-      <street-view center="{ lat: vm.event.latitude, lng: vm.event.longitude }"></street-view>
     </div>
+</div>
+
+<div class="column is-two-thirds red">
+  <div class="street-img">
+    <street-view center="{ lat: vm.event.latitude, lng: vm.event.longitude }"></street-view>
   </div>
+</div>
 </div>
 
 <div class="notification">
+  <div class="create-group"><h1>GROUPS FOR THIS EVENT</h1></div>
   <div class="columns groupscreated" ng-repeat="groups in vm.groups | chunkBy: 3">
     <div class="column" ng-repeat="group in groups">
       <div class="chat-profile-img" style="background-image: url('{{ group.image }}');">
@@ -30,4 +30,5 @@
       </div>
     </div>
   </div>
+    <div class="create-group" ui-sref="groupsNew({ eventId: vm.event.id })"><h1>CREATE GROUP</h1></div>
 </div>

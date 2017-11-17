@@ -7,12 +7,12 @@
     <hr>
     <div class="profiledetails">
       <h3 class="subtitle">Member of {{ vm.user.joinedGroups.length }} groups</h3>
-      <button class="button" ui-sref="usersEdit({ id: main.user._id })" ng-if="main.user._id === vm.user._id">Edit</button>
+      <button class="button edit-btn" ui-sref="usersEdit({ id: main.user._id })" ng-if="main.user._id === vm.user._id">Edit</button>
     </div>
   </div>
 
-  <div class="column is-two-thirds">
-    <h1 class="title">EVENTS & CHATS</h1>
+  <div class="column is-two-thirds profile-events">
+    <div class="title"><h1>EVENTS & CHATS</h1></div>
     <div class="columns user-groups" ng-repeat="groups in vm.user.joinedGroups | chunkBy: 3">
       <div class="column green" ng-repeat="group in groups">
         <div class="chat-profile-img" style="background-image: url('{{ group.image }}');">
