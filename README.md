@@ -103,8 +103,9 @@ Image 7: Teamworking
 The landing page of the website needed to be visually appealing in order to market the Explore More App. Minimal colour palette on the main components and elements were chosen. The animated coloured wave was styled to mimic musical wave and flow in-keeping with the focus on musical events. The users' photos appearing on this landing page was to portray a sense of group-use, this would also serve as general promotion of the website.
 
 
-![](src//images/Landingpage.png)
+![](src//images/landpage.png)
 
+Image 8: Landing Page of Website Application
 
 ### Register / Login
 
@@ -112,21 +113,43 @@ In order to encourage group interaction, users must be registered and logged int
 
 ### Searchable Music Events based on location
 
-From a user experience perspective, people are familiar with Google Maps, therefore we used the Google map API as a large feature on the event search page. Users are able to type in a location and find **10** music events within a **mile** radius of selected location. A dark styling of the map was selected to represent evening music events, adding to the social/group interaction experience.
+From a user experience perspective, people are familiar with Google Maps, therefore we used the Google map API as a large feature on the event search page. Users are able to type in a location and find music events within a 3 mile radius of selected location. A dark styling of the map was selected to represent evening music events, adding to the social/group interaction experience.
+
+![](src//images/search.png)
+
+Image 9: Location Google Search Map
 
 ### Event Selection
 
 When a search is completed, a number of musical events in the immediate vicinity is populated onto the map. This is completed through an ajax request to the Eventful API, specifically for music events. Eventful API was selected for scalability to include other non-music events globally. Upon clicking an event marker, the user is navigated to the event page containing the details of the event with a map and photo of the location. At this point, the user can decide to create a group chat for the specific event.
 
+![](src//images/googleevent.png)
+
+Image 10: Details of Event at Location
+
+The user can click on read more in order to redirect to an events page.
+
+![](src//images/eventdetails.png)
+
+Image 11: Event Details Page
+
 ### Creating Groups
 
 Once a user decides they would like to attend the event or generally create a group possibly amongst friends/other users to discuss potentially going to a music event, they can create a group chat. The user has the ability to name the group, url to a photo and a description of the purpose of the group. Once created, this group chat is saved in the user's profile and is also visible to other users who click on the same music event.  This gives other users the ability to join the group and comment.
+
+![](src//images/eventschat.png)
+
+Image 12: Event Chat Page
 
 ### Group Chat Page
 
 Users who create and join specific group for an event can then interact through comments feature. The comments are created via an embedded reference so that the user and time stamp of comment left is visible on the Group chat page. 
 
 The users always have the freedom to leave a group chat and the creator of the group has the ability to edit the initial details of the group.
+
+![](src//images/groupchat.png)
+
+Image 13: Group Chat Page
 
 ### User Profile
 
