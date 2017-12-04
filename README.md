@@ -58,7 +58,7 @@ Clone or download the repository and navigate to it's root in the terminal.
 
 ## Overview
 
-Initially considered several themes during a quick brainstorming session, mainly associated with using one of NASA's APIs. However, further discussions on how to create a functional purposeful app, a decision was made to focus on a location searchable music event app with group interaction.  The user experience design intention was to create a group interaction for people going to the same music events.
+Initially, several themes were considered during a quick brainstorming session, mainly associated with using one of NASA's APIs. However, further discussions on how to create a functional purposeful app, a decision was made to focus on a location searchable music event app with group interaction.  The user experience design intention was to create a group interaction for people going to the same music events.
 
 During planning stage of the project, we wireframed and planned as a group on a whiteboard before transferring the agreed content including assigned tasks into Trello and Adobe Illustrator / Adobe XD.
 
@@ -74,7 +74,7 @@ Image 2: Task Breakdown
 
 Image 3: Team Planning
 
-Planning together on a whiteboard was crucial to visualise the mechanics of the app whilst also breakdown the app into workable tasks to be divided amongst the group. We individually selected tasks which we may not have had time previously to focus on, in order to maximise learning opportunity. The project was completed with a mix of individual and pair-programming. 
+Planning together on a whiteboard was crucial to visualise the mechanics of the app whilst also breaking down the app into workable tasks to be divided amongst the group. We individually selected tasks which we may not have had time previously to focus on, in order to maximise learning opportunity. The project was completed with a mix of individual and pair-programming. 
 
 
 ![](src//images/Illustrator.png)
