@@ -1,57 +1,50 @@
-angular
-  .module('groupProject')
-  .controller('groupsShowCtrl', groupsShowCtrl);
+angular.module('groupProject').controller('groupsShowCtrl', groupsShowCtrl);
 
-groupsShowCtrl.$inject = ['Group', '$stateParams', '$rootScope', '$state', 'currentUserService', '$scope'];
-function groupsShowCtrl(Group, $stateParams, $rootScope, $state, currentUserService, $scope) {
+groupsShowCtrl.$inject = ['Group', '$stateParams'];
+function groupsShowCtrl(Group, $stateParams) {
   const vm = this;
-  console.log('group show loaded');
-
-  // vm.group = Group.get($stateParams);
-
-  //GET EVENT INFO AND PASS INTO vm.event - $rootScope?
 
   vm.commentCreate = commentCreate;
   vm.commentDelete = commentDelete;
-  vm.updateGroup = join;
+  vm.updateGroup = update;
 
   getTheGroup();
 
   function getTheGroup() {
-    Group
-      .get({ id: $stateParams.id })
-      .$promise
-      .then(group => {
-        vm.group = group;
-      });
+    Group.get({ id: $stateParams.id }).$promise.then(group => {
+      vm.membersArray = [];
+      vm.group = group;
+      createMemberIdArray(group.members);
+    });
+  }
+
+  function createMemberIdArray(members) {
+    for (var i = 0; i < members.length; i++) {
+      vm.membersArray.push(members[i].id);
+    }
   }
 
   function commentCreate() {
-    Group
-      .createComment({ id: $stateParams.id }, vm.comment)
-      .$promise
-      .then(() => {
+    Group.createComment({ id: $stateParams.id }, vm.comment).$promise.then(
+      () => {
         getTheGroup();
         vm.comment = null;
-      });
+      }
+    );
   }
 
   function commentDelete(comment) {
-    Group
-      .deleteComment({ id: $stateParams.id, commentId: comment._id })
-      .$promise
-      .then(() => {
-        getTheGroup();
-      });
+    Group.deleteComment({
+      id: $stateParams.id,
+      commentId: comment._id
+    }).$promise.then(() => {
+      getTheGroup();
+    });
   }
 
-  function join() {
-    Group
-      .update({ id: $stateParams.id }, {})
-      .$promise
-      .then(group => {
-        vm.group.members = group.members;
-      });
-
+  function update() {
+    Group.update({ id: $stateParams.id }, {}).$promise.then(() => {
+      getTheGroup();
+    });
   }
 }

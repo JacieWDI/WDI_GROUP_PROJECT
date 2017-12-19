@@ -1,0 +1,26 @@
+.form-container {
+}
+
+.form {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  border-style:solid;
+  border-color:$color-purple;
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding-bottom: -10px;
+
+}
+
+.form-label {
+  font-size: 12px;
+  width: 50px;
+}
+
+.input {
+  font-size: 13px;
+  border-color: $color-purple;
+}

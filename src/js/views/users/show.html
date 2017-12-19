@@ -1,40 +1,28 @@
-<div class="level">
-
-
-
-  <div class="level-left">
-
-       <div class ="show-img" style="background-image: url('{{vm.user.image}}');">
-       </div>
-       <div class="profiledetails">
-
-      <ul>
-        <p class="title"><h1>{{ vm.user.userName }}'s profile'</h1></p>
-        <li>Username: {{vm.user.userName}}</li>
-        <li>First name: {{vm.user.firstName}}</li>
-        <li>Last name: {{vm.user.lastName}}</li>
-        <li class="control"><button class="button is-focused is-medium" ui-sref="usersEdit({ id: vm.user.id })">Edit</button></li>
-      </ul>
+<div class="columns">
+  <div class="column is-one-third profile">
+    <div class="profile-img" style="background-image: url('{{vm.user.image}}');"></div>
+    <h1 class="title">{{vm.user.firstName }} {{vm.user.lastName}}</h1>
+    <h2 class="subtitle">{{ vm.user.userName }}</h2>
+    <h3>{{ vm.user.email }}</h3>
+    <hr>
+    <div class="profiledetails">
+      <h3 class="subtitle">Member of {{ vm.user.joinedGroups.length }} groups</h3>
+      <button class="button edit-btn" ui-sref="usersEdit({ id: main.user._id })" ng-if="main.user._id === vm.user._id">Edit</button>
     </div>
   </div>
 
-   <div class="level-item">
-      <h1 class="title">Events</h1>
-      <ul class="groups-for-user">
-        <li class="column notification is-info" ng-repeat="group in vm.user.joinedGroups">
-          <p>{{ group.name }}</p>
-          <p>{{ group.description }}</p>
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-link" ui-sref="groupsShow({ id: group._id })">Enter chat</button>
-            </div>
+  <div class="column is-two-thirds profile-events">
+    <div class="title"><h1>EVENTS & CHATS</h1></div>
+    <div class="columns user-groups" ng-repeat="groups in vm.user.joinedGroups | chunkBy: 3">
+      <div class="column green" ng-repeat="group in groups">
+        <div class="chat-profile-img" style="background-image: url('{{ group.image }}');">
+          <h2>{{ group.name }}</h2>
+          <h3>{{ group.description }}</h3>
+          <div class="join-chat" ui-sref="groupsShow({ id: group._id })">
+            JOIN CHAT
           </div>
-        </li>
-      </ul>
-
+        </div>
+      </div>
     </div>
-    <div class="level-item">
-    </div>
-
-
   </div>
+</div>

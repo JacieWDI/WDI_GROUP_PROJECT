@@ -1,13 +1,13 @@
-button{
-  font-family: 'Roboto', sans-serif;
-    border: none;
-
+.button-container {
+  margin: auto;
 }
 
-button.button.is-focused{
+.btn.button{
+  background-color: white;
+  width: 200px;
+}
+
+.btn.button:hover{
+  background-color: $color-purple;
   color: white;
-  border-radius: 15px;
-  background-color: black;
-  border: none;
-  text-align: center;
 }

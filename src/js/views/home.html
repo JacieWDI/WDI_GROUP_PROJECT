@@ -1,54 +1,41 @@
-<h1>EXPLORE MORE has {{ vm.users.length }} users, and counting... </h1>
-<!-- <div class="container">
-  <div class="tile is-ancestor"
-    <ul class="users tile is-parent">
-      <li ng-repeat="user in vm.users" class="title-is-parent">
-      <div class ="show-img" style="background-image: url('{{ user.image}}');">
-      </li>
-    </ul>
+<section class="home-page">
+  <div class="white">
+  <h1>{{ vm.users.length }} users, and counting... </h1>
   </div>
-</div>
-</div> -->
-
-<div class="columns  homepage-board ">
-  <div ng-repeat="user in vm.users">
-    <div class ="home-img box" style="background-image: url('{{ user.image}}');">
-    </div>
-</div>
-</div>
-
-
-<footer class="footer">
-  <div class="container ">
-    <div class="content has-text-centered">
-      <p>
-        <p><a href="http://eventful.com/">Events</a> by Eventful</p>
+  </div>
+  <div class="container-fluid">
+    <div class="columns homepage-board ">
+      <div ng-repeat="user in vm.users">
+        <div class ="home-img box" style="background-image: url('{{ user.image}}');"></div>
       </div>
-      <p class="field">
-        <a class="button">
-          <span class="icon">
-            <i class="fa fa-github"></i>
-          </span>
-          <span>GitHub</span>
-        </a>
-        <a class="button is-primary">
-          <span class="icon">
-            <i class="fa fa-twitter"></i>
-          </span>
-          <span>Twitter</span>
-        </a>
-
-      </p>
-    </p>
+    </div>
   </div>
-</div>
-</footer>
-
-<!-- <div class="container">
-<div class="notification">
-<div class="tile"
-
-</div>
-</div> -->
-
-<!-- need to style the height of the footer with css -->
+  <div class="animation">
+    <div class="design">
+      <span class="animation-span"> <!-- Square container -->
+        <div class="color"></div> <!-- Bars -->
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+      </span>
+    </div>
+  </div>
+</section>

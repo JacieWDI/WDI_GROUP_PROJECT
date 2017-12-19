@@ -1,4 +1,4 @@
-const mongoose   = require('mongoose');
+const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 const express = require('express');
 const app = express();
@@ -13,17 +13,19 @@ User.collection.drop();
 const Group = require('../models/group');
 Group.collection.drop();
 
-User
-  .create([{
-    userName: 'Matt',
+User.create([
+  {
+    userName: 'matt',
+    gender: 'female',
     firstName: 'Matt',
     lastName: 'Yates',
     email: 'matt@matt.com',
-    image: 'image',
+    image:
+      'https://img.buzzfeed.com/buzzfeed-static/static/2017-10/19/10/enhanced/buzzfeed-prod-fastlane-01/enhanced-2704-1508425095-1.jpg?downsize=715:*&output-format=auto&output-quality=auto',
     password: 'password',
     passwordConfirmation: 'password'
-
-  }, {
+  },
+  {
     userName: 'duck2017',
     gender: 'female',
     firstName: 'marleen',
@@ -32,7 +34,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/9.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'Richard',
     gender: 'male',
     firstName: 'Richard',
@@ -41,7 +44,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/20.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'brad',
     gender: 'male',
     firstName: 'brad',
@@ -50,7 +54,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/85.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'filicutie',
     gender: 'female',
     firstName: 'filipa',
@@ -59,7 +64,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/16.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'helloworld',
     gender: 'female',
     firstName: 'java',
@@ -68,7 +74,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/43.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'todi',
     gender: 'male',
     firstName: 'tody',
@@ -77,7 +84,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/72.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'josie',
     gender: 'female',
     firstName: 'josephine',
@@ -86,7 +94,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/67.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'emy',
     gender: 'female',
     firstName: 'emy',
@@ -95,7 +104,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/11.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'eemeli',
     gender: 'male',
     firstName: 'eemeli',
@@ -104,7 +114,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/49.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'alisa',
     gender: 'female',
     firstName: 'alisa',
@@ -113,7 +124,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/92.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'elyayaya',
     gender: 'female',
     firstName: 'elya',
@@ -122,7 +134,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/17.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'mrwhite',
     gender: 'male',
     firstName: 'xavier',
@@ -131,7 +144,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/97.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'erico',
     gender: 'male',
     firstName: 'erico',
@@ -140,7 +154,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/47.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'jasmine',
     gender: 'female',
     firstName: 'jasmine',
@@ -149,7 +164,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/57.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'leon',
     gender: 'male',
     firstName: 'leon',
@@ -158,7 +174,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/41.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'sad',
     gender: 'female',
     firstName: 'sady',
@@ -167,7 +184,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/20.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'flo',
     gender: 'male',
     firstName: 'florian',
@@ -176,7 +194,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/2.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'leta',
     gender: 'female',
     firstName: 'leta',
@@ -185,7 +204,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/96.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'niklas',
     gender: 'male',
     firstName: 'niklas',
@@ -194,7 +214,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/45.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'lenni',
     gender: 'male',
     firstName: 'lenni',
@@ -203,7 +224,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/82.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'nathan',
     gender: 'male',
     firstName: 'nathan',
@@ -212,7 +234,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/9.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'vero',
     gender: 'female',
     firstName: 'veronia',
@@ -221,8 +244,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/52.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
-
+  },
+  {
     userName: 'Orly',
     gender: 'male',
     firstName: 'Orlando',
@@ -231,7 +254,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/23.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'aaliyah',
     gender: 'female',
     firstName: 'aaliyah',
@@ -240,7 +264,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/38.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'hannah',
     gender: 'female',
     firstName: 'hannah',
@@ -249,7 +274,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/70.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'ugo',
     gender: 'male',
     firstName: 'ugo',
@@ -258,7 +284,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/64.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'judith',
     gender: 'female',
     firstName: 'judith',
@@ -267,7 +294,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/0.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'stanley',
     gender: 'male',
     firstName: 'stanley',
@@ -276,7 +304,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/6.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'di',
     gender: 'female',
     firstName: 'ediane',
@@ -285,7 +314,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/65.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'luis',
     gender: 'male',
     firstName: 'luis',
@@ -294,7 +324,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/27.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'miss',
     gender: 'female',
     firstName: 'marjorie',
@@ -303,7 +334,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/24.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'daniel',
     gender: 'male',
     firstName: 'daniel',
@@ -312,7 +344,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/14.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'liam',
     gender: 'male',
     firstName: 'liam',
@@ -321,7 +354,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/75.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'felix',
     gender: 'male',
     firstName: 'felix',
@@ -330,7 +364,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/66.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'konrad',
     gender: 'male',
     firstName: 'konrad',
@@ -339,7 +374,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/50.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'jud',
     gender: 'female',
     firstName: 'judith',
@@ -348,7 +384,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/24.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'ahbay',
     gender: 'male',
     firstName: 'ahmet',
@@ -357,7 +394,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/16.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'luke',
     gender: 'male',
     firstName: 'luke',
@@ -366,7 +404,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/66.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'florence',
     gender: 'female',
     firstName: 'florence',
@@ -375,7 +414,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/73.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'ella',
     gender: 'female',
     firstName: 'ella',
@@ -384,7 +424,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/54.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'liv',
     gender: 'female',
     firstName: 'liva',
@@ -393,7 +434,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/41.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'gene',
     gender: 'male',
     firstName: 'gene',
@@ -402,7 +444,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/76.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'anni',
     gender: 'female',
     firstName: 'anni',
@@ -411,7 +454,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/86.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'oni',
     gender: 'male',
     firstName: 'onal',
@@ -420,7 +464,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/14.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'ryan',
     gender: 'male',
     firstName: 'fernando',
@@ -429,7 +474,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/9.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'alberto',
     gender: 'male',
     firstName: 'alberto',
@@ -438,7 +484,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/57.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'lio',
     gender: 'male',
     firstName: 'lionel',
@@ -447,7 +494,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/94.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'iiris',
     gender: 'female',
     firstName: 'iiris',
@@ -456,7 +504,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/45.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'johan',
     gender: 'male',
     firstName: 'johan',
@@ -465,7 +514,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/49.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'holly',
     gender: 'female',
     firstName: 'holly',
@@ -474,7 +524,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/46.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'thomas',
     gender: 'male',
     firstName: 'thomas',
@@ -483,7 +534,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/4.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'lyam',
     gender: 'male',
     firstName: 'lyam',
@@ -492,7 +544,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/96.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'lilly',
     gender: 'female',
     firstName: 'lilly',
@@ -501,7 +554,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/20.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'afet',
     gender: 'female',
     firstName: 'afet',
@@ -510,7 +564,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/65.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'francis',
     gender: 'male',
     firstName: 'francis',
@@ -519,7 +574,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/18.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'auguste',
     gender: 'male',
     firstName: 'auguste',
@@ -528,7 +584,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/82.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'maddy',
     gender: 'female',
     firstName: 'madison',
@@ -537,7 +594,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/37.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'clayton',
     gender: 'male',
     firstName: 'clayton',
@@ -546,7 +604,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/30.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'jonny',
     gender: 'male',
     firstName: 'jonathan',
@@ -555,7 +614,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/2.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'delaforet',
     gender: 'male',
     firstName: 'elouan',
@@ -564,7 +624,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/28.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'eliza',
     gender: 'female',
     firstName: 'eliza',
@@ -573,7 +634,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/35.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'becky',
     gender: 'female',
     firstName: 'becky',
@@ -582,7 +644,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/83.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'nevaeh',
     gender: 'female',
     firstName: 'nevaeh',
@@ -591,7 +654,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/42.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'virgil',
     gender: 'male',
     firstName: 'virgil',
@@ -600,7 +664,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/97.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'oliver',
     gender: 'male',
     firstName: 'oliver',
@@ -609,7 +674,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/71.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'umut',
     gender: 'male',
     firstName: 'umut',
@@ -618,7 +684,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/48.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'paula',
     gender: 'female',
     firstName: 'paula',
@@ -627,7 +694,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/18.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'topias',
     gender: 'male',
     firstName: 'topias',
@@ -636,7 +704,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/95.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'leo',
     gender: 'male',
     firstName: 'leonard',
@@ -645,7 +714,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/19.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'laurent',
     gender: 'male',
     firstName: 'laurent',
@@ -654,8 +724,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/84.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-
-  }, {
+  },
+  {
     userName: 'anisio',
     gender: 'male',
     firstName: 'anisio',
@@ -664,7 +734,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/19.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'amelia',
     gender: 'female',
     firstName: 'amelia',
@@ -673,7 +744,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/89.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'margarita',
     gender: 'female',
     firstName: 'margarita',
@@ -682,7 +754,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/27.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'jen',
     gender: 'female',
     firstName: 'jen',
@@ -691,7 +764,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/35.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'marouane',
     gender: 'male',
     firstName: 'marouane',
@@ -700,7 +774,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/20.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'alexa',
     gender: 'female',
     firstName: 'alexa',
@@ -709,7 +784,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/42.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'eline',
     gender: 'female',
     firstName: 'eline',
@@ -718,7 +794,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/51.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'nadeem',
     gender: 'male',
     firstName: 'nadeem',
@@ -727,7 +804,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/48.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'eren',
     gender: 'male',
     firstName: 'eren',
@@ -736,7 +814,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/18.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'harold',
     gender: 'male',
     firstName: 'harold',
@@ -745,7 +824,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/22.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'maddison',
     gender: 'female',
     firstName: 'maddison',
@@ -754,7 +834,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/41.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'fatin',
     gender: 'male',
     firstName: 'fatin',
@@ -763,7 +844,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/57.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'amber',
     gender: 'female',
     firstName: 'amber',
@@ -772,7 +854,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/35.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'jonas',
     gender: 'male',
     firstName: 'jonas',
@@ -781,7 +864,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/72.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'teo',
     gender: 'male',
     firstName: 'teo',
@@ -790,7 +874,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/16.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'lily',
     gender: 'female',
     firstName: 'lily',
@@ -799,7 +884,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/95.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'gabrielle',
     gender: 'female',
     firstName: 'gabrielle',
@@ -808,7 +894,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/78.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'jelger',
     gender: 'male',
     firstName: 'jelger',
@@ -817,7 +904,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/84.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'kayla',
     gender: 'female',
     firstName: 'kalya',
@@ -826,7 +914,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/13.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'jesus',
     gender: 'male',
     firstName: 'jesus',
@@ -835,7 +924,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/86.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'tita',
     gender: 'female',
     firstName: 'tita',
@@ -844,7 +934,8 @@ User
     image: 'https://randomuser.me/api/portraits/women/94.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'lucian',
     gender: 'male',
     firstName: 'lucian',
@@ -853,7 +944,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/54.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'john',
     gender: 'male',
     firstName: 'john',
@@ -862,7 +954,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/1.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'ethan',
     gender: 'male',
     firstName: 'ethan',
@@ -871,7 +964,8 @@ User
     image: 'https://randomuser.me/api/portraits/men/1.jpg',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'slow',
     gender: 'male',
     firstName: 'slow',
@@ -880,45 +974,52 @@ User
     image: 'https://78.media.tumblr.com/avatar_a606c72a403f_128.png',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'cuttie',
     gender: 'male',
     firstName: 'johnny',
     lastName: 'rawr',
     email: 'rawr@gmail.com',
-    image: 'http://pa1.narvii.com/6468/c345deddd9f25b1b9d1d8ba83c7f02d63a7e6f8b_00.gif',
+    image:
+      'http://pa1.narvii.com/6468/c345deddd9f25b1b9d1d8ba83c7f02d63a7e6f8b_00.gif',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'fluff',
     gender: 'female',
     firstName: 'ginger',
     lastName: 'wouf',
     email: 'g.wouf@gmail.com',
-    image: 'https://assets.change.org/photos/0/pl/pj/yYPLpjhqItHRWvt-128x128-noPad.jpg?1454829422',
+    image:
+      'https://assets.change.org/photos/0/pl/pj/yYPLpjhqItHRWvt-128x128-noPad.jpg?1454829422',
     password: 'password',
     passwordConfirmation: 'password'
-  }, {
+  },
+  {
     userName: 'otterson',
     gender: 'male',
     firstName: 'emet',
     lastName: 'otterson',
     email: 'otterson@gmail.com',
-    image: 'https://pbs.twimg.com/profile_images/651464732260462592/4YExEoUQ.jpg',
+    image:
+      'https://pbs.twimg.com/profile_images/651464732260462592/4YExEoUQ.jpg',
     password: 'password',
     passwordConfirmation: 'password'
+  }
+])
+  .then(users => console.log(`${users.length} users created!`))
+  .catch(err => console.log(err));
 
-
-  }])
-  .then((users) => console.log(`${users.length} users created!`))
-  .catch((err) => console.log(err));
-
-Group
-  .create([{
+Group.create([
+  {
     event: 123
-  }, {
+  },
+  {
     event: 456
-  }])
-  .then((groups) => console.log(`${groups.length} groups created!`))
-  .catch((err) => console.log(err))
+  }
+])
+  .then(groups => console.log(`${groups.length} groups created!`))
+  .catch(err => console.log(err))
   .finally(() => mongoose.connection.close());

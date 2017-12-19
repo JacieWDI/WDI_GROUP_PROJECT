@@ -6,26 +6,76 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 100px;
+  border-color: white;
+  border-style:solid;
 }
+.nav-img:hover {
+  border-color: black;
+}
+
 
 div.navbar-brand{
   background-color: black;
-  font-family: 'Roboto', sans-serif;
-
+  font-family:'Comfortaa', cursive;
 }
 
 #navigationbar{
     background-color: black;
-    font-family: 'Roboto', sans-serif;
-    height: 100px;
+    font-family:'Comfortaa', cursive;
+    text-transform:lowercase;
+    font-weight: bold;
+    height: 80px;
     $size-1: 3rem
 }
 
 a.navbar-item{
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500px;
+  color: white;
 }
+
+$dropdown-content-background-color: black;
+
+a.navbar-item:hover{
+  background-color: $color-purple;
+  color: black;
+}
+
+.navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
+  color: black;
+  background: $color-purple;
+}
+
 a.navbar-link{
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500px;
+  color: white;
+}
+
+.navbar-dropdown {
+  background: black;
+
+  a.navbar-item.drop, i {
+    color: white;
+
+    &:hover {
+      background: $color-purple;
+      color: white;
+    }
+  }
+}
+
+.icon{
+  color: black;
+}
+
+.nav-logo {
+  text-align: center;
+  height: 80px;
+  width: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 25px;
+  margin-top: 5px;
 }

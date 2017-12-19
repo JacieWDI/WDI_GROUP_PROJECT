@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Explore More</title>
   <base href="/" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Khula|Nunito+Sans" rel="stylesheet">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB22I-f_WLOasdvWLf9qQI4R8sE_7_zxs4&libraries=places" charset="utf-8"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- inject:js -->
@@ -16,18 +18,22 @@
 
 </head>
 <body ng-controller="MainCtrl as main">
-  <nav class="navbar is-primary ">
+  <nav class="navbar" id="navigationbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" ui-sref="eventsIndex">
-        Explore More
-      </a>
+      <div class ="nav-logo" style="background-image: url('images/logo.png');" ui-sref="eventsIndex"></div>
+      <button class="button navbar-burger" ng-class="{'is-active': main.toggle }" ng-click="main.toggle = !main.toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <div id="navigationbar" class="navbar-menu">
+
+    <div class="navbar-menu" ng-class="{'is-active' : main.toggle }">
       <div class="navbar-end">
-        <a class="navbar-item" ui-sref="#" ng-if="main.user">
+        <a class="navbar-item" ui-sref="usersShow({ id: main.user._id })"ng-if="main.user">
           Hi, {{ main.user.userName }}!
         </a>
-        <a class="navbar-item" href="#" ng-if="main.user">
+        <a class="navbar-item" ui-sref="usersShow({ id: main.user._id })" ng-if="main.user">
           <div class ="nav-img" style="background-image: url('{{main.user.image}}');"></div>
         </a>
         <a class="navbar-item" ui-sref="register" ng-if="!main.user">
@@ -36,18 +42,12 @@
         <a class="navbar-item" ui-sref="login" ng-if="!main.user">
           Login
         </a>
-        <a class="navbar-item" ui-sref="groupsIndex" ng-if="main.user">
-          Groups
-        </a>
 
         <div class="navbar-item has-dropdown is-hoverable is-right" ng-if="main.user">
           <a class="navbar-link" href="#">
             Account
           </a>
           <div class="navbar-dropdown is-right">
-            <a class="navbar-item" href="#">
-              Signed in as: {{ main.user.userName }}
-            </a>
             <a class="navbar-item" ui-sref="usersShow({ id: main.user._id })">
               <span class="icon">
                 <i class="fa fa-user"></i>
@@ -61,38 +61,45 @@
           </div>
         </div>
       </div>
-    </div>
-  </nav>
-   <div class="design">
-     <span> <!-- Square container -->
-  <div clas="color"></div> <!-- Bars -->
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-  <div clas="color"></div>
-</span>
-   </div>
+    </nav>
 
-  <main ui-view></main>
-  <div ng-show="main.message" class="my-message notification is-{{ main.messageType }}" role="alert">
-    {{ main.message }}
-  </div>
+
+
+    <main ui-view></main>
+    <div ng-show="main.message" class="my-message notification is-{{ main.messageType }}" role="alert">
+      {{ main.message }}
+    </div>
+
+
+    <footer class="columns">
+      <section class="column is-4 center-these">
+        <div class="wrapper">
+          <a href="https://github.com/JacieWDI">
+            <div class="ourpicture" style="background-image: url('/images/Profilephoto.jpg');"></div>
+          </a>
+          <a href="https://github.com/Julie-S-Bernal">
+            <div class="ourpicture" style="background-image: url('/images/Julie-2.jpg');"></div>
+          </a>
+          <a href="https://github.com/plummoore">
+            <div class="ourpicture" style="background-image: url('/images/Plum_June_2016.jpg');"></div>
+          </a>
+          <a href="https://github.com/mattyates52">
+            <div class="ourpicture" style="background-image: url('/images/matt.jpg');"></div>
+          </a>
+          <h2 class="meet-team">meet the team</h2>
+        </div>
+      </section>
+      <section class="column is-4 center-these">
+         <h4 class="ga"> &#9834; Made with Love at GA &#9834;</h4>
+      </section>
+      <section class="column is-4">
+      <!-- <span class="badges" -->
+        <div class="eventful-badge eventful-medium">
+          <img src="http://api.eventful.com/images/powered/eventful_88x31.gif"
+          alt="Local Events, Concerts, Tickets">
+          <p><a href="http://eventful.com/">Events</a> by Eventful</p>
+        </div>
+      </section>
+  </footer>
 </body>
 </html>

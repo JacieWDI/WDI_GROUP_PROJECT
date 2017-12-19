@@ -1,0 +1,59 @@
+main {
+  margin-bottom: 10px;
+  min-height: 70vh;
+
+}
+
+footer{
+  background: black;
+  padding: 20px;
+  margin-bottom: 0px!important;
+  h2.meet-team {
+    color: white;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+  .columns{
+    height:80px;
+    background-color: #333333;
+  }
+  section {
+    text-align: center;
+    .eventful-badge {
+      margin-bottom: 10px;
+      // &.badges{
+      //   float:right;
+    }
+    // &.badges{
+    //   display: inline-block;
+    // }
+    // }
+    &.center-these {
+      position: relative;
+      .wrapper {
+        position: absolute;
+        width: 100%;
+        @include centerCentrally;
+        .ourpicture {
+          display: inline-block;
+          height:50px;
+          width: 50px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 100px;
+          margin: 0 10px;
+
+        }
+      }
+      h4 {
+        position: absolute;
+        width: 100%;
+        @include centerCentrally;
+        font-weight: bold;
+        font-size: 120%;
+        color: white;
+      }
+    }
+  }
+}
