@@ -1,9 +1,9 @@
-# ![](src//images/GAtitle.png) 
+# ![](src//images/GAtitle.png)
 # WDI GROUP PROJECT: ExploreMore App
 
 
 ## Brief
-We were set a challenge to design and collaboratively build a MEAN stack app. 
+We were set a challenge to design and collaboratively build a MEAN stack app.
 
 Technical requirements:
 
@@ -14,7 +14,6 @@ Technical requirements:
 - Deployed application online
 - Minimum of two related models with all RESTful actions for at least one model
 - Include tests
-
 
 ## Technologies Used / Stack
 
@@ -74,7 +73,7 @@ Image 2: Task Breakdown
 
 Image 3: Team Planning
 
-Planning together on a whiteboard was crucial to visualise the mechanics of the app whilst also breaking down the app into workable tasks to be divided amongst the group. We individually selected tasks which we may not have had time previously to focus on, in order to maximise learning opportunity. The project was completed with a mix of individual and pair-programming. 
+Planning together on a whiteboard was crucial to visualise the mechanics of the app whilst also breaking down the app into workable tasks to be divided amongst the group. We individually selected tasks which we may not have had time previously to focus on, in order to maximise learning opportunity. The project was completed with a mix of individual and pair-programming.
 
 
 ![](src//images/Illustrator.png)
@@ -143,7 +142,7 @@ Image 12: Event Chat Page
 
 ### Group Chat Page
 
-Users who create and join specific group for an event can then interact through comments feature. The comments are created via an embedded reference so that the user and time stamp of comment left is visible on the Group chat page. 
+Users who create and join specific group for an event can then interact through comments feature. The comments are created via an embedded reference so that the user and time stamp of comment left is visible on the Group chat page.
 
 The users always have the freedom to leave a group chat and the creator of the group has the ability to edit the initial details of the group.
 
@@ -153,7 +152,7 @@ Image 13: Group Chat Page
 
 ### User Profile
 
-The profile page gives the user a central page overview with their details and which music events and chat groups they have either created or joined. This allows easy navigation upon logging into the app. In addition, the user has the ability to update and edit their own details in the app. 
+The profile page gives the user a central page overview with their details and which music events and chat groups they have either created or joined. This allows easy navigation upon logging into the app. In addition, the user has the ability to update and edit their own details in the app.
 
 
 ## Challenges
@@ -181,9 +180,9 @@ As challenging as Bulma can be to customise, it is always good to learn a new fr
 
 - Fully responsive
 
-- Uploading user photo: 
+- Uploading user photo:
 
-- Using alternative / additional APIs 
+- Using alternative / additional APIs
 
 - Additional events other than music
 
